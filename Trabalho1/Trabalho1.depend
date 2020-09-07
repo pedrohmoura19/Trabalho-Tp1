@@ -1,0 +1,17 @@
+# depslib dependency file v1.0
+1599195376 source:d:\pedro\materias\tp1\trabalho1\main.cpp
+	<iostream>
+	<string>
+	"Dominios.h"
+
+1599323894 d:\pedro\materias\tp1\trabalho1\dominios.h
+	<string>
+
+1599321780 d:\pedro\materias\tp1\trabalho1\dominios2.cpp
+	"Dominios.h"
+	<string>
+
+1599324062 source:d:\pedro\materias\tp1\trabalho1\dominios.cpp
+	"Dominios.h"
+	<string>
+
