@@ -1,14 +1,16 @@
 #ifndef DOMINIOS_H_INCLUDED
 #define DOMINIOS_H_INCLUDED
 #include <string>
+#include <stdexcept>
 
 using namespace std;
 
 class CEP{
     private:
-        static const int LIMITE = 60999999;
+        static const int LIMITE_MIN_FORT = 60000000;
+        static const int LIMITE_MAX_FORT = 60999999;
         int valor;
-        bool validar(int valor);
+        void validar(int valor);
 
     public:
         CEP();
@@ -18,6 +20,17 @@ class CEP{
 };
 
 class Classe{
+    private:
+        static const int LIMITE = 3;
+        string valor;
+        int TamanhoValor = valor.size();
+        void validar(string valor);
+
+    public:
+        Classe();
+        Classe(string);
+        void setValor(string);
+        string getValor();
 };
 
 class CodAgencia{
@@ -33,6 +46,21 @@ class CodAgencia{
         void setValor(string);
         string getValor();
 };
+
+class CodProduto{
+    private:
+        static const int LIMITE = 3;
+        string valor;
+        int TamanhoValor = (valor.size()) ;
+        void validar(string valor);
+
+    public:
+        CodProduto();
+        CodProduto(string);
+        void setValor(string);
+        string getValor();
+};
+
 
 class Taxa{
     private:

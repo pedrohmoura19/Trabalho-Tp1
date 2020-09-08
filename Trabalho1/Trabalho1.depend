@@ -15,3 +15,16 @@
 	"Dominios.h"
 	<string>
 
+1599607490 source:d:\pedro\github\trabalho-tp1\trabalho1\dominios.cpp
+	"Dominios.h"
+	<string>
+
+1599607932 d:\pedro\github\trabalho-tp1\trabalho1\dominios.h
+	<string>
+	<stdexcept>
+
+1599607508 source:d:\pedro\github\trabalho-tp1\trabalho1\main.cpp
+	<iostream>
+	<string>
+	"Dominios.h"
+
