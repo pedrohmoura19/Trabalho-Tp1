@@ -61,6 +61,47 @@ class CodProduto{
         string getValor();
 };
 
+class Data{
+    private:
+        string valor;
+        int TamanhoValor = (valor.size()) ;
+        void validar(string valor);
+
+    public:
+        Data();
+        Data(string);
+        void setValor(string);
+        string getValor();
+};
+
+class Nome{
+    private:
+        static const int LIMITE_MIN = 5;
+        static const int LIMITE_MAX = 30;
+        string valor;
+        int TamanhoValor = (valor.size()) ;
+        void validar(string valor);
+
+    public:
+        Nome();
+        Nome(string);
+        void setValor(string);
+        string getValor();
+};
+
+class Prazo{
+    private:
+        int valor;
+        void validar(int valor);
+
+    public:
+        Prazo();
+        Prazo(int);
+        void setValor(int);
+        int getValor();
+
+};
+
 
 class Taxa{
     private:
