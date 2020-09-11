@@ -6,10 +6,17 @@ using namespace std;
 
 int main()
 {
-    CEP cep(123);
-   cout << cep.getValor() << endl;
+    Classe cla1("abc");
+    CEP cep1(60000001);
 
-   CodAgencia agen("2333");
-   cout << agen.getValor() << endl;
+    cout << cep1.getValor() << endl;
+
+    try{
+        cla1.setValor("CDB");
+    }
+    catch(invalid_argument &exp){
+        cout << exp.what() << endl;
+    }
+
 
 }
