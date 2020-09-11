@@ -27,7 +27,7 @@ class Classe{
     private:
         static const int LIMITE = 3;
         string valor;
-        int TamanhoValor = valor.size();
+        int tamanhoValor = valor.size();
         void validar(string valor);
 
     public:
@@ -41,8 +41,8 @@ class CodAgencia{
     private:
         static const int FORMATO = 4;
         string valor;
-        int TamanhoValor = valor.size();
-        bool validar(string valor);
+        int tamanhoValor = valor.size();
+        void validar(string valor);
 
     public:
         CodAgencia();
@@ -53,9 +53,9 @@ class CodAgencia{
 
 class CodProduto{
     private:
-        static const int LIMITE = 3;
+        static const int FORMATO = 3;
         string valor;
-        int TamanhoValor = (valor.size()) ;
+        int tamanhoValor = (valor.size()) ;
         void validar(string valor);
 
     public:
@@ -67,8 +67,9 @@ class CodProduto{
 
 class Data{
     private:
+        static const int FORMATO = 5;
         string valor;
-        int TamanhoValor = (valor.size()) ;
+        int tamanhoValor = (valor.size()) ;
         void validar(string valor);
 
     public:
@@ -83,7 +84,7 @@ class Nome{
         static const int LIMITE_MIN = 5;
         static const int LIMITE_MAX = 30;
         string valor;
-        int TamanhoValor = (valor.size()) ;
+        int tamanhoValor = (valor.size()) ;
         void validar(string valor);
 
     public:
@@ -112,7 +113,7 @@ class Taxa{
         static const int LIMITE_MIN = 0;
         static const int LIMITE_MAX = 200;
         int valor;
-        bool validar(int valor);
+        void validar(int valor);
 
     public:
         Taxa();
@@ -127,7 +128,7 @@ class ValorAplicacao{
         static const int LIMITE_MIN = 0;
         static const int LIMITE_MAX = 1000000;
         int valor;
-        bool validar(int valor);
+        void validar(int valor);
 
     public:
         ValorAplicacao();

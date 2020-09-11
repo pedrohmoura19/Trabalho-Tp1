@@ -9,7 +9,7 @@ int main()
     Classe cla1("abc");
     CEP cep1(60000001);
 
-    cout << cep1.getValor() << endl;
+    cout << cla1.getValor() << endl;
 
     try{
         cla1.setValor("CDB");
