@@ -32,6 +32,9 @@ Classe::Classe(string valor){
 void Classe::validar(string valor){
     if( (valor.size()) > LIMITE )
         throw length_error("Tamanho excedido");
+    if( (valor == "LCA") || (valor == "CDB") || (valor == "LC") || (valor == "LCI") || (valor == "LF") );
+    else
+        throw invalid_argument("Entrada invalida");
 }
 
 void Classe::setValor(string valor){
@@ -51,8 +54,14 @@ CodAgencia::CodAgencia(string valor){
 }
 
 bool CodAgencia::validar(string valor){
-    if ((valor.size()) > LIMITE)
+    if ((valor.size()) != FORMATO )
         throw length_error("Tamanho excedido");
+    try{
+        stoi(valor);
+    }
+    catch(invalid_argument &exp){
+     ;
+    }
 }
 
 void CodAgencia::setValor(string valor){

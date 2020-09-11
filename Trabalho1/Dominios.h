@@ -7,6 +7,10 @@ using namespace std;
 
 class CEP{
     private:
+        static const int LIMITE_MIN_BSB = 70000000;
+        static const int LIMITE_MAX_BSB = 70999999;
+        static const int LIMITE_MIN_SLV = 40000000;
+        static const int LIMITE_MAX_SLV = 41999999;
         static const int LIMITE_MIN_FORT = 60000000;
         static const int LIMITE_MAX_FORT = 60999999;
         int valor;
@@ -35,7 +39,7 @@ class Classe{
 
 class CodAgencia{
     private:
-        static const int LIMITE = 4;
+        static const int FORMATO = 4;
         string valor;
         int TamanhoValor = valor.size();
         bool validar(string valor);
@@ -105,7 +109,8 @@ class Prazo{
 
 class Taxa{
     private:
-        static const int LIMITE = 200;
+        static const int LIMITE_MIN = 0;
+        static const int LIMITE_MAX = 200;
         int valor;
         bool validar(int valor);
 
@@ -119,7 +124,8 @@ class Taxa{
 
 class ValorAplicacao{
     private:
-        static const int LIMITE = 1000000;
+        static const int LIMITE_MIN = 0;
+        static const int LIMITE_MAX = 1000000;
         int valor;
         bool validar(int valor);
 

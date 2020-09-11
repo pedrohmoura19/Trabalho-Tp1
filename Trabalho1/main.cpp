@@ -12,7 +12,7 @@ int main()
     cout << cep1.getValor() << endl;
 
     try{
-        cep1.setValor(2);
+        cla1.setValor("CDB");
     }
     catch(invalid_argument &exp){
         cout << exp.what() << endl;
