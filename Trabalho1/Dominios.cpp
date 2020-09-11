@@ -22,6 +22,7 @@ int CEP::getValor(){
     return valor;
 }
 
+
 Classe::Classe(){
 }
 
@@ -46,6 +47,7 @@ string Classe::getValor(){
     return valor;
 }
 
+
 CodAgencia::CodAgencia(){
 }
 
@@ -53,7 +55,7 @@ CodAgencia::CodAgencia(string valor){
     this->valor = valor;
 }
 
-bool CodAgencia::validar(string valor){
+void CodAgencia::validar(string valor){
     if ((valor.size()) != FORMATO )
         throw length_error("Tamanho excedido");
     try{
@@ -73,6 +75,7 @@ string CodAgencia::getValor(){
     return valor;
 }
 
+
 CodProduto::CodProduto(){
 }
 
@@ -81,8 +84,14 @@ CodProduto::CodProduto(string valor){
 }
 
 void CodProduto::validar(string valor){
-    if ((valor.size()) > LIMITE)
+    if ((valor.size()) != FORMATO)
         throw length_error("Tamanho excedido");
+    try{
+        stoi(valor);
+    }
+    catch(invalid_argument &exp){
+     ;
+    }
 }
 
 void CodProduto::setValor(string valor){
@@ -94,4 +103,135 @@ void CodProduto::setValor(string valor){
 string CodProduto::getValor(){
     return valor;
 }
+
+
+Data::Data(){
+}
+
+Data::Data(string valor){
+    this->valor = valor;
+}
+
+void Data::validar(string valor){
+    if ((valor.size()) != FORMATO)
+        throw length_error("Tamanho excedido");
+    try{
+        stoi(valor);
+    }
+    catch(invalid_argument &exp){
+     ;
+    }
+}
+
+void Data::setValor(string valor){
+    validar(valor);
+    this->valor = valor;
+
+}
+
+string Data::getValor(){
+    return valor;
+}
+
+
+Nome::Nome(){
+}
+
+Nome::Nome(string valor){
+    this->valor = valor;
+}
+
+void Nome::validar(string valor){
+    if ((valor.size()) < LIMITE_MIN || (valor.size()) > LIMITE_MAX )
+        throw length_error("Tamanho incorreto");
+    try{
+        stoi(valor);
+    }
+    catch(invalid_argument &exp){
+     ;
+    }
+}
+
+void Nome::setValor(string valor){
+    validar(valor);
+    this->valor = valor;
+
+}
+
+string Nome::getValor(){
+    return valor;
+}
+
+
+Prazo::Prazo(){
+}
+
+Prazo::Prazo(int valor){
+    this->valor = valor;
+}
+
+void Prazo::validar(int valor){
+    if ((valor == 6 ) || (valor == 12) || (valor == 18) || (valor == 24) || (valor == 30)|| (valor == 36)
+        || (valor == 42) || (valor == 48) || (valor == 54) || (valor == 60) || (valor == 66) || (valor == 72));
+    else
+        throw invalid_argument("Tamanho incorreto");
+
+}
+
+void Prazo::setValor(int valor){
+    validar(valor);
+    this->valor = valor;
+
+}
+
+int Prazo::getValor(){
+    return valor;
+}
+
+
+Taxa::Taxa(){
+}
+
+Taxa::Taxa(int valor){
+    this->valor = valor;
+}
+
+void Taxa::validar(int valor){
+    if ((LIMITE_MIN > valor) || (valor > LIMITE_MAX))
+        throw invalid_argument("Taxa invalida");
+}
+
+void Taxa::setValor(int valor){
+    validar(valor);
+    this->valor = valor;
+}
+
+int Taxa::getValor(){
+    return valor;
+}
+
+
+ValorAplicacao::ValorAplicacao(){
+}
+
+ValorAplicacao::ValorAplicacao(int valor){
+    this->valor = valor;
+}
+
+void ValorAplicacao::validar(int valor){
+    if ((LIMITE_MIN > valor) || (valor > LIMITE_MAX))
+        throw invalid_argument("Valor invalida");
+}
+
+void ValorAplicacao::setValor(int valor){
+    validar(valor);
+    this->valor = valor;
+}
+
+int ValorAplicacao::getValor(){
+    return valor;
+}
+
+
+
 
