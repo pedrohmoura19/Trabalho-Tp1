@@ -1,22 +1,20 @@
 #include <iostream>
 #include <string>
+
 #include "Dominios.h"
+#include "testes.h"
 
 using namespace std;
 
-int main()
-{
-    Classe cla1("abc");
-    CEP cep1(60000001);
+int main(){
 
-    cout << cla1.getValor() << endl;
-
-    try{
-        cla1.setValor("CDB");
+    TUCep teste;
+    switch(teste.run()){
+        case true  : cout << "SUCESSO";
+                            break;
+        case false : cout << "FALHA";
+                            break;
     }
-    catch(invalid_argument &exp){
-        cout << exp.what() << endl;
-    }
-
+    return 0;
 
 }

@@ -1,50 +1,59 @@
 #include "Dominios.h"
 #include <string>
 
-CEP::CEP(){
+Cep::Cep(){
 }
 
-CEP::CEP(int valor){
-    this->valor = valor;
-}
-
-void CEP::validar(int valor){
-    if ((LIMITE_MIN_FORT > valor) || (valor > LIMITE_MAX_FORT))
-        throw invalid_argument("CEP invalido");
-}
-
-void CEP::setValor(int valor){
+Cep::Cep(int valor){
     validar(valor);
-    this->valor = valor;
+    this->cep = valor;
 }
 
-int CEP::getValor(){
-    return valor;
+void Cep::validar(int valor){
+    if((LIMITE_MIN_SP1 <= valor) && (valor <= LIMITE_MAX_SP1));
+    else if ((LIMITE_MIN_SP2 <= valor) && (valor <= LIMITE_MAX_SP2));
+    else if((LIMITE_MIN_RJ <= valor) && (valor <= LIMITE_MAX_RJ));
+    else if((LIMITE_MIN_BSB <= valor) && (valor <= LIMITE_MAX_BSB));
+    else if((LIMITE_MIN_SLV <= valor) && (valor <= LIMITE_MAX_SLV));
+    else if((LIMITE_MIN_FORT <= valor) && (valor <= LIMITE_MAX_FORT));
+    else
+        throw invalid_argument("CEP invalido");
+
+}
+
+void Cep::setCep(int valor){
+    validar(valor);
+    this->cep = valor;
+}
+
+int Cep::getCep(){
+    return cep;
 }
 
 
 Classe::Classe(){
 }
 
-Classe::Classe(string valor){
-    this->valor = valor;
+Classe::Classe(string classe){
+    validar(classe);
+    this->classe = classe;
 }
 
-void Classe::validar(string valor){
-    if( (valor.size()) > LIMITE )
+void Classe::validar(string classe){
+    if( (classe.size()) > LIMITE )
         throw length_error("Tamanho excedido");
-    if( (valor == "LCA") || (valor == "CDB") || (valor == "LC") || (valor == "LCI") || (valor == "LF") );
+    if( (classe == "LCA") || (classe == "CDB") || (classe == "LC") || (classe == "LCI") || (classe == "LF") );
     else
         throw invalid_argument("Entrada invalida");
 }
 
-void Classe::setValor(string valor){
-    validar(valor);
-    this->valor = valor;
+void Classe::setClasse(string classe){
+    validar(classe);
+    this->classe = classe;
 }
 
-string Classe::getValor(){
-    return valor;
+string Classe::getClasse(){
+    return classe;
 }
 
 
@@ -52,18 +61,21 @@ CodAgencia::CodAgencia(){
 }
 
 CodAgencia::CodAgencia(string valor){
+    validar(valor);
     this->valor = valor;
 }
 
 void CodAgencia::validar(string valor){
-    if ((valor.size()) != FORMATO )
-        throw length_error("Tamanho excedido");
+    if ( (valor.size()) != FORMATO )
+        throw invalid_argument("Codigo invalido");
     try{
         stoi(valor);
     }
     catch(invalid_argument &exp){
-     ;
+        throw invalid_argument("Codigo invalido");
     }
+    if(stoi(valor) == 0)
+        throw invalid_argument("Codigo invalido");
 }
 
 void CodAgencia::setValor(string valor){
@@ -90,8 +102,10 @@ void CodProduto::validar(string valor){
         stoi(valor);
     }
     catch(invalid_argument &exp){
-     ;
+        throw invalid_argument("Codigo invalido");
     }
+    if(stoi(valor) == 0)
+        throw invalid_argument("Codigo invalido");
 }
 
 void CodProduto::setValor(string valor){
@@ -113,14 +127,8 @@ Data::Data(string valor){
 }
 
 void Data::validar(string valor){
-    if ((valor.size()) != FORMATO)
-        throw length_error("Tamanho excedido");
-    try{
-        stoi(valor);
-    }
-    catch(invalid_argument &exp){
-     ;
-    }
+    if ((valor[2] != '/')||(valor[5] != '/') ||(valor.size() != FORMATO))
+        throw invalid_argument("Deve se inserir a entrada em formato DD/MM/AAAA");
 }
 
 void Data::setValor(string valor){
@@ -137,29 +145,36 @@ string Data::getValor(){
 Nome::Nome(){
 }
 
-Nome::Nome(string valor){
-    this->valor = valor;
+Nome::Nome(string nome){
+    this->nome = nome;
 }
 
-void Nome::validar(string valor){
-    if ((valor.size()) < LIMITE_MIN || (valor.size()) > LIMITE_MAX )
-        throw length_error("Tamanho incorreto");
-    try{
-        stoi(valor);
+void Nome::validar(string nome){
+    int letras = 0;
+    if ((nome.size()) < LIMITE_MIN || (nome.size()) > LIMITE_MAX )
+        throw length_error("O nome deve ter entre 5 e 30 caracteres");
+
+    for(int i=0;i < nome.size();i++){
+        if(isalpha(nome[i]))
+           letras++;
+
+        if( isalpha(nome[i]) || nome[i] == ' ');
+        else
+            throw invalid_argument("O nome deve conter apenas letras");
+
+        if( i != 0 && nome[i] == ' ' && nome[i-1] == ' ')
+            throw invalid_argument("Nao eh permitido espacos em sequencia");
     }
-    catch(invalid_argument &exp){
-     ;
-    }
 }
 
-void Nome::setValor(string valor){
-    validar(valor);
-    this->valor = valor;
+void Nome::setNome(string nome){
+    validar(nome);
+    this->nome = nome;
 
 }
 
-string Nome::getValor(){
-    return valor;
+string Nome::getNome(){
+    return nome;
 }
 
 
@@ -220,7 +235,7 @@ ValorAplicacao::ValorAplicacao(int valor){
 
 void ValorAplicacao::validar(int valor){
     if ((LIMITE_MIN > valor) || (valor > LIMITE_MAX))
-        throw invalid_argument("Valor invalida");
+        throw invalid_argument("Valor de aplicacao deve ser de 0 a 1000000 reais");
 }
 
 void ValorAplicacao::setValor(int valor){
