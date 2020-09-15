@@ -1,5 +1,6 @@
 #include "Dominios.h"
 #include <string>
+#include <ctype.h>
 
 Cep::Cep(){
 }
@@ -40,8 +41,6 @@ Classe::Classe(string classe){
 }
 
 void Classe::validar(string classe){
-    if( (classe.size()) > LIMITE )
-        throw length_error("Tamanho excedido");
     if( (classe == "LCA") || (classe == "CDB") || (classe == "LC") || (classe == "LCI") || (classe == "LF") );
     else
         throw invalid_argument("Entrada invalida");
@@ -122,23 +121,40 @@ string CodProduto::getValor(){
 Data::Data(){
 }
 
-Data::Data(string valor){
-    this->valor = valor;
+Data::Data(string data){
+    this->data = data;
 }
 
-void Data::validar(string valor){
-    if ((valor[2] != '/')||(valor[5] != '/') ||(valor.size() != FORMATO))
+void Data::validar(string data){
+    bool bissexto = false;
+    string dia,mes,ano;
+
+    dia[0] = data[0];
+    dia[1] = data[1];
+    dia = stoi(dia);
+
+    mes[0] = data[3];
+    mes[1] = data[4];
+
+    ano[0] = data[6];
+    ano[1] = data[7];
+    ano[2] = data[8];
+    ano[3] = data[9];
+
+
+    if ((data[2] != '/')||(data[5] != '/') ||(data.size() != FORMATO))
         throw invalid_argument("Deve se inserir a entrada em formato DD/MM/AAAA");
+
 }
 
-void Data::setValor(string valor){
-    validar(valor);
-    this->valor = valor;
+void Data::setValor(string data){
+    validar(data);
+    this->data = data;
 
 }
 
 string Data::getValor(){
-    return valor;
+    return data;
 }
 
 
@@ -152,7 +168,7 @@ Nome::Nome(string nome){
 void Nome::validar(string nome){
     int letras = 0;
     if ((nome.size()) < LIMITE_MIN || (nome.size()) > LIMITE_MAX )
-        throw length_error("O nome deve ter entre 5 e 30 caracteres");
+        throw length_error("O nome deve conter entre 5 e 30 caracteres");
 
     for(int i=0;i < nome.size();i++){
         if(isalpha(nome[i]))
@@ -164,7 +180,12 @@ void Nome::validar(string nome){
 
         if( i != 0 && nome[i] == ' ' && nome[i-1] == ' ')
             throw invalid_argument("Nao eh permitido espacos em sequencia");
+
+        if( i != (nome.size()-1) &&  nome[i]==' ' && islower(nome[i+1]) )
+            throw invalid_argument("Apos um espaco deve conter letra maiuscula");
     }
+    if (letras < 5)
+        throw invalid_argument("O nome deve conter no minimo 5 letras");
 }
 
 void Nome::setNome(string nome){
@@ -207,22 +228,22 @@ int Prazo::getValor(){
 Taxa::Taxa(){
 }
 
-Taxa::Taxa(int valor){
-    this->valor = valor;
+Taxa::Taxa(int taxa){
+    this->taxa = taxa;
 }
 
-void Taxa::validar(int valor){
-    if ((LIMITE_MIN > valor) || (valor > LIMITE_MAX))
+void Taxa::validar(int taxa){
+    if ((LIMITE_MIN > taxa) || (taxa > LIMITE_MAX))
         throw invalid_argument("Taxa invalida");
 }
 
-void Taxa::setValor(int valor){
-    validar(valor);
-    this->valor = valor;
+void Taxa::setTaxa(int taxa){
+    validar(taxa);
+    this->taxa = taxa;
 }
 
-int Taxa::getValor(){
-    return valor;
+int Taxa::getTaxa(){
+    return taxa;
 }
 
 

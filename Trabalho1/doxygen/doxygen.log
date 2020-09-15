@@ -1,0 +1,6 @@
+warning: source ..\Dominios2.cpp is not a readable file or directory... skipping.
+D:/Pedro/GitHub/Trabalho-Tp1/Trabalho1/Dominios.h:57: warning: unexpected end of comment block while parsing the argument of command param
+D:/Pedro/GitHub/Trabalho-Tp1/Trabalho1/Dominios.h:88: warning: argument 'string' of command @param is not found in the argument list of Classe::Classe(string classe)
+D:/Pedro/GitHub/Trabalho-Tp1/Trabalho1/Dominios.h:93: warning: The following parameter of Classe::Classe(string classe) is not documented:
+  parameter 'classe'
+D:/Pedro/GitHub/Trabalho-Tp1/Trabalho1/Dominios.h:98: warning: unexpected end of comment block while parsing the argument of command param
