@@ -246,42 +246,39 @@ class ValorAplicacao{
 class CodAplicacao{
     private:
         static const int FORMATO = 5;
-        string valor;
-        int tamanhoValor = valor.size();
-        void validar(string valor);
+        string aplicacao;
+        void validar(string aplicacao);
 
     public:
         CodAplicacao();
         CodAplicacao(string);
-        void setValor(string);
-        string getValor();
+        void setAplicacao(string);
+        string getAplicacao();
 };
 
 class CodBanco{
     private:
         static const int FORMATO = 3;
-        string valor;
-        int tamanhoValor = valor.size();
-        void validar(string valor);
+        string banco;
+        void validar(string banco);
 
     public:
         CodBanco();
         CodBanco(string);
-        void setValor(string);
-        string getValor();
+        void setBanco(string);
+        string getBanco();
 };
 
 class Cpf{
     private:
         static const int TAMANHO = 14;
-        string valor;
-        int tamanhoValor = valor.size();
-        void validar(string valor);
+        string cpf;
+        void validar(string cpf);
     public:
         Cpf();
         Cpf(string);
-        void setValor(string);
-        string getValor();
+        void setCpf(string);
+        string getCpf();
         ~Cpf();
 };
 
@@ -289,66 +286,65 @@ class Emissor{
     private:
         static const int LIMITE_MIN = 5;
         static const int LIMITE_MAX = 30;
-        string valor;
-        void validar(string valor);
+        string emissor;
+        void validar(string emissor);
     public:
         Emissor();
         Emissor(string);
-        void setValor(string);
-        string getValor();
+        void setEmissor(string);
+        string getEmissor();
         ~Emissor();
 };
 
-class Endereço{
+class Endereco{
     private:
         static const int LIMITE_MIN = 5;
         static const int LIMITE_MAX = 20;
-        string valor;
-        void validar(string valor);
+        string endereco;
+        void validar(string endereco);
     public:
-        Endereço();
-        Endereço(string);
-        void setValor(string);
-        string getValor();
-        ~Endereço();
+        Endereco();
+        Endereco(string);
+        void setEndereco(string);
+        string getEndereco();
+        ~Endereco();
 };
 
 class Horario{
     private:
-        string valor;
-        void validar(string valor);
+        string horario;
+        void validar(string horario);
     public:
         Horario();
         Horario(string);
-        void setValor();
-        string getValor();
+        void setHorario();
+        string getHorario();
         ~Horario();
 };
 
 class Numero{
     private:
         static const int TAMANHO = 8;
-        string valor;
-        int tamanhoValor = valor.size();
-        void validar(string valor);
+        string numero;
+        void validar(string numero);
     public:
         Numero();
         Numero(string);
-        void setValor(string);
-        string getValor();
+        void setNumero(string);
+        string getNumero();
         ~Numero();
 };
 
 class Senha{
     private:
         static const int TAMANHO = 6;
-        int valor;
-        void validar(int valor);
+        int senha;
+        void validar(int senha);
     public:
         Senha();
         Senha(int);
-        void setValor(int);
-        int getValor();
+        void setSenha(int);
+        int getSenha();
         ~Senha();
 };
 
