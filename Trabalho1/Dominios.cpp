@@ -59,62 +59,62 @@ string Classe::getClasse(){
 CodAgencia::CodAgencia(){
 }
 
-CodAgencia::CodAgencia(string valor){
-    validar(valor);
-    this->valor = valor;
+CodAgencia::CodAgencia(string agencia){
+    validar(agencia);
+    this->agencia = agencia;
 }
 
-void CodAgencia::validar(string valor){
-    if ( (valor.size()) != FORMATO )
+void CodAgencia::validar(string agencia){
+    if ( (agencia.size()) != FORMATO )
         throw invalid_argument("Codigo invalido");
     try{
-        stoi(valor);
+        stoi(agencia);
     }
     catch(invalid_argument &exp){
         throw invalid_argument("Codigo invalido");
     }
-    if(stoi(valor) == 0)
+    if(stoi(agencia) == 0)
         throw invalid_argument("Codigo invalido");
 }
 
-void CodAgencia::setValor(string valor){
-    validar(valor);
-    this->valor = valor;
+void CodAgencia::setAgencia(string agencia){
+    validar(agencia);
+    this->agencia = agencia;
 }
 
-string CodAgencia::getValor(){
-    return valor;
+string CodAgencia::getAgencia(){
+    return agencia;
 }
 
 
 CodProduto::CodProduto(){
 }
 
-CodProduto::CodProduto(string valor){
-    this->valor = valor;
+CodProduto::CodProduto(string produto){
+    this->produto = produto;
 }
 
-void CodProduto::validar(string valor){
-    if ((valor.size()) != FORMATO)
+void CodProduto::validar(string produto){
+    if ((produto.size()) != FORMATO)
         throw length_error("Tamanho excedido");
     try{
-        stoi(valor);
+        stoi(produto);
     }
     catch(invalid_argument &exp){
         throw invalid_argument("Codigo invalido");
     }
-    if(stoi(valor) == 0)
+    if(stoi(produto) == 0)
         throw invalid_argument("Codigo invalido");
 }
 
-void CodProduto::setValor(string valor){
-    validar(valor);
-    this->valor = valor;
+void CodProduto::setProduto(string produto){
+    validar(produto);
+    this->produto = produto;
 
 }
 
-string CodProduto::getValor(){
-    return valor;
+string CodProduto::getProduto(){
+    return produto;
 }
 
 
@@ -202,26 +202,26 @@ string Nome::getNome(){
 Prazo::Prazo(){
 }
 
-Prazo::Prazo(int valor){
-    this->valor = valor;
+Prazo::Prazo(int prazo){
+    this->prazo = prazo;
 }
 
 void Prazo::validar(int valor){
-    if ((valor == 6 ) || (valor == 12) || (valor == 18) || (valor == 24) || (valor == 30)|| (valor == 36)
-        || (valor == 42) || (valor == 48) || (valor == 54) || (valor == 60) || (valor == 66) || (valor == 72));
+    if ((prazo == 6 ) || (prazo == 12) || (prazo == 18) || (prazo == 24) || (prazo == 30)|| (prazo == 36)
+        || (prazo == 42) || (prazo == 48) || (prazo == 54) || (prazo == 60) || (prazo == 66) || (prazo == 72));
     else
         throw invalid_argument("Tamanho incorreto");
 
 }
 
-void Prazo::setValor(int valor){
-    validar(valor);
-    this->valor = valor;
+void Prazo::setPrazo(int prazo){
+    validar(prazo);
+    this->prazo = prazo;
 
 }
 
-int Prazo::getValor(){
-    return valor;
+int Prazo::getPrazo(){
+    return prazo;
 }
 
 

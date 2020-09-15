@@ -70,7 +70,7 @@ class Cep{
 
 /// @class Classe
 ///
-/// @brief C&oacute;digo destinado a armazenar o Classe do investimento.
+/// @brief C&oacute;digo destinado a armazenar a Classe do investimento.
 ///
 /// As classes de investimento podem ser CDB, LCA, LCI, LF ou LC.
 
@@ -109,32 +109,68 @@ class Classe{
         string getClasse();
 };
 
+/// @class CodAgencia
+///
+/// @brief C&oacute;digo destinado a armazenar o C&oacute;digo da Agencia.
+///
+/// O c&oacute;digo de Agencia v&aacute;lido informado deve ser no formato XXXX em que X &eacute um d&igito de 0 a 9.
+/// N&atildeo; &eacute; permitido o c&oacute;digo 0000.
+
+
 class CodAgencia{
     private:
-        static const int FORMATO = 4;
-        string valor;
-        int tamanhoValor = valor.size();
-        void validar(string valor);
+        static const int FORMATO = 4;       // Tamanho do formato válido.
+        string agencia;
+        void validar(string agencia);
 
     public:
+
+///
+/// Inicializa o objeto com o valor 0.
+///
+
         CodAgencia();
+
+///
+/// Inicializa o objeto com o c&oacute;digo de Agencia informado caso o mesma seja v&aacute;lido.
+///
+/// @param string contendo o c&oacute;digo a ser inserido.
+///
+
         CodAgencia(string);
-        void setValor(string);
-        string getValor();
+
+///
+/// Met&oacute;do para dar set na Classe.
+///
+/// @param string a ser inserida no objeto.
+///
+/// @throw invalid_argument Em caso de argumento inv&acute;lido,&eacute lancado
+/// um objeto explicando o erro.
+///
+
+        void setAgencia(string);
+
+///
+/// Met&oacute;do para dar get no c&oacute;digo de agencia.
+///
+///
+///@return string Retorna o c&oacute;digo de agencia.
+///
+
+        string getAgencia();
 };
 
 class CodProduto{
     private:
         static const int FORMATO = 3;
-        string valor;
-        int tamanhoValor = (valor.size()) ;
-        void validar(string valor);
+        string produto;
+        void validar(string produto);
 
     public:
         CodProduto();
         CodProduto(string);
-        void setValor(string);
-        string getValor();
+        void setProduto(string);
+        string getProduto();
 };
 
 class Data{
@@ -166,14 +202,14 @@ class Nome{
 
 class Prazo{
     private:
-        int valor;
-        void validar(int valor);
+        int prazo;
+        void validar(int prazo);
 
     public:
         Prazo();
         Prazo(int);
-        void setValor(int);
-        int getValor();
+        void setPrazo(int);
+        int getPrazo();
 
 };
 

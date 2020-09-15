@@ -20,7 +20,7 @@
 	<string>
 	<ctype.h>
 
-1600187930 d:\pedro\github\trabalho-tp1\trabalho1\dominios.h
+1600209398 d:\pedro\github\trabalho-tp1\trabalho1\dominios.h
 	<string>
 	<stdexcept>
 
@@ -30,7 +30,7 @@
 	"Dominios.h"
 	"testes.h"
 
-1600039742 source:d:\pedro\github\trabalho-tp1\trabalho1\testes.cpp
+1600197484 source:d:\pedro\github\trabalho-tp1\trabalho1\testes.cpp
 	<iostream>
 	<string>
 	"testes.h"
