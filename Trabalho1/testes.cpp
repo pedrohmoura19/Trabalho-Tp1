@@ -93,3 +93,208 @@ bool TUClasse::run(){
 }
 
 /////////////Metodos da classe TUCodAgencia//////////////
+void TUCodAgencia::setUp(){
+    codigo = new CodAgencia();
+    estado = true;
+}
+
+void TUCodAgencia::tearDown(){
+    delete codigo;
+}
+
+void TUCodAgencia::testarCenarioSucesso(){
+    try{
+        codigo->setAgencia(VALOR_VALIDO);
+        if(codigo->getAgencia() != VALOR_VALIDO){
+            estado = false;
+        }
+    }
+    catch(invalid_argument excecao){
+        estado = false;
+    }
+
+}
+
+void TUCodAgencia::testarCenarioFalha(){
+    try{
+        codigo->setAgencia(VALOR_INVALIDO);
+        estado = false;
+    }
+    catch(invalid_argument excecao){
+        return;
+    }
+}
+
+bool TUCodAgencia::run(){
+    setUp();
+    testarCenarioSucesso();
+    testarCenarioFalha();
+    tearDown();
+    return estado;
+}
+
+
+/////////////Metodos da classe TUCodProduto//////////////
+void TUCodProduto::setUp(){
+    codigo = new CodProduto();
+    estado = true;
+}
+
+void TUCodProduto::tearDown(){
+    delete codigo;
+}
+
+void TUCodProduto::testarCenarioSucesso(){
+    try{
+        codigo->setProduto(VALOR_VALIDO);
+        if(codigo->getProduto() != VALOR_VALIDO){
+            estado = false;
+        }
+    }
+    catch(invalid_argument excecao){
+        estado = false;
+    }
+
+}
+
+void TUCodProduto::testarCenarioFalha(){
+    try{
+        codigo->setProduto(VALOR_INVALIDO);
+        estado = false;
+    }
+    catch(invalid_argument excecao){
+        return;
+    }
+}
+
+bool TUCodProduto::run(){
+    setUp();
+    testarCenarioSucesso();
+    testarCenarioFalha();
+    tearDown();
+    return estado;
+}
+
+/////////////Metodos da classe TUData//////////////
+void TUData::setUp(){
+    codigo = new Data();
+    estado = true;
+}
+
+void TUData::tearDown(){
+    delete codigo;
+}
+
+void TUData::testarCenarioSucesso(){
+    try{
+        codigo->setData(VALOR_VALIDO);
+        if(codigo->getData() != VALOR_VALIDO){
+            estado = false;
+        }
+    }
+    catch(invalid_argument excecao){
+        estado = false;
+    }
+
+}
+
+void TUData::testarCenarioFalha(){
+    try{
+        codigo->setData(VALOR_INVALIDO);
+        estado = false;
+    }
+    catch(invalid_argument excecao){
+        return;
+    }
+}
+
+bool TUData::run(){
+    setUp();
+    testarCenarioSucesso();
+    testarCenarioFalha();
+    tearDown();
+    return estado;
+}
+
+
+/////////////Metodos da classe TUNome//////////////
+void TUNome::setUp(){
+    codigo = new Nome();
+    estado = true;
+}
+
+void TUNome::tearDown(){
+    delete codigo;
+}
+
+void TUNome::testarCenarioSucesso(){
+    try{
+        codigo->setNome(VALOR_VALIDO);
+        if(codigo->getNome() != VALOR_VALIDO){
+            estado = false;
+        }
+    }
+    catch(invalid_argument excecao){
+        estado = false;
+    }
+
+}
+
+void TUNome::testarCenarioFalha(){
+    try{
+        codigo->setNome(VALOR_INVALIDO);
+        estado = false;
+    }
+    catch(invalid_argument excecao){
+        return;
+    }
+}
+
+bool TUNome::run(){
+    setUp();
+    testarCenarioSucesso();
+    testarCenarioFalha();
+    tearDown();
+    return estado;
+}
+
+/////////////Metodos da classe TUPrazo//////////////
+void TUPrazo::setUp(){
+    codigo = new Prazo();
+    estado = true;
+}
+
+void TUPrazo::tearDown(){
+    delete codigo;
+}
+
+void TUPrazo::testarCenarioSucesso(){
+    try{
+        codigo->setPrazo(VALOR_VALIDO);
+        if(codigo->getPrazo() != VALOR_VALIDO){
+            estado = false;
+        }
+    }
+    catch(invalid_argument excecao){
+        estado = false;
+    }
+
+}
+
+void TUPrazo::testarCenarioFalha(){
+    try{
+        codigo->setPrazo(VALOR_INVALIDO);
+        estado = false;
+    }
+    catch(invalid_argument excecao){
+        return;
+    }
+}
+
+bool TUPrazo::run(){
+    setUp();
+    testarCenarioSucesso();
+    testarCenarioFalha();
+    tearDown();
+    return estado;
+}

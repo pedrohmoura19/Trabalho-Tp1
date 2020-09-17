@@ -33,28 +33,17 @@ class Cep{
         static const int LIMITE_MIN_FORT = 60000000;
         static const int LIMITE_MAX_FORT = 60999999; // Limites do CEP da cidade de Fortaleza.
         int cep;
-        void validar(int valor);
+        void validar(int cep);
 
     public:
 
 ///
-/// Inicializa o objeto com o valor 0.
-///
-
-        Cep();
-
-///
-/// Inicializa o objeto com CEP informado caso o mesmo seja v&aacute;lido.
-///
-/// @param valor do CEP a ser inserido.
-///
-
-        Cep(int);
-
-///
 /// Met&oacute;do para dar set no CEP.
 ///
-///@param
+///@param int que representa o CEP que ser&aacute; inserido.
+///
+///@throw invalid_argument Em caso de argumento inv&acute;lido,&eacute lancado
+/// um objeto explicando o erro.
 ///
 
         void setCep(int);
@@ -80,17 +69,6 @@ class Classe{
         void validar(string valor);
 
     public:
-///
-/// Inicializa o objeto com o valor 0.
-///
-        Classe();
-
-///
-/// Inicializa o objeto com a Classe informada caso a mesma seja v&aacute;lido.
-///
-/// @param string da Classe a ser inserida.
-///
-        Classe(string);
 
 ///
 /// Met&oacute;do para dar set na Classe.
@@ -124,21 +102,6 @@ class CodAgencia{
         void validar(string agencia);
 
     public:
-
-///
-/// Inicializa o objeto com o valor 0.
-///
-
-        CodAgencia();
-
-///
-/// Inicializa o objeto com o c&oacute;digo de Agencia informado caso o mesma seja v&aacute;lido.
-///
-/// @param string contendo o c&oacute;digo a ser inserido.
-///
-
-        CodAgencia(string);
-
 ///
 /// Met&oacute;do para dar set na Classe.
 ///
@@ -182,8 +145,8 @@ class Data{
     public:
         Data();
         Data(string);
-        void setValor(string);
-        string getValor();
+        void setData(string);
+        string getData();
 };
 
 class Nome{
@@ -206,8 +169,6 @@ class Prazo{
         void validar(int prazo);
 
     public:
-        Prazo();
-        Prazo(int);
         void setPrazo(int);
         int getPrazo();
 
@@ -222,8 +183,6 @@ class Taxa{
         void validar(int taxa);
 
     public:
-        Taxa();
-        Taxa(int);
         void setTaxa(int);
         int getTaxa();
 
@@ -237,8 +196,6 @@ class ValorAplicacao{
         void validar(int valor);
 
     public:
-        ValorAplicacao();
-        ValorAplicacao(int);
         void setValor(int);
         int getValor();
 };
@@ -250,8 +207,6 @@ class CodAplicacao{
         void validar(string aplicacao);
 
     public:
-        CodAplicacao();
-        CodAplicacao(string);
         void setAplicacao(string);
         string getAplicacao();
 };
@@ -263,8 +218,6 @@ class CodBanco{
         void validar(string banco);
 
     public:
-        CodBanco();
-        CodBanco(string);
         void setBanco(string);
         string getBanco();
 };
@@ -275,11 +228,8 @@ class Cpf{
         string cpf;
         void validar(string cpf);
     public:
-        Cpf();
-        Cpf(string);
         void setCpf(string);
         string getCpf();
-        ~Cpf();
 };
 
 class Emissor{
@@ -289,11 +239,8 @@ class Emissor{
         string emissor;
         void validar(string emissor);
     public:
-        Emissor();
-        Emissor(string);
         void setEmissor(string);
         string getEmissor();
-        ~Emissor();
 };
 
 class Endereco{
@@ -303,11 +250,8 @@ class Endereco{
         string endereco;
         void validar(string endereco);
     public:
-        Endereco();
-        Endereco(string);
         void setEndereco(string);
         string getEndereco();
-        ~Endereco();
 };
 
 class Horario{
@@ -315,11 +259,9 @@ class Horario{
         string horario;
         void validar(string horario);
     public:
-        Horario();
         Horario(string);
         void setHorario();
         string getHorario();
-        ~Horario();
 };
 
 class Numero{
@@ -328,11 +270,9 @@ class Numero{
         string numero;
         void validar(string numero);
     public:
-        Numero();
-        Numero(string);
         void setNumero(string);
         string getNumero();
-        ~Numero();
+
 };
 
 class Senha{
@@ -341,11 +281,8 @@ class Senha{
         int senha;
         void validar(int senha);
     public:
-        Senha();
-        Senha(int);
         void setSenha(int);
         int getSenha();
-        ~Senha();
 };
 
 class ValorMinimo{
@@ -353,11 +290,8 @@ class ValorMinimo{
         int valor;
         void validar(int valor);
     public:
-        ValorMinimo();
-        ValorMinimo(int);
         void setValor(int);
         int getValor();
-        ~ValorMinimo();
 };
 
 

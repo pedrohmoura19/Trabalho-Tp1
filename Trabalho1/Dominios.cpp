@@ -2,42 +2,26 @@
 #include <string>
 #include <ctype.h>
 
-Cep::Cep(){
-}
 
-Cep::Cep(int valor){
-    validar(valor);
-    this->cep = valor;
-}
-
-void Cep::validar(int valor){
-    if((LIMITE_MIN_SP1 <= valor) && (valor <= LIMITE_MAX_SP1));
-    else if ((LIMITE_MIN_SP2 <= valor) && (valor <= LIMITE_MAX_SP2));
-    else if((LIMITE_MIN_RJ <= valor) && (valor <= LIMITE_MAX_RJ));
-    else if((LIMITE_MIN_BSB <= valor) && (valor <= LIMITE_MAX_BSB));
-    else if((LIMITE_MIN_SLV <= valor) && (valor <= LIMITE_MAX_SLV));
-    else if((LIMITE_MIN_FORT <= valor) && (valor <= LIMITE_MAX_FORT));
+void Cep::validar(int cep){
+    if((LIMITE_MIN_SP1 <= cep) && (cep <= LIMITE_MAX_SP1));
+    else if ((LIMITE_MIN_SP2 <= cep) && (cep <= LIMITE_MAX_SP2));
+    else if((LIMITE_MIN_RJ <= cep) && (cep <= LIMITE_MAX_RJ));
+    else if((LIMITE_MIN_BSB <= cep) && (cep <= LIMITE_MAX_BSB));
+    else if((LIMITE_MIN_SLV <= cep) && (cep <= LIMITE_MAX_SLV));
+    else if((LIMITE_MIN_FORT <= cep) && (cep <= LIMITE_MAX_FORT));
     else
         throw invalid_argument("CEP invalido");
 
 }
 
-void Cep::setCep(int valor){
-    validar(valor);
-    this->cep = valor;
+void Cep::setCep(int cep){
+    validar(cep);
+    this->cep = cep;
 }
 
 int Cep::getCep(){
     return cep;
-}
-
-
-Classe::Classe(){
-}
-
-Classe::Classe(string classe){
-    validar(classe);
-    this->classe = classe;
 }
 
 void Classe::validar(string classe){
@@ -55,14 +39,6 @@ string Classe::getClasse(){
     return classe;
 }
 
-
-CodAgencia::CodAgencia(){
-}
-
-CodAgencia::CodAgencia(string agencia){
-    validar(agencia);
-    this->agencia = agencia;
-}
 
 void CodAgencia::validar(string agencia){
     if ( (agencia.size()) != FORMATO )
@@ -84,14 +60,6 @@ void CodAgencia::setAgencia(string agencia){
 
 string CodAgencia::getAgencia(){
     return agencia;
-}
-
-
-CodProduto::CodProduto(){
-}
-
-CodProduto::CodProduto(string produto){
-    this->produto = produto;
 }
 
 void CodProduto::validar(string produto){
@@ -118,13 +86,6 @@ string CodProduto::getProduto(){
 }
 
 
-Data::Data(){
-}
-
-Data::Data(string data){
-    this->data = data;
-}
-
 void Data::validar(string data){
     bool bissexto = false;
     string dia,mes,ano;
@@ -147,23 +108,16 @@ void Data::validar(string data){
 
 }
 
-void Data::setValor(string data){
+void Data::setData(string data){
     validar(data);
     this->data = data;
 
 }
 
-string Data::getValor(){
+string Data::getData(){
     return data;
 }
 
-
-Nome::Nome(){
-}
-
-Nome::Nome(string nome){
-    this->nome = nome;
-}
 
 void Nome::validar(string nome){
     int letras = 0;
@@ -199,13 +153,6 @@ string Nome::getNome(){
 }
 
 
-Prazo::Prazo(){
-}
-
-Prazo::Prazo(int prazo){
-    this->prazo = prazo;
-}
-
 void Prazo::validar(int valor){
     if ((prazo == 6 ) || (prazo == 12) || (prazo == 18) || (prazo == 24) || (prazo == 30)|| (prazo == 36)
         || (prazo == 42) || (prazo == 48) || (prazo == 54) || (prazo == 60) || (prazo == 66) || (prazo == 72));
@@ -225,13 +172,6 @@ int Prazo::getPrazo(){
 }
 
 
-Taxa::Taxa(){
-}
-
-Taxa::Taxa(int taxa){
-    this->taxa = taxa;
-}
-
 void Taxa::validar(int taxa){
     if ((LIMITE_MIN > taxa) || (taxa > LIMITE_MAX))
         throw invalid_argument("Taxa invalida");
@@ -246,13 +186,6 @@ int Taxa::getTaxa(){
     return taxa;
 }
 
-
-ValorAplicacao::ValorAplicacao(){
-}
-
-ValorAplicacao::ValorAplicacao(int valor){
-    this->valor = valor;
-}
 
 void ValorAplicacao::validar(int valor){
     if ((LIMITE_MIN > valor) || (valor > LIMITE_MAX))
