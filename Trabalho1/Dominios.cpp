@@ -2,7 +2,7 @@
 #include <string>
 #include <ctype.h>
 
-
+//Metodos da classe Cep
 void Cep::validar(int cep){
     if((LIMITE_MIN_SP1 <= cep) && (cep <= LIMITE_MAX_SP1));
     else if ((LIMITE_MIN_SP2 <= cep) && (cep <= LIMITE_MAX_SP2));
@@ -24,6 +24,7 @@ int Cep::getCep(){
     return cep;
 }
 
+//Metodos da classe Classe
 void Classe::validar(string classe){
     if( (classe == "LCA") || (classe == "CDB") || (classe == "LC") || (classe == "LCI") || (classe == "LF") );
     else
@@ -39,7 +40,7 @@ string Classe::getClasse(){
     return classe;
 }
 
-
+//Metodos da classe CodAgencia
 void CodAgencia::validar(string agencia){
     if ( (agencia.size()) != FORMATO )
         throw invalid_argument("Codigo invalido");
@@ -62,6 +63,7 @@ string CodAgencia::getAgencia(){
     return agencia;
 }
 
+//Metodos da classe CodProduto
 void CodProduto::validar(string produto){
     if ((produto.size()) != FORMATO)
         throw length_error("Tamanho excedido");
@@ -85,26 +87,68 @@ string CodProduto::getProduto(){
     return produto;
 }
 
-
+//Metodos da classe Data
 void Data::validar(string data){
     bool bissexto = false;
     string dia,mes,ano;
+    int iDia,iMes,iAno;
 
     dia[0] = data[0];
     dia[1] = data[1];
-    dia = stoi(dia);
+    iDia = stoi(dia);
 
     mes[0] = data[3];
     mes[1] = data[4];
+    iMes = stoi(mes);
 
     ano[0] = data[6];
     ano[1] = data[7];
     ano[2] = data[8];
     ano[3] = data[9];
+    iAno = stoi(ano);
 
 
-    if ((data[2] != '/')||(data[5] != '/') ||(data.size() != FORMATO))
+    if((iAno % 4) == 0){
+        if((iAno % 100) != 0){
+            bissexto = true;
+        }
+
+    }else{
+        if(iAno % 400 == 0){
+            bissexto = true;
+        }
+    }
+
+
+    if((data[2] != '/')||(data[5] != '/') ||(data.size() != FORMATO)){
         throw invalid_argument("Deve se inserir a entrada em formato DD/MM/AAAA");
+    }
+
+    if( 2020 > iAno || iAno > 2099 ){
+        throw invalid_argument("O ano deve ser da faixa de 2020 a 2099");
+    }
+
+    if( 1 > iMes || iMes > 12 ){
+        throw invalid_argument("Mes Invalido");
+    }
+
+    if((iMes == 1 || iMes == 3 || iMes == 5 || iMes == 7 || iMes == 8 || iMes == 10 || iMes == 12 ) && iDia > 31){
+        throw invalid_argument("Dia Invalido");
+    }
+
+    if((iMes == 4 || iMes == 6 || iMes == 9 || iMes == 11 ) && iDia > 30){
+        throw invalid_argument("Dia Invalido");
+    }
+
+    if( bissexto == false ){
+        if((iMes == 2) && iDia > 28){
+        throw invalid_argument("Dia Invalido");
+        }
+    }else{
+        if((iMes == 2) && iDia > 29){
+        throw invalid_argument("Dia Invalido");
+        }
+    }
 
 }
 

@@ -88,19 +88,73 @@ $(document).ready(function(){initNavTree('class_data.html',''); initResizable();
 <div class="title">Data Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>C&oacute;digo destinado a armazenar a <a class="el" href="class_data.html" title="Código destinado a armazenar a Data.">Data</a>.  
+ <a href="class_data.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_dominios_8h_source.html">Dominios.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a7e546a6e6e55f93cb621011dff413f00"><td class="memItemLeft" align="right" valign="top"><a id="a7e546a6e6e55f93cb621011dff413f00"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Data</b> (string)</td></tr>
-<tr class="separator:a7e546a6e6e55f93cb621011dff413f00"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aee3a6598533a28a3f446c5f8ecb63c0f"><td class="memItemLeft" align="right" valign="top"><a id="aee3a6598533a28a3f446c5f8ecb63c0f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setValor</b> (string)</td></tr>
-<tr class="separator:aee3a6598533a28a3f446c5f8ecb63c0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8dd738e6c3e7ef96784b4e6b6c0cec61"><td class="memItemLeft" align="right" valign="top"><a id="a8dd738e6c3e7ef96784b4e6b6c0cec61"></a>
-string&#160;</td><td class="memItemRight" valign="bottom"><b>getValor</b> ()</td></tr>
-<tr class="separator:a8dd738e6c3e7ef96784b4e6b6c0cec61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75a50f88bc966f20826a3959717a5acc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_data.html#a75a50f88bc966f20826a3959717a5acc">setData</a> (string)</td></tr>
+<tr class="separator:a75a50f88bc966f20826a3959717a5acc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc7b15a5e81334858e48709b2f45cdc3"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_data.html#afc7b15a5e81334858e48709b2f45cdc3">getData</a> ()</td></tr>
+<tr class="separator:afc7b15a5e81334858e48709b2f45cdc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>C&oacute;digo destinado a armazenar a <a class="el" href="class_data.html" title="Código destinado a armazenar a Data.">Data</a>. </p>
+<p>A <a class="el" href="class_data.html" title="Código destinado a armazenar a Data.">Data</a> v&aacute;lida informada deve ser no formato DD/MM/AAAA, com DD representando os dias v&aacute;lidos levando em consideracao anos bissextos e os respectivos meses MM que devem ser da faixa de 01 a 12.J&aacute; o AAAA representa o ano que deve ser inserido na faixa de 2020 a 2099. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="afc7b15a5e81334858e48709b2f45cdc3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc7b15a5e81334858e48709b2f45cdc3">&#9670;&nbsp;</a></span>getData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Data::getData </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Met&oacute;do para dar get na <a class="el" href="class_data.html" title="Código destinado a armazenar a Data.">Data</a>.</p>
+<dl class="section return"><dt>Returns</dt><dd>string Retorna a <a class="el" href="class_data.html" title="Código destinado a armazenar a Data.">Data</a>. </dd></dl>
+
+</div>
+</div>
+<a id="a75a50f88bc966f20826a3959717a5acc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75a50f88bc966f20826a3959717a5acc">&#9670;&nbsp;</a></span>setData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Data::setData </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>data</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Met&oacute;do para dar set na <a class="el" href="class_data.html" title="Código destinado a armazenar a Data.">Data</a>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">string</td><td>no formato DD/MM/AAAA a ser inserido no objeto.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">invalid_argument</td><td>Em caso de argumento inv&aacute;lido,&eacute; lancado um objeto explicando o erro. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="_dominios_8h_source.html">Dominios.h</a></li>
 <li>Dominios.cpp</li>
@@ -111,7 +165,7 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>getValor</b> ()</td
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_data.html">Data</a></li>
-    <li class="footer">Generated on Tue Sep 15 2020 16:56:29 for Trabalho1 by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
+    <li class="footer">Generated on Fri Sep 18 2020 16:23:25 for Trabalho1 by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>
 </body>

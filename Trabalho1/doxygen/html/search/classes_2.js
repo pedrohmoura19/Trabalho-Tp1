@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['nome_27',['Nome',['../class_nome.html',1,'']]]
+  ['emissor_47',['Emissor',['../class_emissor.html',1,'']]],
+  ['endereco_48',['Endereco',['../class_endereco.html',1,'']]]
 ];

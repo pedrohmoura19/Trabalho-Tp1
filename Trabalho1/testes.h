@@ -79,8 +79,8 @@ public:
 
 class TUData {
 private:
-    const string VALOR_VALIDO   = "25/02/2010";
-    const string VALOR_INVALIDO = "01/03/1970";
+    const string VALOR_VALIDO   = "31/03/2040";
+    const string VALOR_INVALIDO = "31/04/2027";
 
     Data *codigo;
 

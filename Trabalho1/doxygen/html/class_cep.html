@@ -96,10 +96,6 @@ $(document).ready(function(){initNavTree('class_cep.html',''); initResizable(); 
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ac34fd9be126216fe522e8e07ab61a8f1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cep.html#ac34fd9be126216fe522e8e07ab61a8f1">Cep</a> ()</td></tr>
-<tr class="separator:ac34fd9be126216fe522e8e07ab61a8f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a24d52d95dd1739713d95e9fd330d5b54"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cep.html#a24d52d95dd1739713d95e9fd330d5b54">Cep</a> (int)</td></tr>
-<tr class="separator:a24d52d95dd1739713d95e9fd330d5b54"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5996385293b801a2f6ecaba8509801b9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cep.html#a5996385293b801a2f6ecaba8509801b9">setCep</a> (int)</td></tr>
 <tr class="separator:a5996385293b801a2f6ecaba8509801b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a328f2f8018c0a0719fcfec286bec467d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cep.html#a328f2f8018c0a0719fcfec286bec467d">getCep</a> ()</td></tr>
@@ -109,51 +105,7 @@ Public Member Functions</h2></td></tr>
 <div class="textblock"><p>C&oacute;digo destinado a armazenar o CEP. </p>
 <p>C&oacute;digo v&aacute;lido caso o valor esteja entre as seguintes faixas:</p>
 <p>-1000000 a 5999999 e 8000000 a 8499999 : S&atilde;o Paulo -20000000 a 26600999 : Rio de Janeiro -70000000 a 70999999 : Bras&iacute;lia. -40000000 a 41999999 : Salvador. -60000000 a 60999999 : Fortaleza. </p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="ac34fd9be126216fe522e8e07ab61a8f1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac34fd9be126216fe522e8e07ab61a8f1">&#9670;&nbsp;</a></span>Cep() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Cep::Cep </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Inicializa o objeto com o valor 0. </p>
-
-</div>
-</div>
-<a id="a24d52d95dd1739713d95e9fd330d5b54"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a24d52d95dd1739713d95e9fd330d5b54">&#9670;&nbsp;</a></span>Cep() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Cep::Cep </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>valor</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Inicializa o objeto com CEP informado caso o mesmo seja v&aacute;lido.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">valor</td><td>do CEP a ser inserido. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a328f2f8018c0a0719fcfec286bec467d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a328f2f8018c0a0719fcfec286bec467d">&#9670;&nbsp;</a></span>getCep()</h2>
 
@@ -183,7 +135,7 @@ Public Member Functions</h2></td></tr>
           <td class="memname">void Cep::setCep </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>valor</em></td><td>)</td>
+          <td class="paramname"><em>cep</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -191,7 +143,13 @@ Public Member Functions</h2></td></tr>
 <p>Met&oacute;do para dar set no CEP.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname"></td><td></td></tr>
+    <tr><td class="paramname">int</td><td>que representa o CEP que ser&aacute; inserido.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">invalid_argument</td><td>Em caso de argumento inv&acute;lido,&amp;eacute lancado um objeto explicando o erro. </td></tr>
   </table>
   </dd>
 </dl>
@@ -208,7 +166,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_cep.html">Cep</a></li>
-    <li class="footer">Generated on Tue Sep 15 2020 16:56:29 for Trabalho1 by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
+    <li class="footer">Generated on Fri Sep 18 2020 16:23:24 for Trabalho1 by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>
 </body>

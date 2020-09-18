@@ -135,45 +135,7 @@ bool TUCodAgencia::run(){
 
 
 /////////////Metodos da classe TUCodProduto//////////////
-void TUCodProduto::setUp(){
-    codigo = new CodProduto();
-    estado = true;
-}
 
-void TUCodProduto::tearDown(){
-    delete codigo;
-}
-
-void TUCodProduto::testarCenarioSucesso(){
-    try{
-        codigo->setProduto(VALOR_VALIDO);
-        if(codigo->getProduto() != VALOR_VALIDO){
-            estado = false;
-        }
-    }
-    catch(invalid_argument excecao){
-        estado = false;
-    }
-
-}
-
-void TUCodProduto::testarCenarioFalha(){
-    try{
-        codigo->setProduto(VALOR_INVALIDO);
-        estado = false;
-    }
-    catch(invalid_argument excecao){
-        return;
-    }
-}
-
-bool TUCodProduto::run(){
-    setUp();
-    testarCenarioSucesso();
-    testarCenarioFalha();
-    tearDown();
-    return estado;
-}
 
 /////////////Metodos da classe TUData//////////////
 void TUData::setUp(){
@@ -292,6 +254,88 @@ void TUPrazo::testarCenarioFalha(){
 }
 
 bool TUPrazo::run(){
+    setUp();
+    testarCenarioSucesso();
+    testarCenarioFalha();
+    tearDown();
+    return estado;
+}
+
+/////////////Metodos da classe TUTaxa//////////////
+void TUTaxa::setUp(){
+    codigo = new Taxa();
+    estado = true;
+}
+
+void TUTaxa::tearDown(){
+    delete codigo;
+}
+
+void TUTaxa::testarCenarioSucesso(){
+    try{
+        codigo->setTaxa(VALOR_VALIDO);
+        if(codigo->getTaxa() != VALOR_VALIDO){
+            estado = false;
+        }
+    }
+    catch(invalid_argument excecao){
+        estado = false;
+    }
+
+}
+
+void TUTaxa::testarCenarioFalha(){
+    try{
+        codigo->setTaxa(VALOR_INVALIDO);
+        estado = false;
+    }
+    catch(invalid_argument excecao){
+        return;
+    }
+}
+
+bool TUTaxa::run(){
+    setUp();
+    testarCenarioSucesso();
+    testarCenarioFalha();
+    tearDown();
+    return estado;
+}
+
+/////////////Metodos da classe TUValorAplicacao//////////////
+void TUValorAplicacao::setUp(){
+    codigo = new ValorAplicacao();
+    estado = true;
+}
+
+void TUValorAplicacao::tearDown(){
+    delete codigo;
+}
+
+void TUValorAplicacao::testarCenarioSucesso(){
+    try{
+        codigo->setValor(VALOR_VALIDO);
+        if(codigo->getValor() != VALOR_VALIDO){
+            estado = false;
+        }
+    }
+    catch(invalid_argument excecao){
+        estado = false;
+    }
+
+}
+
+void TUValorAplicacao::testarCenarioFalha(){
+    try{
+        codigo->setValor(VALOR_INVALIDO);
+        estado = false;
+    }
+    catch(invalid_argument excecao){
+        return;
+    }
+}
+
+bool TUValorAplicacao::run(){
     setUp();
     testarCenarioSucesso();
     testarCenarioFalha();

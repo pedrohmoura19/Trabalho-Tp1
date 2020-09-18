@@ -123,31 +123,84 @@ class CodAgencia{
         string getAgencia();
 };
 
+/// @class CodProduto
+///
+/// @brief C&oacute;digo destinado a armazenar o C&oacute;digo do Produto.
+///
+/// O c&oacute;digo de Agencia v&aacute;lido informado deve ser no formato XXX em que X &eacute; um d&iacute;gito de 0 a 9.
+/// N&atildeo; &eacute; permitido o c&oacute;digo 000.
+///
+
 class CodProduto{
     private:
-        static const int FORMATO = 3;
+        static const int FORMATO = 3;       //Tamanho do formato valido.
         string produto;
         void validar(string produto);
 
     public:
-        CodProduto();
-        CodProduto(string);
+///
+/// Met&oacute;do para dar set no C&oacute;digo do Produto.
+///
+/// @param string com o produto a ser inserido no objeto.
+///
+/// @throw invalid_argument Em caso de argumento inv&acute;lido,&eacute lancado
+/// um objeto explicando o erro.
+///
         void setProduto(string);
+
+///
+/// Met&oacute;do para dar get no C&oacute;digo do Produto.
+///
+///
+///@return string Retorna o c&oacute;digo do Produto.
+///
+
         string getProduto();
 };
+
+/// @class Data
+///
+/// @brief C&oacute;digo destinado a armazenar a Data.
+///
+/// A Data v&aacute;lida informada deve ser no formato DD/MM/AAAA, com DD representando os dias v&aacute;lidos
+/// levando em consideracao anos bissextos e os respectivos meses MM que devem ser da faixa de 01 a 12.J&aacute;
+/// o AAAA representa o ano que deve ser inserido na faixa de 2020 a 2099.
+///
 
 class Data{
     private:
         static const int FORMATO = 10;
         string data;
-        void validar(string valor);
+        void validar(string data);
 
     public:
-        Data();
-        Data(string);
+///
+/// Met&oacute;do para dar set na Data.
+///
+/// @param string no formato DD/MM/AAAA a ser inserido no objeto.
+///
+/// @throw invalid_argument Em caso de argumento inv&aacute;lido,&eacute; lancado
+/// um objeto explicando o erro.
+///
         void setData(string);
+
+///
+/// Met&oacute;do para dar get na Data.
+///
+///
+///@return string Retorna a Data.
+///
         string getData();
 };
+
+/// @class Nome
+///
+/// @brief C&oacute;digo destinado a armazenar o Nome.
+///
+/// O nome &eacute; um texto composto por 5 a 30 caracteres onde cada caracter pode ser letra (A-Z ou a-z) ou
+/// espaco, h&aacute; pelo menos 5 letras, n&atilde;o h&aacute; espacos em sequencia e a primeira letra de cada termo &eacute;
+/// letra mai&uacute;scula.
+///
 
 class Nome{
     private:
@@ -157,9 +210,22 @@ class Nome{
         void validar(string nome);
 
     public:
-        Nome();
-        Nome(string);
+///
+/// Met&oacute;do para dar set no Nome.
+///
+/// @param string com 5 a 30 caracteres a ser inserido no objeto.
+///
+/// @throw invalid_argument Em caso de argumento inv&aacute;lido,&eacute; lancado
+/// um objeto explicando o erro.
+///
         void setNome(string);
+///
+/// Met&oacute;do para dar get no Nome.
+///
+///
+///@return string Retorna o Nome.
+///
+
         string getNome();
 };
 
