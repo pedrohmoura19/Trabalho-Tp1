@@ -286,12 +286,18 @@ string CodBanco::getValor(){
     return valor;
 }
 
+// Metodos da classe Horario
 
-Senha::Senha(){
+void Horario::validar(string horario){
 }
 
-Senha::Senha(string valor){
-    this->valor = valor;
+void Horario::setHorario(string horario){
+    validar(horario);
+    this->horario = horario;
+}
+
+string Horario::getHorario(){
+    return horario;
 }
 
 void Senha::validar(string valor){

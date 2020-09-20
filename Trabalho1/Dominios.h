@@ -332,7 +332,6 @@ class Horario{
         string horario;
         void validar(string horario);
     public:
-        Horario(string);
         void setHorario();
         string getHorario();
 };
