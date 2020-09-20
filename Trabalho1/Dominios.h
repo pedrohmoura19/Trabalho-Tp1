@@ -298,8 +298,8 @@ class CodBanco{
 class Cpf{
     private:
         static const int TAMANHO = 14;
-        string cpf;
-        void validar(string cpf);
+        string valor;
+        void validar(string valor);
     public:
         void setCpf(string);
         string getCpf();
@@ -358,7 +358,7 @@ class Senha{
         Senha();
         Senha(string);
         void setValor(string);
-        int getValor();
+        string getValor();
         ~Senha();
 
 };
