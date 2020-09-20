@@ -66,7 +66,7 @@ string CodAgencia::getAgencia(){
 //Metodos da classe CodProduto
 void CodProduto::validar(string produto){
     if ((produto.size()) != FORMATO)
-        throw length_error("Tamanho excedido");
+        throw invalid_argument("Formato incorreto");
     try{
         stoi(produto);
     }
@@ -255,11 +255,11 @@ string Numero::getNumero(){
 }
 
 
-void Prazo::validar(int valor){
+void Prazo::validar(int prazo){
     if ((prazo == 6 ) || (prazo == 12) || (prazo == 18) || (prazo == 24) || (prazo == 30)|| (prazo == 36)
         || (prazo == 42) || (prazo == 48) || (prazo == 54) || (prazo == 60) || (prazo == 66) || (prazo == 72));
     else
-        throw invalid_argument("Tamanho incorreto");
+        throw invalid_argument("Valor invalido");
 
 }
 
