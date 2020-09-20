@@ -1,5 +1,5 @@
 var class_cod_banco =
 [
-    [ "getBanco", "class_cod_banco.html#a1f217efee2c04e1b45252664570ada9a", null ],
-    [ "setBanco", "class_cod_banco.html#a6575320c8435a76686063777a5fe335d", null ]
+    [ "getValor", "class_cod_banco.html#aac8f2f89982d1aee960cd2a0ae9fe3fd", null ],
+    [ "setValor", "class_cod_banco.html#afcccebb9f78a4433891a04e52f4247cd", null ]
 ];

@@ -303,13 +303,6 @@ int ValorAplicacao::getValor(){
     return valor;
 }
 
-CodAplicacao::CodAplicacao(){
-}
-
-CodAplicacao::CodAplicacao(string valor){
-    this->valor = valor;
-}
-
 void CodAplicacao::validar(string valor){
     if ((valor.size()) != TAMANHO ){
         throw length_error("Tamanho excedido");
@@ -321,29 +314,23 @@ void CodAplicacao::validar(string valor){
         stoi(valor);
     }
     catch(invalid_argument &exp){
-     
+
     }
 }
 
-void CodAplicacao::setValor(string valor){
+void CodAplicacao::setAplicacao(string valor){
     validar(valor);
     this->valor = valor;
 }
 
-string CodAplicacao::getValor(){
+string CodAplicacao::getAplicacao(){
     return valor;
 }
 
-CodBanco::CodBanco(){
-}
-
-CodBanco::CodBanco(string valor){
-    this->valor = valor;
-}
 
 void CodBanco::validar(string valor){
     if ( tamanhoValor != TAMANHO ){
-        throw invalid_argument("Tamanho excedido");
+        throw invalid_argument("Tamanho invalido");
     }
     if((valor == "341") || (valor == "001") || (valor == "237") || (valor == "104") || (valor == "033"));
     else{
@@ -361,23 +348,16 @@ string CodBanco::getValor(){
 }
 
 
-Senha::Senha(){ 
-}
-
-Senha::Senha(string valor){
-    this->valor = valor;
-}
-
 void Senha::validar(string valor){
-    if( tamanhoValor != TAMANHO){
+    if( valor.size() != TAMANHO){
         throw invalid_argument("Tamanho excedido");
     }
-    for (int i = 0; i < tamanhoValor; i++){
+    for (int i = 0; i < valor.size() ; i++){
         if(valor[i] >= 48 && valor[i] <= 57);
         else{
             throw invalid_argument("Entrada invalida");
         }
-        
+
     }
 }
 

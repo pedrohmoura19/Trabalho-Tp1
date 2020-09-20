@@ -20,21 +20,21 @@
 	<string>
 	<ctype.h>
 
-1600553598 d:\pedro\github\trabalho-tp1\trabalho1\dominios.h
+1600637756 d:\pedro\github\trabalho-tp1\trabalho1\dominios.h
 	<string>
 	<stdexcept>
 
-1600558200 source:d:\pedro\github\trabalho-tp1\trabalho1\main.cpp
+1600637356 source:d:\pedro\github\trabalho-tp1\trabalho1\main.cpp
 	<iostream>
 	<string>
 	"Dominios.h"
 	"testes.h"
 
-1600558110 source:d:\pedro\github\trabalho-tp1\trabalho1\testes.cpp
+1600637356 source:d:\pedro\github\trabalho-tp1\trabalho1\testes.cpp
 	<iostream>
 	<string>
 	"testes.h"
 
-1600558768 d:\pedro\github\trabalho-tp1\trabalho1\testes.h
+1600637356 d:\pedro\github\trabalho-tp1\trabalho1\testes.h
 	"Dominios.h"
 

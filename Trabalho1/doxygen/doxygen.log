@@ -1,19 +1,30 @@
 warning: source ..\Dominios2.cpp is not a readable file or directory... skipping.
-D:/Pedro/GitHub/Trabalho-Tp1/Trabalho1/Dominios.h:40: warning: argument 'int' of command @param is not found in the argument list of Cep::setCep(int cep)
-D:/Pedro/GitHub/Trabalho-Tp1/Trabalho1/Dominios.h:49: warning: The following parameter of Cep::setCep(int cep) is not documented:
+D:/Pedro/GitHub/Trabalho-Tp1/Trabalho1/Dominios.h:42: warning: argument 'int' of command @param is not found in the argument list of Cep::setCep(int cep)
+D:/Pedro/GitHub/Trabalho-Tp1/Trabalho1/Dominios.h:51: warning: The following parameter of Cep::setCep(int cep) is not documented:
   parameter 'cep'
-D:/Pedro/GitHub/Trabalho-Tp1/Trabalho1/Dominios.h:76: warning: unexpected end of comment block while parsing the argument of command param
-D:/Pedro/GitHub/Trabalho-Tp1/Trabalho1/Dominios.h:94: warning: Unsupported symbol &atildeo; found
-D:/Pedro/GitHub/Trabalho-Tp1/Trabalho1/Dominios.h:105: warning: argument 'string' of command @param is not found in the argument list of CodAgencia::setAgencia(string agencia)
-D:/Pedro/GitHub/Trabalho-Tp1/Trabalho1/Dominios.h:114: warning: The following parameter of CodAgencia::setAgencia(string agencia) is not documented:
+D:/Pedro/GitHub/Trabalho-Tp1/Trabalho1/Dominios.h:78: warning: unexpected end of comment block while parsing the argument of command param
+D:/Pedro/GitHub/Trabalho-Tp1/Trabalho1/Dominios.h:96: warning: Unsupported symbol &atildeo; found
+D:/Pedro/GitHub/Trabalho-Tp1/Trabalho1/Dominios.h:107: warning: argument 'string' of command @param is not found in the argument list of CodAgencia::setAgencia(string agencia)
+D:/Pedro/GitHub/Trabalho-Tp1/Trabalho1/Dominios.h:116: warning: The following parameter of CodAgencia::setAgencia(string agencia) is not documented:
   parameter 'agencia'
-D:/Pedro/GitHub/Trabalho-Tp1/Trabalho1/Dominios.h:130: warning: Unsupported symbol &atildeo; found
-D:/Pedro/GitHub/Trabalho-Tp1/Trabalho1/Dominios.h:141: warning: argument 'string' of command @param is not found in the argument list of CodProduto::setProduto(string produto)
-D:/Pedro/GitHub/Trabalho-Tp1/Trabalho1/Dominios.h:149: warning: The following parameter of CodProduto::setProduto(string produto) is not documented:
+D:/Pedro/GitHub/Trabalho-Tp1/Trabalho1/Dominios.h:143: warning: argument 'string' of command @param is not found in the argument list of CodProduto::setProduto(string produto)
+D:/Pedro/GitHub/Trabalho-Tp1/Trabalho1/Dominios.h:151: warning: The following parameter of CodProduto::setProduto(string produto) is not documented:
   parameter 'produto'
-D:/Pedro/GitHub/Trabalho-Tp1/Trabalho1/Dominios.h:177: warning: argument 'string' of command @param is not found in the argument list of Data::setData(string data)
-D:/Pedro/GitHub/Trabalho-Tp1/Trabalho1/Dominios.h:185: warning: The following parameter of Data::setData(string data) is not documented:
+D:/Pedro/GitHub/Trabalho-Tp1/Trabalho1/Dominios.h:179: warning: argument 'string' of command @param is not found in the argument list of Data::setData(string data)
+D:/Pedro/GitHub/Trabalho-Tp1/Trabalho1/Dominios.h:187: warning: The following parameter of Data::setData(string data) is not documented:
   parameter 'data'
-D:/Pedro/GitHub/Trabalho-Tp1/Trabalho1/Dominios.h:213: warning: argument 'string' of command @param is not found in the argument list of Nome::setNome(string nome)
-D:/Pedro/GitHub/Trabalho-Tp1/Trabalho1/Dominios.h:221: warning: The following parameter of Nome::setNome(string nome) is not documented:
+D:/Pedro/GitHub/Trabalho-Tp1/Trabalho1/Dominios.h:215: warning: argument 'string' of command @param is not found in the argument list of Nome::setNome(string nome)
+D:/Pedro/GitHub/Trabalho-Tp1/Trabalho1/Dominios.h:223: warning: The following parameter of Nome::setNome(string nome) is not documented:
   parameter 'nome'
+D:/Pedro/GitHub/Trabalho-Tp1/Trabalho1/Dominios.h:252: warning: argument 'string' of command @param is not found in the argument list of Numero::setNumero(string numero)
+D:/Pedro/GitHub/Trabalho-Tp1/Trabalho1/Dominios.h:260: warning: The following parameter of Numero::setNumero(string numero) is not documented:
+  parameter 'numero'
+D:/Pedro/GitHub/Trabalho-Tp1/Trabalho1/Dominios.h:283: warning: argument 'int' of command @param is not found in the argument list of Prazo::setPrazo(int prazo)
+D:/Pedro/GitHub/Trabalho-Tp1/Trabalho1/Dominios.h:291: warning: The following parameter of Prazo::setPrazo(int prazo) is not documented:
+  parameter 'prazo'
+D:/Pedro/GitHub/Trabalho-Tp1/Trabalho1/Dominios.h:317: warning: argument 'int' of command @param is not found in the argument list of Taxa::setTaxa(int taxa)
+D:/Pedro/GitHub/Trabalho-Tp1/Trabalho1/Dominios.h:325: warning: The following parameter of Taxa::setTaxa(int taxa) is not documented:
+  parameter 'taxa'
+D:/Pedro/GitHub/Trabalho-Tp1/Trabalho1/Dominios.h:351: warning: argument 'int' of command @param is not found in the argument list of ValorAplicacao::setValor(int valor)
+D:/Pedro/GitHub/Trabalho-Tp1/Trabalho1/Dominios.h:359: warning: The following parameter of ValorAplicacao::setValor(int valor) is not documented:
+  parameter 'valor'
