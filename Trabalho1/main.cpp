@@ -1,22 +1,48 @@
 #include <iostream>
 #include <string>
+
 #include "Dominios.h"
+#include "testes.h"
 
 using namespace std;
 
-int main()
-{
-    Classe cla1("abc");
-    CEP cep1(60000001);
+int main(){
 
-    cout << cep1.getValor() << endl;
+    TUCep testecep;
+    TUClasse testeclasse;
+    TUCodAgencia testeagencia;
+    TUData testedata;
 
-    try{
-        cla1.setValor("CDB");
+    switch(testecep.run()){
+        case true : cout << "SUCESSO no teste do CEP" << endl;
+                            break;
+        case false : cout << "FALHA no teste do CEP" << endl;
+                            break;
     }
-    catch(invalid_argument &exp){
-        cout << exp.what() << endl;
+
+    switch(testeclasse.run()){
+        case true  : cout << "SUCESSO no teste de Classe" << endl;
+                            break;
+        case false : cout << "FALHA no teste de Classe" << endl;
+                            break;
+
     }
 
+    switch(testeagencia.run()){
+        case true  : cout << "SUCESSO no teste de Codigo de Agencia" << endl;
+                            break;
+        case false : cout << "FALHA no teste de Codigo de Agencia" << endl;
+                            break;
+
+    }
+
+    switch(testedata.run()){
+        case true  : cout << "SUCESSO no teste de Data" << endl;
+                            break;
+        case false : cout << "FALHA no teste de Data" << endl;
+                            break;
+
+    }
+    return 0;
 
 }
