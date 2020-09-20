@@ -196,6 +196,64 @@ string Nome::getNome(){
     return nome;
 }
 
+void Numero::validar(string numero){
+    if(numero.size() > TAMANHO){
+        throw invalid_argument("Argumento invalido");
+    }
+
+    if(numero[6] != '-'){
+        throw invalid_argument("Formato invalido");
+    }
+
+    int i = 0;
+
+    for(i=0;i<numero.size();i++){
+        if(isdigit(numero[i]) == false && numero[i] != '-'){
+            throw invalid_argument("Formato invalido");
+        }
+    }
+
+    string digito1, digito2, digito3, digito4, digito5, digito6 , digito8;
+    int iDigito1, iDigito2, iDigito3, iDigito4, iDigito5, iDigito6 , iDigito8;
+    int digitoVerificador, somaNum;
+    digito1 = numero[0];
+    iDigito1 = (stoi(digito1)*1);
+
+    digito2 = numero[1];
+    iDigito2 = (stoi(digito2)*2);
+
+    digito3 = numero[2];
+    iDigito3 = (stoi(digito3)*3);
+
+    digito4 = numero[3];
+    iDigito4 = (stoi(digito4)*4);
+
+    digito5 = numero[4];
+    iDigito5 = (stoi(digito5)*5);
+
+    digito6 = numero[5];
+    iDigito6 = (stoi(digito6)*6);
+
+    digito8 = numero[7];
+    iDigito8 = stoi(digito8);
+
+    somaNum = iDigito1+ iDigito2+ iDigito3 + iDigito4 + iDigito5 + iDigito6;
+    digitoVerificador = (9-(somaNum%6));
+
+    if(digitoVerificador != iDigito8){
+        throw invalid_argument("Digito verificador errado");
+    }
+}
+
+void Numero::setNumero(string numero){
+    validar(numero);
+    this->numero = numero;
+}
+
+string Numero::getNumero(){
+    return numero;
+}
+
 
 void Prazo::validar(int valor){
     if ((prazo == 6 ) || (prazo == 12) || (prazo == 18) || (prazo == 24) || (prazo == 30)|| (prazo == 36)

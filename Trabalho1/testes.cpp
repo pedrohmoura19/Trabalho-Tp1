@@ -220,6 +220,48 @@ bool TUNome::run(){
     return estado;
 }
 
+/////////////Metodos da classe TUNumero//////////////
+void TUNumero::setUp(){
+    codigo = new Numero();
+    estado = true;
+}
+
+void TUNumero::tearDown(){
+    delete codigo;
+}
+
+void TUNumero::testarCenarioSucesso(){
+    try{
+        codigo->setNumero(VALOR_VALIDO);
+        if(codigo->getNumero() != VALOR_VALIDO){
+            estado = false;
+        }
+    }
+    catch(invalid_argument excecao){
+        estado = false;
+    }
+
+}
+
+void TUNumero::testarCenarioFalha(){
+    try{
+        codigo->setNumero(VALOR_INVALIDO);
+        estado = false;
+    }
+    catch(invalid_argument excecao){
+        return;
+    }
+}
+
+bool TUNumero::run(){
+    setUp();
+    testarCenarioSucesso();
+    testarCenarioFalha();
+    tearDown();
+    return estado;
+}
+
+
 /////////////Metodos da classe TUPrazo//////////////
 void TUPrazo::setUp(){
     codigo = new Prazo();

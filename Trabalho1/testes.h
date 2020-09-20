@@ -113,6 +113,24 @@ public:
     bool run();
 };
 
+class TUNumero {
+private:
+    const string VALOR_VALIDO   = "819889-8";
+    const string VALOR_INVALIDO = "995389-7";
+
+    Numero *codigo;
+
+    bool estado;
+
+    void setUp();
+    void tearDown();
+    void testarCenarioSucesso();
+    void testarCenarioFalha();
+
+public:
+    bool run();
+};
+
 class TUPrazo {
 private:
     const int VALOR_VALIDO   = 48;

@@ -12,6 +12,7 @@ int main(){
     TUClasse testeclasse;
     TUCodAgencia testeagencia;
     TUData testedata;
+    TUNumero testenumero;
 
     switch(testecep.run()){
         case true : cout << "SUCESSO no teste do CEP" << endl;
@@ -43,6 +44,14 @@ int main(){
                             break;
 
     }
+
+    switch(testenumero.run()){
+        case true : cout << "SUCESSO no teste do Numero" << endl;
+                            break;
+        case false : cout << "FALHA no teste do Numero" << endl;
+                            break;
+    }
+
     return 0;
 
 }

@@ -195,7 +195,7 @@ class Data{
 
 /// @class Nome
 ///
-/// @brief C&oacute;digo destinado a armazenar o Nome.
+/// @brief C&oacute;digo destinado a armazenar o Nome do usu&aacute/rio.
 ///
 /// O nome &eacute; um texto composto por 5 a 30 caracteres onde cada caracter pode ser letra (A-Z ou a-z) ou
 /// espaco, h&aacute; pelo menos 5 letras, n&atilde;o h&aacute; espacos em sequencia e a primeira letra de cada termo &eacute;
@@ -229,13 +229,53 @@ class Nome{
         string getNome();
 };
 
+/// @class Numero
+///
+/// @brief C&oacute;digo destinado a armazenar a conta corrente do usu&aacute/rio.
+///
+/// O nome &eacute; um texto composto por 5 a 30 caracteres onde cada caracter pode ser letra (A-Z ou a-z) ou
+/// espaco, h&aacute; pelo menos 5 letras, n&atilde;o h&aacute; espacos em sequencia e a primeira letra de cada termo &eacute;
+/// letra mai&uacute;scula.
+///
+
+class Numero{
+    private:
+        static const int TAMANHO = 8;
+        string numero;
+        void validar(string numero);
+    public:
+        void setNumero(string);
+        string getNumero();
+
+};
+
+/// @class Prazo
+///
+/// @brief C&oacute;digo destinado a armazenar o Prazo da aplicacao em meses.
+///
+/// O Prazo v&aacute;lido inserido deve ser um valor igual a 6, 12, 18, 24, 30, 36, 42, 48, 54, 60, 66 ou 72 meses.
+///
 class Prazo{
     private:
         int prazo;
         void validar(int prazo);
 
     public:
+///
+/// Met&oacute;do para dar set no Prazo.
+///
+/// @param int Valor a ser inserido no objeto.
+///
+/// @throw invalid_argument Em caso de argumento inv&aacute;lido,&eacute; lancado
+/// um objeto explicando o erro.
+///
         void setPrazo(int);
+///
+/// Met&oacute;do para dar get no Prazo.
+///
+///
+///@return int Retorna o valor do Prazo.
+///
         int getPrazo();
 
 };
@@ -330,16 +370,6 @@ class Horario{
         string getHorario();
 };
 
-class Numero{
-    private:
-        static const int TAMANHO = 8;
-        string numero;
-        void validar(string numero);
-    public:
-        void setNumero(string);
-        string getNumero();
-
-};
 
 class Senha{
     private:
