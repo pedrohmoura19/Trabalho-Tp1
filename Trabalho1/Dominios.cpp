@@ -245,13 +245,6 @@ int ValorAplicacao::getValor(){
     return valor;
 }
 
-CodAplicacao::CodAplicacao(){
-}
-
-CodAplicacao::CodAplicacao(string valor){
-    this->valor = valor;
-}
-
 void CodAplicacao::validar(string valor){
     if ((valor.size()) != TAMANHO ){
         throw length_error("Tamanho excedido");
@@ -265,15 +258,6 @@ void CodAplicacao::validar(string valor){
     catch(invalid_argument &exp){
      
     }
-}
-
-void CodAplicacao::setValor(string valor){
-    validar(valor);
-    this->valor = valor;
-}
-
-string CodAplicacao::getValor(){
-    return valor;
 }
 
 CodBanco::CodBanco(){
@@ -312,7 +296,7 @@ Senha::Senha(string valor){
 
 void Senha::validar(string valor){
     if( tamanhoValor != TAMANHO){
-        throw invalid_argument("Tamanho excedido");
+        throw invalid_argument("Tamanho inválido");
     }
     for (int i = 0; i < tamanhoValor; i++){
         if(valor[i] >= 48 && valor[i] <= 57);
@@ -332,4 +316,59 @@ string Senha::getValor(){
     return valor;
 }
 
+// Metodos da classe CPF
 
+void Cpf::validar(string valor){
+    if( valor.size() != TAMANHO){
+        throw invalid_argument("Tamanho inválido");
+    }
+    for(int i = 0; i < valor.size(); i++){
+        if(valor[i] >= 48 && valor[i] <= 57 && i != 3 && i != 7 && i != 11);
+        else if( (i == 3 || i == 7) && valor[i] == 46);
+        else if(i == 11 && valor[i] == '-');
+        else{
+            throw invalid_argument("Formato inválido");
+        }
+    }   
+    int aux[11];
+    for(int i = 0, j = 0; i < valor.size(); i++){
+        if( i != 3 && i != 7 && i != 11){
+            aux[j] = (valor[i] - 48);
+            j++;
+        }
+    }
+
+
+    int digito1, digito2, temp = 0;
+
+    for(int i = 0; i < 9; i++){
+        temp += ( aux[i] * (10 - i));
+    }
+    
+    temp %= 11;
+    if(temp < 2){
+        digito1 = 0;
+    }
+    else{
+        digito1 = 11 - temp;
+    }
+    
+    temp =0;
+
+    for(int i = 0; i < 10; i++){
+        temp += (aux[i] * (11 - i));
+    }
+        
+    temp %= 11;
+
+    if(temp < 2){
+        digito2 = 0;
+    }
+    else{
+        digito2 = 11 - temp;
+    }
+    if(digito1 == aux[9] && digito2 == aux[10]);
+    else{
+        throw invalid_argument("CPF invalido");
+    }
+}
