@@ -21,13 +21,13 @@ using namespace std;
 class Cep{
     private:
         static const int LIMITE_MIN_SP1 = 1000000;
-        static const int LIMITE_MAX_SP1 = 5999999;  // Limites 1 do CEP da cidade de S„o Paulo.
+        static const int LIMITE_MAX_SP1 = 5999999;  // Limites 1 do CEP da cidade de S√£o Paulo.
         static const int LIMITE_MIN_SP2 = 8000000;
-        static const int LIMITE_MAX_SP2 = 8499999;  // Limites 2 do CEP da cidade de S„o Paulo.
+        static const int LIMITE_MAX_SP2 = 8499999;  // Limites 2 do CEP da cidade de S√£o Paulo.
         static const int LIMITE_MIN_RJ  = 20000000;
         static const int LIMITE_MAX_RJ  = 26600999; // Limites do CEP da cidade do Rio de Janeiro.
         static const int LIMITE_MIN_BSB = 70000000;
-        static const int LIMITE_MAX_BSB = 70999999; // Limites do CEP da cidade de BrasÌlia.
+        static const int LIMITE_MAX_BSB = 70999999; // Limites do CEP da cidade de Bras√≠lia.
         static const int LIMITE_MIN_SLV = 40000000;
         static const int LIMITE_MAX_SLV = 41999999; // Limites do CEP da cidade de Salvador.
         static const int LIMITE_MIN_FORT = 60000000;
@@ -97,7 +97,7 @@ class Classe{
 
 class CodAgencia{
     private:
-        static const int FORMATO = 4;       // Tamanho do formato v·lido.
+        static const int FORMATO = 4;       // Tamanho do formato v√°lido.
         string agencia;
         void validar(string agencia);
 
@@ -308,9 +308,11 @@ class ValorAplicacao{
 
 class CodAplicacao{
     private:
-        static const int FORMATO = 5;
-        string aplicacao;
-        void validar(string aplicacao);
+
+        static const int TAMANHO = 5;
+        string valor;
+        int tamanhoValor = valor.size();
+        void validar(string valor);
 
     public:
         void setAplicacao(string);
@@ -319,13 +321,18 @@ class CodAplicacao{
 
 class CodBanco{
     private:
-        static const int FORMATO = 3;
-        string banco;
-        void validar(string banco);
+
+        static const int TAMANHO = 3;
+        string valor;
+        int tamanhoValor = valor.size();
+        void validar(string valor);
 
     public:
-        void setBanco(string);
-        string getBanco();
+        CodBanco();
+        CodBanco(string);
+        void setValor(string);
+        string getValor();
+        ~CodBanco();
 };
 
 class Cpf{
@@ -374,11 +381,16 @@ class Horario{
 class Senha{
     private:
         static const int TAMANHO = 6;
-        int senha;
-        void validar(int senha);
+        string valor;
+        int tamanhoValor = valor.size();
+        void validar(string valor);
     public:
-        void setSenha(int);
-        int getSenha();
+        Senha();
+        Senha(string);
+        void setValor(string);
+        int getValor();
+        ~Senha();
+
 };
 
 class ValorMinimo{
