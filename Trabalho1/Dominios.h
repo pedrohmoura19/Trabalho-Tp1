@@ -138,7 +138,7 @@ class ValorAplicacao{
 
 class CodAplicacao{
     private:
-        static const int FORMATO = 5;
+        static const int TAMANHO = 5;
         string valor;
         int tamanhoValor = valor.size();
         void validar(string valor);
@@ -152,7 +152,7 @@ class CodAplicacao{
 
 class CodBanco{
     private:
-        static const int FORMATO = 3;
+        static const int TAMANHO = 3;
         string valor;
         int tamanhoValor = valor.size();
         void validar(string valor);
@@ -162,6 +162,7 @@ class CodBanco{
         CodBanco(string);
         void setValor(string);
         string getValor();
+        ~CodBanco();
 };
 
 class Cpf{
@@ -235,12 +236,13 @@ class Numero{
 class Senha{
     private:
         static const int TAMANHO = 6;
-        int valor;
-        void validar(int valor);
+        string valor;
+        int tamanhoValor = valor.size();
+        void validar(string valor);
     public:
         Senha();
-        Senha(int);
-        void setValor(int);
+        Senha(string);
+        void setValor(string);
         int getValor();
         ~Senha();
 };
