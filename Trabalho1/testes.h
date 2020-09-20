@@ -167,6 +167,23 @@ public:
     bool run();
 };
 
+class TUCpf {
+private:
+    const string VALOR_VALIDO   = "020.950.771-30";
+    const string VALOR_INVALIDO = "789.454.987-87";
+
+    Cpf *codigo;
+
+    bool estado;
+
+    void setUp();
+    void tearDown();
+    void testarCenarioSucesso();
+    void testarCenarioFalha();
+
+public:
+    bool run();
+};
 
 
 

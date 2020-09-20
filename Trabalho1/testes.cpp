@@ -342,3 +342,44 @@ bool TUValorAplicacao::run(){
     tearDown();
     return estado;
 }
+
+/////////////Metodos da classe TUCpf//////////////
+void TUCpf::setUp(){
+    codigo = new Cpf();
+    estado = true;
+}
+
+void TUCpf::tearDown(){
+    delete codigo;
+}
+
+void TUCpf::testarCenarioSucesso(){
+    try{
+        codigo->setCpf(VALOR_VALIDO);
+        if(codigo->getCpf() != VALOR_VALIDO){
+            estado = false;
+        }
+    }
+    catch(invalid_argument excecao){
+        estado = false;
+    }
+
+}
+
+void TUCpf::testarCenarioFalha(){
+    try{
+        codigo->setCpf(VALOR_INVALIDO);
+        estado = false;
+    }
+    catch(invalid_argument excecao){
+        return;
+    }
+}
+
+bool TUCpf::run(){
+    setUp();
+    testarCenarioSucesso();
+    testarCenarioFalha();
+    tearDown();
+    return estado;
+}
