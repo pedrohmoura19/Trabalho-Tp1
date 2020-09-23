@@ -1,5 +1,5 @@
 var class_senha =
 [
-    [ "getSenha", "class_senha.html#a574598214dc784520a0e93f65b28fc0b", null ],
-    [ "setSenha", "class_senha.html#aca0dd03243aed62e83e90a39c4ece794", null ]
+    [ "getValor", "class_senha.html#a701d441609c24943de42442ceb0f5e43", null ],
+    [ "setValor", "class_senha.html#a379d90c214392ccb42aaf49e3d39e112", null ]
 ];

@@ -22,6 +22,7 @@ var annotated_dup =
     [ "TUCodProduto", "class_t_u_cod_produto.html", "class_t_u_cod_produto" ],
     [ "TUData", "class_t_u_data.html", "class_t_u_data" ],
     [ "TUNome", "class_t_u_nome.html", "class_t_u_nome" ],
+    [ "TUNumero", "class_t_u_numero.html", "class_t_u_numero" ],
     [ "TUPrazo", "class_t_u_prazo.html", "class_t_u_prazo" ],
     [ "TUTaxa", "class_t_u_taxa.html", "class_t_u_taxa" ],
     [ "TUValorAplicacao", "class_t_u_valor_aplicacao.html", "class_t_u_valor_aplicacao" ],

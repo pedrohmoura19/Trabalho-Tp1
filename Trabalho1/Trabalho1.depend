@@ -15,26 +15,26 @@
 	"Dominios.h"
 	<string>
 
-1600453230 source:d:\pedro\github\trabalho-tp1\trabalho1\dominios.cpp
+1600641962 source:d:\pedro\github\trabalho-tp1\trabalho1\dominios.cpp
 	"Dominios.h"
 	<string>
 	<ctype.h>
 
-1600456996 d:\pedro\github\trabalho-tp1\trabalho1\dominios.h
+1600640938 d:\pedro\github\trabalho-tp1\trabalho1\dominios.h
 	<string>
 	<stdexcept>
 
-1600453958 source:d:\pedro\github\trabalho-tp1\trabalho1\main.cpp
+1600641732 source:d:\pedro\github\trabalho-tp1\trabalho1\main.cpp
 	<iostream>
 	<string>
 	"Dominios.h"
 	"testes.h"
 
-1600359010 source:d:\pedro\github\trabalho-tp1\trabalho1\testes.cpp
+1600641194 source:d:\pedro\github\trabalho-tp1\trabalho1\testes.cpp
 	<iostream>
 	<string>
 	"testes.h"
 
-1600454022 d:\pedro\github\trabalho-tp1\trabalho1\testes.h
+1600642100 d:\pedro\github\trabalho-tp1\trabalho1\testes.h
 	"Dominios.h"
 

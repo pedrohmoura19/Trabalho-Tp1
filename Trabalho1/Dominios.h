@@ -12,9 +12,13 @@ using namespace std;
 /// C&oacute;digo v&aacute;lido caso o valor esteja entre as seguintes faixas:
 ///
 /// -1000000 a 5999999 e 8000000 a 8499999 : S&atilde;o Paulo
+///
 /// -20000000 a 26600999 : Rio de Janeiro
+///
 /// -70000000 a 70999999 : Bras&iacute;lia.
+///
 /// -40000000 a 41999999 : Salvador.
+///
 /// -60000000 a 60999999 : Fortaleza.
 ///
 
@@ -73,7 +77,9 @@ class Classe{
 ///
 /// Met&oacute;do para dar set na Classe.
 ///
-///@param
+///@param string
+///
+///@throw
 ///
 
         void setClasse(string);
@@ -82,7 +88,7 @@ class Classe{
 /// Met&oacute;do para dar get na Classe.
 ///
 ///
-///@return
+///@return string
 
         string getClasse();
 };
@@ -91,7 +97,7 @@ class Classe{
 ///
 /// @brief C&oacute;digo destinado a armazenar o C&oacute;digo da Agencia.
 ///
-/// O c&oacute;digo de Agencia v&aacute;lido informado deve ser no formato XXXX em que X &eacute um d&igito de 0 a 9.
+/// O c&oacute;digo de Agencia v&aacute;lido informado deve ser no formato XXXX em que X &eacute; um d&iacute;gito de 0 a 9.
 /// N&atildeo; &eacute; permitido o c&oacute;digo 0000.
 
 
@@ -128,7 +134,7 @@ class CodAgencia{
 /// @brief C&oacute;digo destinado a armazenar o C&oacute;digo do Produto.
 ///
 /// O c&oacute;digo de Agencia v&aacute;lido informado deve ser no formato XXX em que X &eacute; um d&iacute;gito de 0 a 9.
-/// N&atildeo; &eacute; permitido o c&oacute;digo 000.
+/// N&atilde;o &eacute; permitido o c&oacute;digo 000.
 ///
 
 class CodProduto{
@@ -195,7 +201,7 @@ class Data{
 
 /// @class Nome
 ///
-/// @brief C&oacute;digo destinado a armazenar o Nome.
+/// @brief C&oacute;digo destinado a armazenar o Nome do usu&aacute;rio.
 ///
 /// O nome &eacute; um texto composto por 5 a 30 caracteres onde cada caracter pode ser letra (A-Z ou a-z) ou
 /// espaco, h&aacute; pelo menos 5 letras, n&atilde;o h&aacute; espacos em sequencia e a primeira letra de cada termo &eacute;
@@ -229,17 +235,80 @@ class Nome{
         string getNome();
 };
 
+/// @class Numero
+///
+/// @brief C&oacute;digo destinado a armazenar a conta corrente do usu&aacute;rio.
+///
+/// A conta corrente &eacute; um n&uacute;mero no formato XXXXXX-Y, onde cada X &eacute digito (0 – 9) e Y é
+/// um dígito verificador calculado por meio do seguinte algoritmo:
+///
+///  &ndash; O digito verificador &eacute; igual a nove menos o resto da divisao por seis da soma de todos os digitos multiplicados
+///  por sua respectiva posic&atilde;o (Primeiro digito multiplicado por 1, Segundo por dois e assim por diante).
+///
+///
+
+class Numero{
+    private:
+        static const int TAMANHO = 8;
+        string numero;
+        void validar(string numero);
+    public:
+///
+/// Met&oacute;do para dar set no Numero da conta corrente.
+///
+/// @param string com 6 digitos e 1 digito verificador separados com '-' a ser inserido no objeto.
+///
+/// @throw invalid_argument Em caso de argumento inv&aacute;lido,&eacute; lancado
+/// um objeto explicando o erro.
+///
+        void setNumero(string);
+///
+/// Met&oacute;do para dar get no Numero.
+///
+///
+/// @return string Retorna o Numero.
+///
+        string getNumero();
+
+};
+
+/// @class Prazo
+///
+/// @brief C&oacute;digo destinado a armazenar o Prazo da aplicacao em meses.
+///
+/// O Prazo v&aacute;lido inserido deve ser um valor igual a 6, 12, 18, 24, 30, 36, 42, 48, 54, 60, 66 ou 72 meses.
+///
 class Prazo{
     private:
         int prazo;
         void validar(int prazo);
 
     public:
+///
+/// Met&oacute;do para dar set no Prazo.
+///
+/// @param int Valor a ser inserido no objeto.
+///
+/// @throw invalid_argument Em caso de argumento inv&aacute;lido,&eacute; lancado
+/// um objeto explicando o erro.
+///
         void setPrazo(int);
+///
+/// Met&oacute;do para dar get no Prazo.
+///
+///
+///@return int Retorna o valor do Prazo.
+///
         int getPrazo();
 
 };
 
+/// @class Taxa
+///
+/// @brief C&oacute;digo destinado a armazenar a Taxa de rendimento do produto em porcentagem.
+///
+/// A Taxa v&aacute;lida inserida deve ser um valor na faixa de 0 a 200%(ao ano).
+///
 
 class Taxa{
     private:
@@ -249,10 +318,31 @@ class Taxa{
         void validar(int taxa);
 
     public:
+///
+/// Met&oacute;do para dar set na Taxa.
+///
+/// @param int Valor a ser inserido no objeto.
+///
+/// @throw invalid_argument Em caso de argumento inv&aacute;lido,&eacute; lancado
+/// um objeto explicando o erro.
+///
         void setTaxa(int);
+///
+/// Met&oacute;do para dar get na Taxa.
+///
+///
+///@return int Retorna o valor da Taxa.
+///
         int getTaxa();
 
 };
+
+/// @class ValorAplicacao
+///
+/// @brief C&oacute;digo destinado a armazenar o Valor da Aplicac&atilde;o do usu&aacute;rio.
+///
+/// O Valor de Aplicac&atilde;o v&aacute;lido inserido deve ser um valor na faixa de 0 a 1000000(reais).
+///
 
 class ValorAplicacao{
     private:
@@ -262,7 +352,21 @@ class ValorAplicacao{
         void validar(int valor);
 
     public:
+///
+/// Met&oacute;do para dar set no Valor da Aplicac&atilde;o.
+///
+/// @param int Valor a ser inserido no objeto.
+///
+/// @throw invalid_argument Em caso de argumento inv&aacute;lido,&eacute; lancado
+/// um objeto explicando o erro.
+///
         void setValor(int);
+///
+/// Met&oacute;do para dar get no Valor.
+///
+///
+///@return int Retorna o valor de aplicac&atilde;o.
+///
         int getValor();
 };
 
@@ -288,11 +392,9 @@ class CodBanco{
         void validar(string valor);
 
     public:
-        CodBanco();
-        CodBanco(string);
         void setValor(string);
         string getValor();
-        ~CodBanco();
+
 };
 
 class Cpf{
@@ -337,30 +439,15 @@ class Horario{
         string getHorario();
 };
 
-class Numero{
-    private:
-        static const int TAMANHO = 8;
-        string numero;
-        void validar(string numero);
-    public:
-        void setNumero(string);
-        string getNumero();
-
-};
 
 class Senha{
     private:
         static const int TAMANHO = 6;
         string valor;
-        int tamanhoValor = valor.size();
         void validar(string valor);
     public:
-        Senha();
-        Senha(string);
         void setValor(string);
         string getValor();
-        ~Senha();
-
 };
 
 class ValorMinimo{

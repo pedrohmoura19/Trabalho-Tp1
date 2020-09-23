@@ -135,6 +135,45 @@ bool TUCodAgencia::run(){
 
 
 /////////////Metodos da classe TUCodProduto//////////////
+void TUCodProduto::setUp(){
+    codigo = new CodProduto();
+    estado = true;
+}
+
+void TUCodProduto::tearDown(){
+    delete codigo;
+}
+
+void TUCodProduto::testarCenarioSucesso(){
+    try{
+        codigo->setProduto(VALOR_VALIDO);
+        if(codigo->getProduto() != VALOR_VALIDO){
+            estado = false;
+        }
+    }
+    catch(invalid_argument excecao){
+        estado = false;
+    }
+
+}
+
+void TUCodProduto::testarCenarioFalha(){
+    try{
+        codigo->setProduto(VALOR_INVALIDO);
+        estado = false;
+    }
+    catch(invalid_argument excecao){
+        return;
+    }
+}
+
+bool TUCodProduto::run(){
+    setUp();
+    testarCenarioSucesso();
+    testarCenarioFalha();
+    tearDown();
+    return estado;
+}
 
 
 /////////////Metodos da classe TUData//////////////
@@ -219,6 +258,48 @@ bool TUNome::run(){
     tearDown();
     return estado;
 }
+
+/////////////Metodos da classe TUNumero//////////////
+void TUNumero::setUp(){
+    codigo = new Numero();
+    estado = true;
+}
+
+void TUNumero::tearDown(){
+    delete codigo;
+}
+
+void TUNumero::testarCenarioSucesso(){
+    try{
+        codigo->setNumero(VALOR_VALIDO);
+        if(codigo->getNumero() != VALOR_VALIDO){
+            estado = false;
+        }
+    }
+    catch(invalid_argument excecao){
+        estado = false;
+    }
+
+}
+
+void TUNumero::testarCenarioFalha(){
+    try{
+        codigo->setNumero(VALOR_INVALIDO);
+        estado = false;
+    }
+    catch(invalid_argument excecao){
+        return;
+    }
+}
+
+bool TUNumero::run(){
+    setUp();
+    testarCenarioSucesso();
+    testarCenarioFalha();
+    tearDown();
+    return estado;
+}
+
 
 /////////////Metodos da classe TUPrazo//////////////
 void TUPrazo::setUp(){
