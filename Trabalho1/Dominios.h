@@ -432,10 +432,11 @@ class Endereco{
 class Horario{
     private:
         string horario;
+        static const int LIMITE_MIN = 5;
         void validar(string horario);
     public:
         Horario(string);
-        void setHorario();
+        void setHorario(string);
         string getHorario();
 };
 
