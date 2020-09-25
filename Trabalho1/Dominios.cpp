@@ -4,8 +4,8 @@
 
 //Metodos da classe Cep
 void Cep::validar(int cep){
-    if((LIMITE_MIN_SP1 <= cep) && (cep <= LIMITE_MAX_SP1));
-    else if ((LIMITE_MIN_SP2 <= cep) && (cep <= LIMITE_MAX_SP2));
+    if((LIMITE_MIN_SP1 <= cep) && (cep <= LIMITE_MAX_SP1));         // Trecho que verifica se o CEP esta entre
+    else if ((LIMITE_MIN_SP2 <= cep) && (cep <= LIMITE_MAX_SP2));   // os limites pre estabelecidos
     else if((LIMITE_MIN_RJ <= cep) && (cep <= LIMITE_MAX_RJ));
     else if((LIMITE_MIN_BSB <= cep) && (cep <= LIMITE_MAX_BSB));
     else if((LIMITE_MIN_SLV <= cep) && (cep <= LIMITE_MAX_SLV));
@@ -42,12 +42,12 @@ string Classe::getClasse(){
 
 //Metodos da classe CodAgencia
 void CodAgencia::validar(string agencia){
-    if ( (agencia.size()) != FORMATO )
-        throw invalid_argument("Codigo invalido");
-    try{
-        stoi(agencia);
-    }
-    catch(invalid_argument &exp){
+    if ( (agencia.size()) != FORMATO )                  // Trecho que primeiro verifica se o tamanho da string
+        throw invalid_argument("Codigo invalido");      // eh igual ao formato desejado, depois tenta transforma-la
+    try{                                                // em um numero inteiro por meio da funcao "stoi" que retorna
+        stoi(agencia);                                  // o inteiro correspondente a string ou lanca uma excecao caso
+    }                                                   // algum caractere nao seja um numero. Apos isso eh verificado
+    catch(invalid_argument &exp){                       // se o inteiro equivale a 0, o que nao pode ocorrer.
         throw invalid_argument("Codigo invalido");
     }
     if(stoi(agencia) == 0)
@@ -97,8 +97,8 @@ void Data::validar(string data){
     dia[1] = data[1];
     iDia = stoi(dia);
 
-    mes[0] = data[3];
-    mes[1] = data[4];
+    mes[0] = data[3];                   // Trecho que transforma a data do formato string para
+    mes[1] = data[4];                   // o formato inteiro para que possa ocorrer a validacao.
     iMes = stoi(mes);
 
     ano[0] = data[6];
@@ -112,8 +112,8 @@ void Data::validar(string data){
         if((iAno % 100) != 0){
             bissexto = true;
         }
-
-    }else{
+                                        // Trecho responsavel por verificar se o ano inserido
+    }else{                              // eh bissexto.
         if(iAno % 400 == 0){
             bissexto = true;
         }
@@ -121,7 +121,7 @@ void Data::validar(string data){
 
 
     if((data[2] != '/')||(data[5] != '/') ||(data.size() != FORMATO)){
-        throw invalid_argument("Deve se inserir a entrada em formato DD/MM/AAAA");
+        throw invalid_argument("Deve se inserir a entrada em formato DD/MM/AAAA");  // Checa se a data esta em formato correto
     }
 
     if( 2020 > iAno || iAno > 2099 ){
@@ -163,23 +163,24 @@ string Data::getData(){
 }
 
 
+//Metodos da classe Nome
 void Nome::validar(string nome){
     int letras = 0;
     if ((nome.size()) < LIMITE_MIN || (nome.size()) > LIMITE_MAX )
         throw length_error("O nome deve conter entre 5 e 30 caracteres");
 
     for(int i=0;i < nome.size();i++){
-        if(isalpha(nome[i]))
+        if(isalpha(nome[i]))            // Conta a quantidade de letras da string
            letras++;
 
-        if( isalpha(nome[i]) || nome[i] == ' ');
+        if( isalpha(nome[i]) || nome[i] == ' ');        // Verifica se ha apenas letras e espacos no nome
         else
             throw invalid_argument("O nome deve conter apenas letras");
 
-        if( i != 0 && nome[i] == ' ' && nome[i-1] == ' ')
+        if( i != 0 && nome[i] == ' ' && nome[i-1] == ' ')       // Garante que nao ha dois espacos em sequencia
             throw invalid_argument("Nao eh permitido espacos em sequencia");
 
-        if( i != (nome.size()-1) &&  nome[i]==' ' && islower(nome[i+1]) )
+        if( i != (nome.size()-1) &&  nome[i]==' ' && islower(nome[i+1]) )   // Verifica se apos o espaco ha uma letra minuscula
             throw invalid_argument("Apos um espaco deve conter letra maiuscula");
     }
     if (letras < 5)
@@ -196,19 +197,20 @@ string Nome::getNome(){
     return nome;
 }
 
+//Metodos da classe Numero
 void Numero::validar(string numero){
     if(numero.size() > TAMANHO){
         throw invalid_argument("Argumento invalido");
     }
 
     if(numero[6] != '-'){
-        throw invalid_argument("Formato invalido");
+        throw invalid_argument("Formato invalido");     // Checa se o numero esta em formato correto
     }
 
     int i = 0;
 
     for(i=0;i<numero.size();i++){
-        if(isdigit(numero[i]) == false && numero[i] != '-'){
+        if(isdigit(numero[i]) == false && numero[i] != '-'){    // Checa se ha apenas numeros e tracos na string
             throw invalid_argument("Formato invalido");
         }
     }
@@ -225,9 +227,9 @@ void Numero::validar(string numero){
     digito3 = numero[2];
     iDigito3 = (stoi(digito3)*3);
 
-    digito4 = numero[3];
-    iDigito4 = (stoi(digito4)*4);
-
+    digito4 = numero[3];                                // Trecho responsavel por transformar cada digito do
+    iDigito4 = (stoi(digito4)*4);                       // formato string para inteiro com objetivo de calcular
+                                                        // o digito verificador
     digito5 = numero[4];
     iDigito5 = (stoi(digito5)*5);
 
@@ -237,8 +239,8 @@ void Numero::validar(string numero){
     digito8 = numero[7];
     iDigito8 = stoi(digito8);
 
-    somaNum = iDigito1+ iDigito2+ iDigito3 + iDigito4 + iDigito5 + iDigito6;
-    digitoVerificador = (9-(somaNum%6));
+    somaNum = iDigito1+ iDigito2+ iDigito3 + iDigito4 + iDigito5 + iDigito6;    // Verifica se o digito verificador eh correto
+    digitoVerificador = (9-(somaNum%6));                                        // seguindo o algoritmo descrito na documentacao.
 
     if(digitoVerificador != iDigito8){
         throw invalid_argument("Digito verificador errado");
@@ -254,7 +256,7 @@ string Numero::getNumero(){
     return numero;
 }
 
-
+//Metodos da classe Prazo
 void Prazo::validar(int prazo){
     if ((prazo == 6 ) || (prazo == 12) || (prazo == 18) || (prazo == 24) || (prazo == 30)|| (prazo == 36)
         || (prazo == 42) || (prazo == 48) || (prazo == 54) || (prazo == 60) || (prazo == 66) || (prazo == 72));
@@ -273,7 +275,7 @@ int Prazo::getPrazo(){
     return prazo;
 }
 
-
+//Metodos da classe Taxa
 void Taxa::validar(int taxa){
     if ((LIMITE_MIN > taxa) || (taxa > LIMITE_MAX))
         throw invalid_argument("Taxa invalida");
@@ -288,7 +290,7 @@ int Taxa::getTaxa(){
     return taxa;
 }
 
-
+//Metodos da classe Vslor Aplicacao
 void ValorAplicacao::validar(int valor){
     if ((LIMITE_MIN > valor) || (valor > LIMITE_MAX))
         throw invalid_argument("Valor de aplicacao deve ser de 0 a 1000000 reais");
