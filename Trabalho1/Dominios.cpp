@@ -349,6 +349,7 @@ string CodBanco::getValor(){
     return valor;
 }
 
+// Metodos da classe Horario
 
 void Senha::validar(string senha){
     if( senha.size() != TAMANHO){
@@ -389,12 +390,12 @@ void Cpf::validar(string valor){
     }
     for(int i = 0; i < valor.size(); i++){
         if(valor[i] >= 48 && valor[i] <= 57 && i != 3 && i != 7 && i != 11);
-        else if( (i == 3 || i == 7) && valor[i] == 46);
+        else if( (i == 3 || i == 7) && valor[i] == '.');
         else if(i == 11 && valor[i] == '-');
         else{
             throw invalid_argument("Formato inválido");
         }
-    }   
+    }
     int aux[11];
     for(int i = 0, j = 0; i < valor.size(); i++){
         if( i != 3 && i != 7 && i != 11){
@@ -409,7 +410,7 @@ void Cpf::validar(string valor){
     for(int i = 0; i < 9; i++){
         temp += ( aux[i] * (10 - i));
     }
-    
+
     temp %= 11;
     if(temp < 2){
         digito1 = 0;
@@ -417,13 +418,13 @@ void Cpf::validar(string valor){
     else{
         digito1 = 11 - temp;
     }
-    
+
     temp =0;
 
     for(int i = 0; i < 10; i++){
         temp += (aux[i] * (11 - i));
     }
-        
+
     temp %= 11;
 
     if(temp < 2){

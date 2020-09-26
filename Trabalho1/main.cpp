@@ -18,6 +18,7 @@ int main(){
     TUPrazo testeprazo;
     TUTaxa testetaxa;
     TUValorAplicacao testevalor;
+    TUCpf testecpf;
 
     switch(testecep.run()){
         case true : cout << "SUCESSO no teste do CEP" << endl;
@@ -91,6 +92,12 @@ int main(){
         case false : cout << "FALHA no teste do Valor de Aplicacao" << endl;
                             break;
     }
+        switch(testecpf.run()){
+        case true  : cout << "SUCESSO no teste de CPF" << endl;
+                            break;
+        case false : cout << "FALHA no teste de CPF" << endl;
+                            break;
+        }
 
     return 0;
 
