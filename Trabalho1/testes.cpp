@@ -92,6 +92,50 @@ bool TUClasse::run(){
     return estado;
 }
 
+/////////////Metodos da classe TUCpf//////////////
+void TUCpf::setUp(){
+    codigo = new Cpf();
+    estado = true;
+}
+
+void TUCpf::tearDown(){
+    delete codigo;
+}
+
+void TUCpf::testarCenarioSucesso(){
+    try{
+        codigo->setCpf(VALOR_VALIDO);
+        if(codigo->getCpf() != VALOR_VALIDO){
+            cout << "Erro ao dar get na Cpf" << endl;
+            estado = false;
+        }
+    }
+    catch(invalid_argument excecao){
+        cout << "Valor valido tratado como invalido" << endl;
+        estado = false;
+    }
+
+}
+
+void TUCpf::testarCenarioFalha(){
+    try{
+        codigo->setCpf(VALOR_INVALIDO);
+        cout << "Valor invalido de Cpf tratado como valido" << endl;
+        estado = false;
+    }
+    catch(invalid_argument excecao){
+        return;
+    }
+}
+
+bool TUCpf::run(){
+    setUp();
+    testarCenarioSucesso();
+    testarCenarioFalha();
+    tearDown();
+    return estado;
+}
+
 /////////////Metodos da classe TUCodAgencia//////////////
 void TUCodAgencia::setUp(){
     codigo = new CodAgencia();
@@ -217,6 +261,130 @@ bool TUData::run(){
     return estado;
 }
 
+/////////////Metodos da classe TUEmissor//////////////
+void TUEmissor::setUp(){
+    codigo = new Emissor();
+    estado = true;
+}
+
+void TUEmissor::tearDown(){
+    delete codigo;
+}
+
+void TUEmissor::testarCenarioSucesso(){
+    try{
+        codigo->setEmissor(VALOR_VALIDO);
+        if(codigo->getEmissor() != VALOR_VALIDO){
+            estado = false;
+        }
+    }
+    catch(invalid_argument excecao){
+        estado = false;
+    }
+
+}
+
+void TUEmissor::testarCenarioFalha(){
+    try{
+        codigo->setEmissor(VALOR_INVALIDO);
+        estado = false;
+    }
+    catch(invalid_argument excecao){
+        return;
+    }
+}
+
+bool TUEmissor::run(){
+    setUp();
+    testarCenarioSucesso();
+    testarCenarioFalha();
+    tearDown();
+    return estado;
+}
+
+
+/////////////Metodos da classe TUEndereco//////////////
+void TUEndereco::setUp(){
+    codigo = new Endereco();
+    estado = true;
+}
+
+void TUEndereco::tearDown(){
+    delete codigo;
+}
+
+void TUEndereco::testarCenarioSucesso(){
+    try{
+        codigo->setEndereco(VALOR_VALIDO);
+        if(codigo->getEndereco() != VALOR_VALIDO){
+            estado = false;
+        }
+    }
+    catch(invalid_argument excecao){
+        estado = false;
+    }
+
+}
+
+void TUEndereco::testarCenarioFalha(){
+    try{
+        codigo->setEndereco(VALOR_INVALIDO);
+        estado = false;
+    }
+    catch(invalid_argument excecao){
+        return;
+    }
+}
+
+bool TUEndereco::run(){
+    setUp();
+    testarCenarioSucesso();
+    testarCenarioFalha();
+    tearDown();
+    return estado;
+}
+
+
+/////////////Metodos da classe TUHorario//////////////
+void TUHorario::setUp(){
+    codigo = new Horario();
+    estado = true;
+}
+
+void TUHorario::tearDown(){
+    delete codigo;
+}
+
+void TUHorario::testarCenarioSucesso(){
+    try{
+        codigo->setHorario(VALOR_VALIDO);
+        if(codigo->getHorario() != VALOR_VALIDO){
+            estado = false;
+        }
+    }
+    catch(invalid_argument excecao){
+        estado = false;
+    }
+
+}
+
+void TUHorario::testarCenarioFalha(){
+    try{
+        codigo->setHorario(VALOR_INVALIDO);
+        estado = false;
+    }
+    catch(invalid_argument excecao){
+        return;
+    }
+}
+
+bool TUHorario::run(){
+    setUp();
+    testarCenarioSucesso();
+    testarCenarioFalha();
+    tearDown();
+    return estado;
+}
 
 /////////////Metodos da classe TUNome//////////////
 void TUNome::setUp(){
@@ -342,6 +510,47 @@ bool TUPrazo::run(){
     return estado;
 }
 
+/////////////Metodos da classe TUSenha//////////////
+void TUSenha::setUp(){
+    codigo = new Senha();
+    estado = true;
+}
+
+void TUSenha::tearDown(){
+    delete codigo;
+}
+
+void TUSenha::testarCenarioSucesso(){
+    try{
+        codigo->setSenha(VALOR_VALIDO);
+        if(codigo->getSenha() != VALOR_VALIDO){
+            estado = false;
+        }
+    }
+    catch(invalid_argument excecao){
+        estado = false;
+    }
+
+}
+
+void TUSenha::testarCenarioFalha(){
+    try{
+        codigo->setSenha(VALOR_INVALIDO);
+        estado = false;
+    }
+    catch(invalid_argument excecao){
+        return;
+    }
+}
+
+bool TUSenha::run(){
+    setUp();
+    testarCenarioSucesso();
+    testarCenarioFalha();
+    tearDown();
+    return estado;
+}
+
 /////////////Metodos da classe TUTaxa//////////////
 void TUTaxa::setUp(){
     codigo = new Taxa();
@@ -417,6 +626,47 @@ void TUValorAplicacao::testarCenarioFalha(){
 }
 
 bool TUValorAplicacao::run(){
+    setUp();
+    testarCenarioSucesso();
+    testarCenarioFalha();
+    tearDown();
+    return estado;
+}
+
+/////////////Metodos da classe TUValorMinimo//////////////
+void TUValorMinimo::setUp(){
+    codigo = new ValorMinimo();
+    estado = true;
+}
+
+void TUValorMinimo::tearDown(){
+    delete codigo;
+}
+
+void TUValorMinimo::testarCenarioSucesso(){
+    try{
+        codigo->setValorMinimo(VALOR_VALIDO);
+        if(codigo->getValorMinimo() != VALOR_VALIDO){
+            estado = false;
+        }
+    }
+    catch(invalid_argument excecao){
+        estado = false;
+    }
+
+}
+
+void TUValorMinimo::testarCenarioFalha(){
+    try{
+        codigo->setValorMinimo(VALOR_INVALIDO);
+        estado = false;
+    }
+    catch(invalid_argument excecao){
+        return;
+    }
+}
+
+bool TUValorMinimo::run(){
     setUp();
     testarCenarioSucesso();
     testarCenarioFalha();
