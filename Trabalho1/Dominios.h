@@ -435,7 +435,6 @@ class Horario{
         static const int LIMITE_MIN = 5;
         void validar(string horario);
     public:
-        Horario(string);
         void setHorario(string);
         string getHorario();
 };
@@ -444,20 +443,20 @@ class Horario{
 class Senha{
     private:
         static const int TAMANHO = 6;
-        string valor;
+        string senha;
         void validar(string valor);
     public:
-        void setValor(string);
-        string getValor();
+        void setSenha(string);
+        string getSenha();
 };
 
 class ValorMinimo{
     private:
-        int valor;
-        void validar(int valor);
+        int valorMinimo;
+        void validar(int valorMinimo);
     public:
-        void setValor(int);
-        int getValor();
+        void setValorMinimo(int);
+        int getValorMinimo();
 };
 
 

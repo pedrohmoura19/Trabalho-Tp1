@@ -348,20 +348,20 @@ string CodBanco::getValor(){
 }
 
 
-void Senha::validar(string valor){
-    if( valor.size() != TAMANHO){
+void Senha::validar(string senha){
+    if( senha.size() != TAMANHO){
         throw invalid_argument("Tamanho excedido");
     }
-    for (int i = 0; i < valor.size() ; i++){
-        if(valor[i] >= 48 && valor[i] <= 57);
+    for (int i = 0; i < senha.size() ; i++){
+        if(senha[i] >= 48 && senha[i] <= 57);
         else{
             throw invalid_argument("Senha invalida");
         }
 
     }
-    for(int i = 0; i < valor.size(); i++){
+    for(int i = 0; i < senha.size(); i++){
         for(int j = i + 1; j < TAMANHO - 1; j++){
-            if(valor[i] != valor[j]);
+            if(senha[i] != senha[j]);
             else{
                 throw invalid_argument("Senha invalida");
             }
@@ -370,13 +370,13 @@ void Senha::validar(string valor){
     }
 }
 
-void Senha::setValor(string valor){
-    validar(valor);
-    this->valor = valor;
+void Senha::setSenha(string senha){
+    validar(senha);
+    this->senha = senha;
 }
 
-string Senha::getValor(){
-    return valor;
+string Senha::getSenha(){
+    return senha;
 }
 
 // Metodos da classe CPF
@@ -541,18 +541,18 @@ string Horario::getHorario(){
     return horario;
 }
 
-void ValorMinimo::validar(int valor){
-    if(valor == 1000 || valor == 5000 || valor == 10000 || valor == 50000);
+void ValorMinimo::validar(int valorMinimo){
+    if(valorMinimo == 1000 || valorMinimo == 5000 || valorMinimo == 10000 || valorMinimo == 50000);
     else{
         throw invalid_argument("Valor minimo invalido");
     }
 }
 
-void ValorMinimo::setValor(int valor){
-    validar(valor);
-    this->valor = valor;
+void ValorMinimo::setValorMinimo(int valorMinimo){
+    validar(valorMinimo);
+    this->valorMinimo = valorMinimo;
 }
 
-int ValorMinimo::getValor(){
-    return valor;
+int ValorMinimo::getValorMinimo(){
+    return valorMinimo;
 }
