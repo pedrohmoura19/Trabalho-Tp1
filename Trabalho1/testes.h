@@ -59,6 +59,42 @@ public:
     bool run();
 };
 
+class TUCodAplicacao {
+private:
+    const string VALOR_VALIDO   = "15032";
+    const string VALOR_INVALIDO = "00000";
+
+    CodAplicacao *codigo;
+
+    bool estado;
+
+    void setUp();
+    void tearDown();
+    void testarCenarioSucesso();
+    void testarCenarioFalha();
+
+public:
+    bool run();
+};
+
+class TUCodBanco {
+private:
+    const string VALOR_VALIDO   = "001";
+    const string VALOR_INVALIDO = "000";
+
+    CodBanco *codigo;
+
+    bool estado;
+
+    void setUp();
+    void tearDown();
+    void testarCenarioSucesso();
+    void testarCenarioFalha();
+
+public:
+    bool run();
+};
+
 class TUCodProduto {
 private:
     const string VALOR_VALIDO   = "256";
@@ -77,12 +113,84 @@ public:
     bool run();
 };
 
+class TUCpf {
+private:
+    const string VALOR_VALIDO   = "167.247.570-88";
+    const string VALOR_INVALIDO = "167.247.572-88";
+
+    Cpf *codigo;
+
+    bool estado;
+
+    void setUp();
+    void tearDown();
+    void testarCenarioSucesso();
+    void testarCenarioFalha();
+
+public:
+    bool run();
+};
+
 class TUData {
 private:
     const string VALOR_VALIDO   = "31/03/2040";
     const string VALOR_INVALIDO = "31/04/2027";
 
     Data *codigo;
+
+    bool estado;
+
+    void setUp();
+    void tearDown();
+    void testarCenarioSucesso();
+    void testarCenarioFalha();
+
+public:
+    bool run();
+};
+
+class TUEmissor {
+private:
+    const string VALOR_VALIDO   = "Cesario Alvim";
+    const string VALOR_INVALIDO = "Aecio neves";
+
+    Emissor *codigo;
+
+    bool estado;
+
+    void setUp();
+    void tearDown();
+    void testarCenarioSucesso();
+    void testarCenarioFalha();
+
+public:
+    bool run();
+};
+
+class TUEndereco {
+private:
+    const string VALOR_VALIDO   = "Cesario Alvim";
+    const string VALOR_INVALIDO = "Barao branco rio";
+
+    Endereco *codigo;
+
+    bool estado;
+
+    void setUp();
+    void tearDown();
+    void testarCenarioSucesso();
+    void testarCenarioFalha();
+
+public:
+    bool run();
+};
+
+class TUHorario {
+private:
+    const string VALOR_VALIDO   = "15:50";
+    const string VALOR_INVALIDO = "10:45";
+
+    Horario *codigo;
 
     bool estado;
 
@@ -149,6 +257,24 @@ public:
     bool run();
 };
 
+class TUSenha {
+private:
+    const string VALOR_VALIDO   = "123456";
+    const string VALOR_INVALIDO = "111112";
+
+    Senha *codigo;
+
+    bool estado;
+
+    void setUp();
+    void tearDown();
+    void testarCenarioSucesso();
+    void testarCenarioFalha();
+
+public:
+    bool run();
+};
+
 class TUTaxa {
 private:
     const int VALOR_VALIDO   = 95;
@@ -185,6 +311,23 @@ public:
     bool run();
 };
 
+class TUValorMinimo {
+private:
+    const int VALOR_VALIDO   = 10000;
+    const int VALOR_INVALIDO = 72;
+
+    ValorMinimo *codigo;
+
+    bool estado;
+
+    void setUp();
+    void tearDown();
+    void testarCenarioSucesso();
+    void testarCenarioFalha();
+
+public:
+    bool run();
+};
 
 
 
