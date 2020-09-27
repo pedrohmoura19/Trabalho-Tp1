@@ -63,6 +63,53 @@ string CodAgencia::getAgencia(){
     return agencia;
 }
 
+//Metodos da classe CodAplicacao
+
+void CodAplicacao::validar(string valor){
+    if ((valor.size()) != TAMANHO ){
+        throw length_error("Tamanho excedido");
+    }
+    if(valor == "00000"){
+        throw invalid_argument("Entrada Invalida");
+    }
+    try{
+        stoi(valor);
+    }
+    catch(invalid_argument &exp){
+
+    }
+}
+
+void CodAplicacao::setAplicacao(string valor){
+    validar(valor);
+    this->valor = valor;
+}
+
+string CodAplicacao::getAplicacao(){
+    return valor;
+}
+
+//Metodos da classe CodBanco
+
+void CodBanco::validar(string valor){
+    if ( tamanhoValor != TAMANHO ){
+        throw invalid_argument("Tamanho invalido");
+    }
+    if((valor == "341") || (valor == "001") || (valor == "237") || (valor == "104") || (valor == "033"));
+    else{
+        throw invalid_argument("Entrada invalida");
+    }
+}
+
+void CodBanco::setValor(string valor){
+    validar(valor);
+    this->valor = valor;
+}
+
+string CodBanco::getValor(){
+    return valor;
+}
+
 //Metodos da classe CodProduto
 void CodProduto::validar(string produto){
     if ((produto.size()) != FORMATO)
@@ -85,6 +132,73 @@ void CodProduto::setProduto(string produto){
 
 string CodProduto::getProduto(){
     return produto;
+}
+
+//Metodos da classe Cpf
+
+void Cpf::validar(string cpf){
+    if( cpf.size() != TAMANHO){
+        throw invalid_argument("Tamanho inválido");
+    }
+    for(int i = 0; i < cpf.size(); i++){
+        if(cpf[i] >= 48 && cpf[i] <= 57 && i != 3 && i != 7 && i != 11);
+        else if( (i == 3 || i == 7) && cpf[i] == '.');
+        else if(i == 11 && cpf[i] == '-');
+        else{
+            throw invalid_argument("Formato inválido");
+        }
+    }
+    int aux[11];
+    for(int i = 0, j = 0; i < cpf.size(); i++){
+        if( i != 3 && i != 7 && i != 11){
+            aux[j] = (cpf[i] - 48);
+            j++;
+        }
+    }
+
+
+    int digito1, digito2, temp = 0;
+
+    for(int i = 0; i < 9; i++){
+        temp += ( aux[i] * (10 - i));
+    }
+
+    temp %= 11;
+    if(temp < 2){
+        digito1 = 0;
+    }
+    else{
+        digito1 = 11 - temp;
+    }
+
+    temp =0;
+
+    for(int i = 0; i < 10; i++){
+        temp += (aux[i] * (11 - i));
+    }
+
+    temp %= 11;
+
+    if(temp < 2){
+        digito2 = 0;
+    }
+    else{
+        digito2 = 11 - temp;
+    }
+    if(digito1 == aux[9] && digito2 == aux[10]);
+    else{
+        throw invalid_argument("CPF invalido");
+    }
+}
+
+void Cpf::setCpf(string cpf){
+    validar(cpf);
+    this->cpf = cpf;
+
+}
+
+string Cpf::getCpf(){
+    return cpf;
 }
 
 //Metodos da classe Data
@@ -163,7 +277,118 @@ string Data::getData(){
 }
 
 
+//Metodos da classe Emissor
+void Emissor::validar(string emissor){
+    int letras = 0;
+    if ((emissor.size()) < LIMITE_MIN || (emissor.size()) > LIMITE_MAX )
+        throw length_error("O emissor deve conter entre 5 e 30 caracteres");
+
+    for(int i=0;i < emissor.size();i++){
+        if(isalpha(emissor[i]))
+           letras++;
+
+        if( isalpha(emissor[i]) || emissor[i] == ' ');
+        else
+            throw invalid_argument("O emissor deve conter apenas letras");
+
+        if( i != 0 && emissor[i] == ' ' && emissor[i-1] == ' ')
+            throw invalid_argument("Nao eh permitido espacos em sequencia");
+
+        if( i != (emissor.size()-1) &&  emissor[i]==' ' && islower(emissor[i+1]) )
+            throw invalid_argument("Apos um espaco deve conter letra maiuscula");
+    }
+    if (letras < 5)
+        throw invalid_argument("O emissor deve conter no minimo 5 letras");
+}
+
+void Emissor::setEmissor(string emissor){
+    validar(emissor);
+    this->emissor = emissor;
+
+}
+
+string Emissor::getEmissor(){
+    return emissor;
+}
+
+//Metodos da classe Endereco
+
+void Endereco::validar(string endereco){
+    int letras = 0;
+    if ((endereco.size()) < LIMITE_MIN || (endereco.size()) > LIMITE_MAX )
+        throw length_error("O endereco deve conter entre 5 e 30 caracteres");
+
+    for(int i=0;i < endereco.size();i++){
+        if(isalpha(endereco[i]))
+           letras++;
+
+        if( isalpha(endereco[i]) || endereco[i] == ' ');
+        else
+            throw invalid_argument("O endereco deve conter apenas letras");
+
+        if( i != 0 && endereco[i] == ' ' && endereco[i-1] == ' ')
+            throw invalid_argument("Nao eh permitido espacos em sequencia");
+
+        if( i != (endereco.size()-1) &&  endereco[i]==' ' && islower(endereco[i+1]) )
+            throw invalid_argument("Apos um espaco deve conter letra maiuscula");
+    }
+    if (letras < 5)
+        throw invalid_argument("O endereco deve conter no minimo 5 letras");
+}
+
+void Endereco::setEndereco(string endereco){
+    validar(endereco);
+    this->endereco = endereco;
+
+}
+
+string Endereco::getEndereco(){
+    return endereco;
+}
+
+//Metodos da classe Horario
+
+void Horario::validar(string horario){
+    string horas, min;
+    int horas_num, min_num;
+
+    if((horario.size()) < LIMITE_MIN){
+        throw invalid_argument("O horario deve ter 5 caracteres");
+    }
+
+    for(int i = 0; i < LIMITE_MIN; i++){
+        if(horario[i] >= 48 && horario[i] <= 57 && i != 2);
+        else if( (i == 2) && (horario[i] == ':'));
+        else{
+            throw invalid_argument("Formato inválido");
+        }
+    } 
+    horas[0] = horario[0];
+    horas[1] = horario[1];
+    min[0] = horario[3];
+    min[1] = horario[4];
+    horas_num = stoi(horas);
+    min_num = stoi(min);
+
+    if(horas_num >= 13 && horas_num < 17 && min_num >= 0 && min_num <= 59);
+    else if(horas_num == 17 && min_num == 0);
+    else{
+        throw invalid_argument("Horário inválido");
+    }
+}
+
+void Horario::setHorario(string horario){
+    validar(horario);
+    this->horario = horario;
+
+}
+
+string Horario::getHorario(){
+    return horario;
+}
+
 //Metodos da classe Nome
+
 void Nome::validar(string nome){
     int letras = 0;
     if ((nome.size()) < LIMITE_MIN || (nome.size()) > LIMITE_MAX )
@@ -261,7 +486,7 @@ void Prazo::validar(int prazo){
     if ((prazo == 6 ) || (prazo == 12) || (prazo == 18) || (prazo == 24) || (prazo == 30)|| (prazo == 36)
         || (prazo == 42) || (prazo == 48) || (prazo == 54) || (prazo == 60) || (prazo == 66) || (prazo == 72));
     else
-        throw invalid_argument("Valor invalido");
+        throw invalid_argument("Prazo invalido");
 
 }
 
@@ -275,82 +500,7 @@ int Prazo::getPrazo(){
     return prazo;
 }
 
-//Metodos da classe Taxa
-void Taxa::validar(int taxa){
-    if ((LIMITE_MIN > taxa) || (taxa > LIMITE_MAX))
-        throw invalid_argument("Taxa invalida");
-}
-
-void Taxa::setTaxa(int taxa){
-    validar(taxa);
-    this->taxa = taxa;
-}
-
-int Taxa::getTaxa(){
-    return taxa;
-}
-
-//Metodos da classe Vslor Aplicacao
-void ValorAplicacao::validar(int valor){
-    if ((LIMITE_MIN > valor) || (valor > LIMITE_MAX))
-        throw invalid_argument("Valor de aplicacao deve ser de 0 a 1000000 reais");
-}
-
-void ValorAplicacao::setValor(int valor){
-    validar(valor);
-    this->valor = valor;
-}
-
-int ValorAplicacao::getValor(){
-    return valor;
-}
-
-void CodAplicacao::validar(string valor){
-    if ((valor.size()) != TAMANHO ){
-        throw length_error("Tamanho excedido");
-    }
-    if(valor == "00000"){
-        throw invalid_argument("Entrada Invalida");
-    }
-    try{
-        stoi(valor);
-    }
-    catch(invalid_argument &exp){
-
-    }
-}
-
-void CodAplicacao::setAplicacao(string valor){
-    validar(valor);
-    this->valor = valor;
-}
-
-string CodAplicacao::getAplicacao(){
-    return valor;
-}
-
-
-void CodBanco::validar(string valor){
-    if ( tamanhoValor != TAMANHO ){
-        throw invalid_argument("Tamanho invalido");
-    }
-    if((valor == "341") || (valor == "001") || (valor == "237") || (valor == "104") || (valor == "033"));
-    else{
-        throw invalid_argument("Entrada invalida");
-    }
-}
-
-void CodBanco::setValor(string valor){
-    validar(valor);
-    this->valor = valor;
-}
-
-string CodBanco::getValor(){
-    return valor;
-}
-
-// Metodos da classe Horario
-
+//Metodos da classe Senha
 void Senha::validar(string senha){
     if( senha.size() != TAMANHO){
         throw invalid_argument("Tamanho excedido");
@@ -382,167 +532,37 @@ string Senha::getSenha(){
     return senha;
 }
 
-// Metodos da classe CPF
-
-void Cpf::validar(string valor){
-    if( valor.size() != TAMANHO){
-        throw invalid_argument("Tamanho inválido");
-    }
-    for(int i = 0; i < valor.size(); i++){
-        if(valor[i] >= 48 && valor[i] <= 57 && i != 3 && i != 7 && i != 11);
-        else if( (i == 3 || i == 7) && valor[i] == '.');
-        else if(i == 11 && valor[i] == '-');
-        else{
-            throw invalid_argument("Formato inválido");
-        }
-    }
-    int aux[11];
-    for(int i = 0, j = 0; i < valor.size(); i++){
-        if( i != 3 && i != 7 && i != 11){
-            aux[j] = (valor[i] - 48);
-            j++;
-        }
-    }
-
-
-    int digito1, digito2, temp = 0;
-
-    for(int i = 0; i < 9; i++){
-        temp += ( aux[i] * (10 - i));
-    }
-
-    temp %= 11;
-    if(temp < 2){
-        digito1 = 0;
-    }
-    else{
-        digito1 = 11 - temp;
-    }
-
-    temp =0;
-
-    for(int i = 0; i < 10; i++){
-        temp += (aux[i] * (11 - i));
-    }
-
-    temp %= 11;
-
-    if(temp < 2){
-        digito2 = 0;
-    }
-    else{
-        digito2 = 11 - temp;
-    }
-    if(digito1 == aux[9] && digito2 == aux[10]);
-    else{
-        throw invalid_argument("CPF invalido");
-    }
+//Metodos da classe Taxa
+void Taxa::validar(int taxa){
+    if ((LIMITE_MIN > taxa) || (taxa > LIMITE_MAX))
+        throw invalid_argument("Taxa invalida");
 }
 
-void Emissor::validar(string emissor){
-    int letras = 0;
-    if ((emissor.size()) < LIMITE_MIN || (emissor.size()) > LIMITE_MAX )
-        throw length_error("O emissor deve conter entre 5 e 30 caracteres");
-
-    for(int i=0;i < emissor.size();i++){
-        if(isalpha(emissor[i]))
-           letras++;
-
-        if( isalpha(emissor[i]) || emissor[i] == ' ');
-        else
-            throw invalid_argument("O emissor deve conter apenas letras");
-
-        if( i != 0 && emissor[i] == ' ' && emissor[i-1] == ' ')
-            throw invalid_argument("Nao eh permitido espacos em sequencia");
-
-        if( i != (emissor.size()-1) &&  emissor[i]==' ' && islower(emissor[i+1]) )
-            throw invalid_argument("Apos um espaco deve conter letra maiuscula");
-    }
-    if (letras < 5)
-        throw invalid_argument("O emissor deve conter no minimo 5 letras");
+void Taxa::setTaxa(int taxa){
+    validar(taxa);
+    this->taxa = taxa;
 }
 
-void Emissor::setEmissor(string emissor){
-    validar(emissor);
-    this->emissor = emissor;
-
+int Taxa::getTaxa(){
+    return taxa;
 }
 
-string Emissor::getEmissor(){
-    return emissor;
+//Metodos da classe Valor Aplicacao
+void ValorAplicacao::validar(int valor){
+    if ((LIMITE_MIN > valor) || (valor > LIMITE_MAX))
+        throw invalid_argument("Valor de aplicacao deve ser de 0 a 1000000 reais");
 }
 
-void Endereco::validar(string endereco){
-    int letras = 0;
-    if ((endereco.size()) < LIMITE_MIN || (endereco.size()) > LIMITE_MAX )
-        throw length_error("O endereco deve conter entre 5 e 30 caracteres");
-
-    for(int i=0;i < endereco.size();i++){
-        if(isalpha(endereco[i]))
-           letras++;
-
-        if( isalpha(endereco[i]) || endereco[i] == ' ');
-        else
-            throw invalid_argument("O endereco deve conter apenas letras");
-
-        if( i != 0 && endereco[i] == ' ' && endereco[i-1] == ' ')
-            throw invalid_argument("Nao eh permitido espacos em sequencia");
-
-        if( i != (endereco.size()-1) &&  endereco[i]==' ' && islower(endereco[i+1]) )
-            throw invalid_argument("Apos um espaco deve conter letra maiuscula");
-    }
-    if (letras < 5)
-        throw invalid_argument("O endereco deve conter no minimo 5 letras");
+void ValorAplicacao::setValor(int valor){
+    validar(valor);
+    this->valor = valor;
 }
 
-void Endereco::setEndereco(string endereco){
-    validar(endereco);
-    this->endereco = endereco;
-
+int ValorAplicacao::getValor(){
+    return valor;
 }
 
-string Endereco::getEndereco(){
-    return endereco;
-}
-
-void Horario::validar(string horario){
-    string horas, min;
-    int horas_num, min_num;
-
-    if((horario.size()) < LIMITE_MIN){
-        throw invalid_argument("O horario deve ter 5 caracteres");
-    }
-
-    for(int i = 0; i < LIMITE_MIN; i++){
-        if(horario[i] >= 48 && horario[i] <= 57 && i != 2);
-        else if( (i == 2) && (horario[i] == ':'));
-        else{
-            throw invalid_argument("Formato inválido");
-        }
-    } 
-    horas[0] = horario[0];
-    horas[1] = horario[1];
-    min[0] = horario[3];
-    min[1] = horario[4];
-    horas_num = stoi(horas);
-    min_num = stoi(min);
-
-    if(horas_num >= 13 && horas_num < 17 && min_num >= 0 && min_num <= 59);
-    else if(horas_num == 17 && min_num == 0);
-    else{
-        throw invalid_argument("Horário inválido");
-    }
-}
-
-void Horario::setHorario(string horario){
-    validar(horario);
-    this->horario = horario;
-
-}
-
-string Horario::getHorario(){
-    return horario;
-}
+//Metodos da classe ValorMinimo
 
 void ValorMinimo::validar(int valorMinimo){
     if(valorMinimo == 1000 || valorMinimo == 5000 || valorMinimo == 10000 || valorMinimo == 50000);
