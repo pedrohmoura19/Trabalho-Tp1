@@ -370,6 +370,14 @@ class ValorAplicacao{
         int getValor();
 };
 
+/// @class CodAplicacao
+///
+/// @brief C&oacute;digo destinado a armazenar o C&oacute;digo da Aplicac&atilde;o.
+///
+/// O C&oacute;digo da Aplicac&atilde;o v&aacute;lido informado deve ser no formato XXXXX em que X &eacute; um d&iacute;gito de 0 a 9.
+/// N&atildeo; &eacute; permitido o c&oacute;digo 00000.
+/// 
+
 class CodAplicacao{
     private:
 
@@ -379,9 +387,32 @@ class CodAplicacao{
         void validar(string valor);
 
     public:
+        ///
+        /// Met&oacute;do para dar set na Classe.
+        ///
+        /// @param string a ser inserida no objeto.
+        ///
+        /// @throw invalid_argument Em caso de argumento inv&acute;lido,&eacute lancado
+        /// um objeto explicando o erro.
+        ///
         void setAplicacao(string);
+
+        ///
+        /// Met&oacute;do para dar get no  C&oacute;digo da Aplicac&atilde;o.
+        ///
+        ///
+        ///@return string Retorna o  C&oacute;digo da Aplicac&atilde;o.
+        ///
         string getAplicacao();
 };
+
+
+/// @class CodBanco
+///
+/// @brief C&oacute;digo destinado a armazenar o C&oacute;digo do Banco.
+///
+/// O C&oacute;digo de Banco v&aacute;lido informado deve ser no formato XXX e os c&oacute;digos aceitos devem corresponder
+/// aos c&oacute;digos dos 5 maiores bancos brasileiros por ativos totais.
 
 class CodBanco{
     private:
@@ -391,10 +422,32 @@ class CodBanco{
         void validar(string valor);
 
     public:
+        ///
+        /// Met&oacute;do para dar set na Classe.
+        ///
+        /// @param string a ser inserida no objeto.
+        ///
+        /// @throw invalid_argument Em caso de argumento inv&acute;lido,&eacute lancado
+        /// um objeto explicando o erro.
+        ///
         void setValor(string);
+        ///
+        /// Met&oacute;do para dar get no  C&oacute;digo do Banco.
+        ///
+        ///
+        ///@return string Retorna o  C&oacute;digo do Banco.
+        ///
         string getValor();
 
 };
+
+/// @class Cpf
+///
+/// @brief C&oacute;digo destinado a armazenar o CPF.
+///
+/// O CPF v&aacute;lido informado deve ser no formato XXX.XXX.XXX-XX  em que X &eacute; um d&iacute;gito de 0 a 9.
+/// Cada CPF inclui d&iacute;gitos verificadores calculados por meio de algor&iacute;timo apropriado.
+/// 
 
 class Cpf{
     private:
@@ -402,10 +455,31 @@ class Cpf{
         string cpf;
         void validar(string cpf);
     public:
+        ///
+        /// Met&oacute;do para dar set na Classe.
+        ///
+        /// @param string a ser inserida no objeto.
+        ///
+        /// @throw invalid_argument Em caso de argumento inv&acute;lido,&eacute lancado
+        /// um objeto explicando o erro.
+        ///
         void setCpf(string);
+        ///
+        /// Met&oacute;do para dar get no  C&oacute;digo do Banco.
+        ///
+        ///
+        ///@return string Retorna o  C&oacute;digo do Banco.
+        ///
         string getCpf();
 };
-
+/// @class Emissor
+///
+/// @brief C&oacute;digo destinado a armazenar o Emissor.
+///
+/// O Emissor &eacute; um texto composto por 5 a 30 caracteres onde cada caracter pode ser letra (A-Z ou a-z) ou
+/// espaco, h&aacute; pelo menos 5 letras, n&atilde;o h&aacute; espacos em sequencia e a primeira letra de cada termo &eacute;
+/// letra mai&uacute;scula.
+///
 class Emissor{
     private:
         static const int LIMITE_MIN = 5;
@@ -413,10 +487,32 @@ class Emissor{
         string emissor;
         void validar(string emissor);
     public:
+        ///
+        /// Met&oacute;do para dar set na Classe.
+        ///
+        /// @param string a ser inserida no objeto.
+        ///
+        /// @throw invalid_argument Em caso de argumento inv&acute;lido,&eacute lancado
+        /// um objeto explicando o erro.
+        ///
         void setEmissor(string);
+        ///
+        /// Met&oacute;do para dar get no  Emissor.
+        ///
+        ///
+        ///@return string Retorna o  Emissor.
+        ///
         string getEmissor();
 };
 
+/// @class Endereco
+///
+/// @brief C&oacute;digo destinado a armazenar o Endereco.
+///
+/// O Endereco &eacute; um texto composto por 5 a 20 caracteres onde cada caracter pode ser letra (A-Z ou a-z) ou
+/// espaco, h&aacute; pelo menos 5 letras, n&atilde;o h&aacute; espacos em sequencia e a primeira letra de cada termo &eacute;
+/// letra mai&uacute;scula.
+///
 class Endereco{
     private:
         static const int LIMITE_MIN = 5;
@@ -424,9 +520,29 @@ class Endereco{
         string endereco;
         void validar(string endereco);
     public:
+        ///
+        /// Met&oacute;do para dar set na Classe.
+        ///
+        /// @param string a ser inserida no objeto.
+        ///
+        /// @throw invalid_argument Em caso de argumento inv&acute;lido,&eacute lancado
+        /// um objeto explicando o erro.
+        ///
         void setEndereco(string);
+        ///
+        /// Met&oacute;do para dar get no  Endereco.
+        ///
+        ///
+        ///@return string Retorna o  Endereco.
+        ///
         string getEndereco();
 };
+
+/// @class Horario
+///
+/// @brief C&oacute;digo destinado a armazenar o Hor$aacute;rio.
+///
+/// O Hor$aacute;rio v&aacute;lido informado deve ser no formato XY:ZW para representar hor$aacute;rio  entre 13:00 e 17:00 horas.
 
 class Horario{
     private:
@@ -434,10 +550,29 @@ class Horario{
         static const int LIMITE_MIN = 5;
         void validar(string horario);
     public:
+        ///
+        /// Met&oacute;do para dar set na Classe.
+        ///
+        /// @param string a ser inserida no objeto.
+        ///
+        /// @throw invalid_argument Em caso de argumento inv&acute;lido,&eacute lancado
+        /// um objeto explicando o erro.
+        ///
         void setHorario(string);
+        ///
+        /// Met&oacute;do para dar get no  hor$aacute;rio .
+        ///
+        ///
+        ///@return string Retorna o hor$aacute;rio .
+        ///
         string getHorario();
 };
 
+/// @class Senha
+///
+/// @brief C&oacute;digo destinado a armazenar a Senha.
+///
+/// A Senha v&aacute;lida informado deve ser no Formato XXXXXX onde cada X &eacute; d$iacute;gito (0 – 9) e não h&aacute; d&iacute;gito repetido.
 
 class Senha{
     private:
@@ -445,16 +580,49 @@ class Senha{
         string senha;
         void validar(string valor);
     public:
+        ///
+        /// Met&oacute;do para dar set na Classe.
+        ///
+        /// @param string a ser inserida no objeto.
+        ///
+        /// @throw invalid_argument Em caso de argumento inv&acute;lido,&eacute lancado
+        /// um objeto explicando o erro.
+        ///
         void setSenha(string);
+        ///
+        /// Met&oacute;do para dar get na Senha .
+        ///
+        ///
+        ///@return string Retorna a Senha .
+        ///
         string getSenha();
 };
 
+/// @class ValorMinimo
+///
+/// @brief C&oacute;digo destinado a armazenar o Valor Minimo.
+///
+/// Valor Minimo deve ser 1.000,00, 5.000,00, 10.000 ou 50.000,00 (reais)
 class ValorMinimo{
     private:
         int valorMinimo;
         void validar(int valorMinimo);
     public:
+        ///
+        /// Met&oacute;do para dar set na Classe.
+        ///
+        /// @param int a ser inserida no objeto.
+        ///
+        /// @throw invalid_argument Em caso de argumento inv&acute;lido,&eacute lancado
+        /// um objeto explicando o erro.
+        ///
         void setValorMinimo(int);
+        ///
+        /// Met&oacute;do para dar get no Valor Minimo .
+        ///
+        ///
+        ///@return int Retorna o Valor Minimo .
+        ///
         int getValorMinimo();
 };
 
