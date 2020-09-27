@@ -27,140 +27,114 @@ int main(){
     TUValorAplicacao testevalor;
     TUValorMinimo testeminimo;
 
-    switch(testecep.run()){
-        case true : cout << "SUCESSO no teste do CEP" << endl;
-                            break;
-        case false : cout << "FALHA no teste do CEP" << endl;
-                            break;
+    if(testecep.run() == true){
+        cout << "SUCESSO no teste do CEP" << endl;
+    }else if(testecep.run() == false){
+        cout << "FALHA no teste do CEP" << endl;
     }
 
-    switch(testeclasse.run()){
-        case true  : cout << "SUCESSO no teste de Classe" << endl;
-                            break;
-        case false : cout << "FALHA no teste de Classe" << endl;
-                            break;
+    if(testeclasse.run() == true ){
+        cout << "SUCESSO no teste de Classe" << endl;
+    }else if(testeclasse.run() == false){
+        cout << "FALHA no teste de Classe" << endl;
     }
 
-    switch(testecpf.run()){
-        case true  : cout << "SUCESSO no teste de CPF" << endl;
-                            break;
-        case false : cout << "FALHA no teste de CPF" << endl;
-                            break;
+    if(testecpf.run() == true){
+        cout << "SUCESSO no teste de CPF" << endl;
+    }else if(testecpf.run() == false){
+        cout << "FALHA no teste de CPF" << endl;
     }
 
-     switch(testeagencia.run()){
-        case true  : cout << "SUCESSO no teste de Codigo de Agencia" << endl;
-                            break;
-        case false : cout << "FALHA no teste de Codigo de Agencia" << endl;
-                            break;
-
+    if(testeagencia.run() == true ){
+        cout << "SUCESSO no teste de Codigo de Agencia" << endl;
+    }else if(testeagencia.run() == false){
+        cout << "FALHA no teste de Codigo de Agencia" << endl;
     }
 
-    switch(testeaplicacao.run()){
-        case true  : cout << "SUCESSO no teste de Codigo de Aplicaçao" << endl;
-                            break;
-        case false : cout << "FALHA no teste de Codigo de Aplicacao" << endl;
-                            break;
-
+    if(testeaplicacao.run() == true ){
+        cout << "SUCESSO no teste de Codigo de Aplicaçao" << endl;
+    }else if(testeaplicacao.run() == false){
+        cout << "FALHA no teste de Codigo de Aplicacao" << endl;
     }
 
-     switch(testebanco.run()){
-        case true  : cout << "SUCESSO no teste de Codigo de Banco" << endl;
-                            break;
-        case false : cout << "FALHA no teste de Codigo de Banco" << endl;
-                            break;
-
+    if(testebanco.run() == true){
+        cout << "SUCESSO no teste de Codigo de Banco" << endl;
+    }else if(testebanco.run() == false){
+        cout << "FALHA no teste de Codigo de Banco" << endl;
     }
 
-    switch(testeproduto.run()){
-        case true : cout << "SUCESSO no teste do Codigo de Produto" << endl;
-                            break;
-        case false : cout << "FALHA no teste do Codigo de Produto" << endl;
-                            break;
+    if(testeproduto.run() == true){
+        cout << "SUCESSO no teste do Codigo de Produto" << endl;
+    }else if(testeproduto.run() == false){
+        cout << "FALHA no teste do Codigo de Produto" << endl;
     }
 
-    switch(testedata.run()){
-        case true  : cout << "SUCESSO no teste de Data" << endl;
-                            break;
-        case false : cout << "FALHA no teste de Data" << endl;
-                            break;
-
+    if(testedata.run() == true){
+        cout << "SUCESSO no teste de Data" << endl;
+    }else if(testedata.run() == false){
+        cout << "FALHA no teste de Data" << endl;
     }
 
-     switch(testeemissor.run()){
-        case true  : cout << "SUCESSO no teste de Emissor" << endl;
-                            break;
-        case false : cout << "FALHA no teste de Emissor" << endl;
-                            break;
-
+    if(testeemissor.run() == true){
+        cout << "SUCESSO no teste de Emissor" << endl;
+    }else if(testedata.run() == false){
+        cout << "FALHA no teste de Emissor" << endl;
     }
 
-     switch(testeendereco.run()){
-        case true  : cout << "SUCESSO no teste de Endereco" << endl;
-                            break;
-        case false : cout << "FALHA no teste de Endereco" << endl;
-                            break;
-
+    if(testeendereco.run() == true){
+        cout << "SUCESSO no teste de Endereco" << endl;
+    }else if(testeendereco.run() == false){
+        cout << "FALHA no teste de Endereco" << endl;
     }
 
-     switch(testehorario.run()){
-        case true  : cout << "SUCESSO no teste de Horario" << endl;
-                            break;
-        case false : cout << "FALHA no teste de Horario" << endl;
-                            break;
-
+    if(testehorario.run() == true){
+        cout << "SUCESSO no teste de Horario" << endl;
+    }else if(testehorario.run() == false){
+        cout << "FALHA no teste de Horario" << endl;
     }
 
 
-    switch(testenome.run()){
-        case true : cout << "SUCESSO no teste do Nome" << endl;
-                            break;
-        case false : cout << "FALHA no teste do Nome" << endl;
-                            break;
+    if(testenome.run() == true ){
+        cout << "SUCESSO no teste do Nome" << endl;
+    }else if(testenome.run() == false){
+        cout << "FALHA no teste do Nome" << endl;
     }
 
-    switch(testenumero.run()){
-        case true : cout << "SUCESSO no teste do Numero" << endl;
-                            break;
-        case false : cout << "FALHA no teste do Numero" << endl;
-                            break;
+    if(testenumero.run() == true){
+        cout << "SUCESSO no teste do Numero" << endl;
+    }else if(testenumero.run() == false){
+        cout << "FALHA no teste do Numero" << endl;
     }
 
-    switch(testeprazo.run()){
-        case true : cout << "SUCESSO no teste do Prazo" << endl;
-                            break;
-        case false : cout << "FALHA no teste do Prazo" << endl;
-                            break;
+    if(testeprazo.run() == true){
+        cout << "SUCESSO no teste do Prazo" << endl;
+    }else if(testeprazo.run() == false){
+        cout << "FALHA no teste do Prazo" << endl;
     }
 
-     switch(testesenha.run()){
-        case true  : cout << "SUCESSO no teste de Senha" << endl;
-                            break;
-        case false : cout << "FALHA no teste de Senha" << endl;
-                            break;
+    if(testesenha.run() == true){
+        cout << "SUCESSO no teste de Senha" << endl;
+    }else if(testesenha.run() == false){
+        cout << "FALHA no teste de Senha" << endl;
     }
 
 
-    switch(testetaxa.run()){
-        case true : cout << "SUCESSO no teste da Taxa" << endl;
-                            break;
-        case false : cout << "FALHA no teste da Taxa" << endl;
-                            break;
+    if(testetaxa.run() == true){
+        cout << "SUCESSO no teste da Taxa" << endl;
+    }else if(testetaxa.run() == false){
+        cout << "FALHA no teste da Taxa" << endl;
     }
 
-    switch(testevalor.run()){
-        case true : cout << "SUCESSO no teste do Valor de Aplicacao" << endl;
-                            break;
-        case false : cout << "FALHA no teste do Valor de Aplicacao" << endl;
-                            break;
+    if(testevalor.run() == true){
+        cout << "SUCESSO no teste do Valor de Aplicacao" << endl;
+    }else if(testevalor.run() == false){
+        cout << "FALHA no teste do Valor de Aplicacao" << endl;
     }
 
-     switch(testeminimo.run()){
-        case true  : cout << "SUCESSO no teste de Valor Minimo" << endl;
-                            break;
-        case false : cout << "FALHA no teste de Valor Minimo" << endl;
-                            break;
-
+    if(testeminimo.run() == true){
+        cout << "SUCESSO no teste de Valor Minimo" << endl;
+    }else if(testeminimo.run() == false){
+        cout << "FALHA no teste de Valor Minimo" << endl;
     }
 
 

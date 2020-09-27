@@ -388,7 +388,6 @@ class CodBanco{
 
         static const int TAMANHO = 3;
         string valor;
-        int tamanhoValor = valor.size();
         void validar(string valor);
 
     public:
