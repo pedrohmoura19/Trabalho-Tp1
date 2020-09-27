@@ -10,15 +10,22 @@ int main(){
 
     TUCep testecep;
     TUClasse testeclasse;
+    TUCpf testecpf;
     TUCodAgencia testeagencia;
+    TUCodAplicacao testeaplicacao;
+    TUCodBanco testebanco;
     TUCodProduto testeproduto;
     TUData testedata;
+    TUEmissor testeemissor;
+    TUEndereco testeendereco;
+    TUHorario testehorario;
     TUNome testenome;
     TUNumero testenumero;
     TUPrazo testeprazo;
+    TUSenha testesenha;
     TUTaxa testetaxa;
     TUValorAplicacao testevalor;
-    TUCpf testecpf;
+    TUValorMinimo testeminimo;
 
     switch(testecep.run()){
         case true : cout << "SUCESSO no teste do CEP" << endl;
@@ -32,13 +39,35 @@ int main(){
                             break;
         case false : cout << "FALHA no teste de Classe" << endl;
                             break;
-
     }
 
-    switch(testeagencia.run()){
+    switch(testecpf.run()){
+        case true  : cout << "SUCESSO no teste de CPF" << endl;
+                            break;
+        case false : cout << "FALHA no teste de CPF" << endl;
+                            break;
+    }
+
+     switch(testeagencia.run()){
         case true  : cout << "SUCESSO no teste de Codigo de Agencia" << endl;
                             break;
         case false : cout << "FALHA no teste de Codigo de Agencia" << endl;
+                            break;
+
+    }
+
+    switch(testeaplicacao.run()){
+        case true  : cout << "SUCESSO no teste de Codigo de Aplicaçao" << endl;
+                            break;
+        case false : cout << "FALHA no teste de Codigo de Aplicacao" << endl;
+                            break;
+
+    }
+
+     switch(testebanco.run()){
+        case true  : cout << "SUCESSO no teste de Codigo de Banco" << endl;
+                            break;
+        case false : cout << "FALHA no teste de Codigo de Banco" << endl;
                             break;
 
     }
@@ -57,6 +86,31 @@ int main(){
                             break;
 
     }
+
+     switch(testeemissor.run()){
+        case true  : cout << "SUCESSO no teste de Emissor" << endl;
+                            break;
+        case false : cout << "FALHA no teste de Emissor" << endl;
+                            break;
+
+    }
+
+     switch(testeendereco.run()){
+        case true  : cout << "SUCESSO no teste de Endereco" << endl;
+                            break;
+        case false : cout << "FALHA no teste de Endereco" << endl;
+                            break;
+
+    }
+
+     switch(testehorario.run()){
+        case true  : cout << "SUCESSO no teste de Horario" << endl;
+                            break;
+        case false : cout << "FALHA no teste de Horario" << endl;
+                            break;
+
+    }
+
 
     switch(testenome.run()){
         case true : cout << "SUCESSO no teste do Nome" << endl;
@@ -79,6 +133,14 @@ int main(){
                             break;
     }
 
+     switch(testesenha.run()){
+        case true  : cout << "SUCESSO no teste de Senha" << endl;
+                            break;
+        case false : cout << "FALHA no teste de Senha" << endl;
+                            break;
+    }
+
+
     switch(testetaxa.run()){
         case true : cout << "SUCESSO no teste da Taxa" << endl;
                             break;
@@ -92,12 +154,15 @@ int main(){
         case false : cout << "FALHA no teste do Valor de Aplicacao" << endl;
                             break;
     }
-        switch(testecpf.run()){
-        case true  : cout << "SUCESSO no teste de CPF" << endl;
+
+     switch(testeminimo.run()){
+        case true  : cout << "SUCESSO no teste de Valor Minimo" << endl;
                             break;
-        case false : cout << "FALHA no teste de CPF" << endl;
+        case false : cout << "FALHA no teste de Valor Minimo" << endl;
                             break;
-        }
+
+    }
+
 
     return 0;
 

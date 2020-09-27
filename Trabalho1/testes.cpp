@@ -177,6 +177,89 @@ bool TUCodAgencia::run(){
     return estado;
 }
 
+/////////////Metodos da classe TUCodAplicacao//////////////
+void TUCodAplicacao::setUp(){
+    codigo = new CodAplicacao();
+    estado = true;
+}
+
+void TUCodAplicacao::tearDown(){
+    delete codigo;
+}
+
+void TUCodAplicacao::testarCenarioSucesso(){
+    try{
+        codigo->setAplicacao(VALOR_VALIDO);
+        if(codigo->getAplicacao() != VALOR_VALIDO){
+            estado = false;
+        }
+    }
+    catch(invalid_argument excecao){
+        estado = false;
+    }
+
+}
+
+void TUCodAplicacao::testarCenarioFalha(){
+    try{
+        codigo->setAplicacao(VALOR_INVALIDO);
+        estado = false;
+    }
+    catch(invalid_argument excecao){
+        return;
+    }
+}
+
+bool TUCodAplicacao::run(){
+    setUp();
+    testarCenarioSucesso();
+    testarCenarioFalha();
+    tearDown();
+    return estado;
+}
+
+/////////////Metodos da classe TUCodBanco//////////////
+void TUCodBanco::setUp(){
+    codigo = new CodBanco();
+    estado = true;
+}
+
+void TUCodBanco::tearDown(){
+    delete codigo;
+}
+
+void TUCodBanco::testarCenarioSucesso(){
+    try{
+        codigo->setValor(VALOR_VALIDO);
+        if(codigo->getValor() != VALOR_VALIDO){
+            estado = false;
+        }
+    }
+    catch(invalid_argument excecao){
+        estado = false;
+    }
+
+}
+
+void TUCodBanco::testarCenarioFalha(){
+    try{
+        codigo->setValor(VALOR_INVALIDO);
+        estado = false;
+    }
+    catch(invalid_argument excecao){
+        return;
+    }
+}
+
+bool TUCodBanco::run(){
+    setUp();
+    testarCenarioSucesso();
+    testarCenarioFalha();
+    tearDown();
+    return estado;
+}
+
+
 
 /////////////Metodos da classe TUCodProduto//////////////
 void TUCodProduto::setUp(){
