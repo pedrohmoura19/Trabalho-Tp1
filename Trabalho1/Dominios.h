@@ -400,8 +400,8 @@ class CodBanco{
 class Cpf{
     private:
         static const int TAMANHO = 14;
-        string valor;
-        void validar(string valor);
+        string cpf;
+        void validar(string cpf);
     public:
         void setCpf(string);
         string getCpf();
