@@ -88,18 +88,76 @@ $(document).ready(function(){initNavTree('class_cpf.html',''); initResizable(); 
 <div class="title">Cpf Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>C&oacute;digo destinado a armazenar o CPF.  
+ <a href="class_cpf.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_dominios_8h_source.html">Dominios.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aec03428cfc5f00210ee6442d83d36528"><td class="memItemLeft" align="right" valign="top"><a id="aec03428cfc5f00210ee6442d83d36528"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setCpf</b> (string)</td></tr>
+<tr class="memitem:aec03428cfc5f00210ee6442d83d36528"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cpf.html#aec03428cfc5f00210ee6442d83d36528">setCpf</a> (string)</td></tr>
 <tr class="separator:aec03428cfc5f00210ee6442d83d36528"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a902324865e17495f9633edd23ed02cd9"><td class="memItemLeft" align="right" valign="top"><a id="a902324865e17495f9633edd23ed02cd9"></a>
-string&#160;</td><td class="memItemRight" valign="bottom"><b>getCpf</b> ()</td></tr>
+<tr class="memitem:a902324865e17495f9633edd23ed02cd9"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cpf.html#a902324865e17495f9633edd23ed02cd9">getCpf</a> ()</td></tr>
 <tr class="separator:a902324865e17495f9633edd23ed02cd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>C&oacute;digo destinado a armazenar o CPF. </p>
+<p>O CPF (Cadastro de Pessoa Fisica) v&aacute;lido informado deve ser no formato XXX.XXX.XXX-XX em que X &eacute; um d&iacute;gito de 0 a 9.Cada CPF inclui d&iacute;gitos verificadores calculados por meio de algor&iacute;timo apropriado. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a902324865e17495f9633edd23ed02cd9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a902324865e17495f9633edd23ed02cd9">&#9670;&nbsp;</a></span>getCpf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Cpf::getCpf </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Met&oacute;do para dar get no C&oacute;digo do Banco.</p>
+<dl class="section return"><dt>Returns</dt><dd>string Retorna o C&oacute;digo do Banco. </dd></dl>
+
+</div>
+</div>
+<a id="aec03428cfc5f00210ee6442d83d36528"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec03428cfc5f00210ee6442d83d36528">&#9670;&nbsp;</a></span>setCpf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Cpf::setCpf </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>cpf</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Met&oacute;do para dar set no C&oacute;digo do Banco..</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">string</td><td>a ser inserida no objeto.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">invalid_argument</td><td>Em caso de argumento inv&aacute;lido,&eacute; lancado um objeto explicando o erro. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="_dominios_8h_source.html">Dominios.h</a></li>
+<li>Dominios.cpp</li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -107,7 +165,7 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>getCpf</b> ()</td><
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_cpf.html">Cpf</a></li>
-    <li class="footer">Generated on Sun Sep 20 2020 19:23:19 for Trabalho1 by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
+    <li class="footer">Generated on Mon Sep 28 2020 02:19:04 for Trabalho1 by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>
 </body>

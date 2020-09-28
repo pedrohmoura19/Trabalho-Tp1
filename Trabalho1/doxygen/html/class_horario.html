@@ -88,21 +88,76 @@ $(document).ready(function(){initNavTree('class_horario.html',''); initResizable
 <div class="title">Horario Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>C&oacute;digo destinado a armazenar o Hor&aacute;rio.  
+ <a href="class_horario.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_dominios_8h_source.html">Dominios.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aaea3db3f64cb014cf250b8c2c91db079"><td class="memItemLeft" align="right" valign="top"><a id="aaea3db3f64cb014cf250b8c2c91db079"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Horario</b> (string)</td></tr>
-<tr class="separator:aaea3db3f64cb014cf250b8c2c91db079"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6ce3757acbef827c9b0d994cdb8e5921"><td class="memItemLeft" align="right" valign="top"><a id="a6ce3757acbef827c9b0d994cdb8e5921"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setHorario</b> ()</td></tr>
-<tr class="separator:a6ce3757acbef827c9b0d994cdb8e5921"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a48bafd16811951544db6244ddc17e2ab"><td class="memItemLeft" align="right" valign="top"><a id="a48bafd16811951544db6244ddc17e2ab"></a>
-string&#160;</td><td class="memItemRight" valign="bottom"><b>getHorario</b> ()</td></tr>
+<tr class="memitem:a40c8660aecd2725dccd830b6248d1772"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_horario.html#a40c8660aecd2725dccd830b6248d1772">setHorario</a> (string)</td></tr>
+<tr class="separator:a40c8660aecd2725dccd830b6248d1772"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48bafd16811951544db6244ddc17e2ab"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_horario.html#a48bafd16811951544db6244ddc17e2ab">getHorario</a> ()</td></tr>
 <tr class="separator:a48bafd16811951544db6244ddc17e2ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>C&oacute;digo destinado a armazenar o Hor&aacute;rio. </p>
+<p>O Hor&aacute;rio v&aacute;lido informado deve ser no formato XY:ZW para representar hor&aacute;rio entre 13:00 e 17:00 horas. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a48bafd16811951544db6244ddc17e2ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48bafd16811951544db6244ddc17e2ab">&#9670;&nbsp;</a></span>getHorario()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Horario::getHorario </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Met&oacute;do para dar get no Hor&aacute;rio .</p>
+<dl class="section return"><dt>Returns</dt><dd>string Retorna o hor&aacute;rio . </dd></dl>
+
+</div>
+</div>
+<a id="a40c8660aecd2725dccd830b6248d1772"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40c8660aecd2725dccd830b6248d1772">&#9670;&nbsp;</a></span>setHorario()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Horario::setHorario </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>horario</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Met&oacute;do para dar set no <a class="el" href="class_horario.html" title="Código destinado a armazenar o Horário.">Horario</a>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">string</td><td>a ser inserida no objeto.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">invalid_argument</td><td>Em caso de argumento inv&aacute;lido,&eacute; lancado um objeto explicando o erro. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="_dominios_8h_source.html">Dominios.h</a></li>
+<li>Dominios.cpp</li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -110,7 +165,7 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>getHorario</b> ()</
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_horario.html">Horario</a></li>
-    <li class="footer">Generated on Sun Sep 20 2020 19:23:19 for Trabalho1 by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
+    <li class="footer">Generated on Mon Sep 28 2020 02:19:04 for Trabalho1 by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>
 </body>

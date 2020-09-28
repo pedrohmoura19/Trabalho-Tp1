@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['horario_20',['Horario',['../class_horario.html',1,'']]]
+  ['horario_27',['Horario',['../class_horario.html',1,'']]]
 ];

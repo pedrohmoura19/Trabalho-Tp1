@@ -88,16 +88,73 @@ $(document).ready(function(){initNavTree('class_senha.html',''); initResizable()
 <div class="title">Senha Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>C&oacute;digo destinado a armazenar a <a class="el" href="class_senha.html" title="Código destinado a armazenar a Senha.">Senha</a>.  
+ <a href="class_senha.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_dominios_8h_source.html">Dominios.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a379d90c214392ccb42aaf49e3d39e112"><td class="memItemLeft" align="right" valign="top"><a id="a379d90c214392ccb42aaf49e3d39e112"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setValor</b> (string)</td></tr>
-<tr class="separator:a379d90c214392ccb42aaf49e3d39e112"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a701d441609c24943de42442ceb0f5e43"><td class="memItemLeft" align="right" valign="top"><a id="a701d441609c24943de42442ceb0f5e43"></a>
-string&#160;</td><td class="memItemRight" valign="bottom"><b>getValor</b> ()</td></tr>
-<tr class="separator:a701d441609c24943de42442ceb0f5e43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a735e4bf5f65cc8d28daa7dbf202fd999"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_senha.html#a735e4bf5f65cc8d28daa7dbf202fd999">setSenha</a> (string)</td></tr>
+<tr class="separator:a735e4bf5f65cc8d28daa7dbf202fd999"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8786b3d03b1652e73df1cdce46cbbaaf"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_senha.html#a8786b3d03b1652e73df1cdce46cbbaaf">getSenha</a> ()</td></tr>
+<tr class="separator:a8786b3d03b1652e73df1cdce46cbbaaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>C&oacute;digo destinado a armazenar a <a class="el" href="class_senha.html" title="Código destinado a armazenar a Senha.">Senha</a>. </p>
+<p>A <a class="el" href="class_senha.html" title="Código destinado a armazenar a Senha.">Senha</a> deve ser criada pelo usu&aacute;rio e seu formato v&aacute;lido informado deve ser no Formato XXXXXX onde cada X &eacute; d&iacute;gito (0 – 9) e não h&aacute; d&iacute;gito repetido. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a8786b3d03b1652e73df1cdce46cbbaaf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8786b3d03b1652e73df1cdce46cbbaaf">&#9670;&nbsp;</a></span>getSenha()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Senha::getSenha </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Met&oacute;do para dar get na <a class="el" href="class_senha.html" title="Código destinado a armazenar a Senha.">Senha</a> .</p>
+<dl class="section return"><dt>Returns</dt><dd>string Retorna a <a class="el" href="class_senha.html" title="Código destinado a armazenar a Senha.">Senha</a> . </dd></dl>
+
+</div>
+</div>
+<a id="a735e4bf5f65cc8d28daa7dbf202fd999"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a735e4bf5f65cc8d28daa7dbf202fd999">&#9670;&nbsp;</a></span>setSenha()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Senha::setSenha </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>senha</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Met&oacute;do para dar set na <a class="el" href="class_senha.html" title="Código destinado a armazenar a Senha.">Senha</a>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">string</td><td>a ser inserida no objeto.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">invalid_argument</td><td>Em caso de argumento inv&aacute;lido,&eacute; lancado um objeto explicando o erro. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="_dominios_8h_source.html">Dominios.h</a></li>
 <li>Dominios.cpp</li>
@@ -108,7 +165,7 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>getValor</b> ()</td
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_senha.html">Senha</a></li>
-    <li class="footer">Generated on Sun Sep 20 2020 19:23:19 for Trabalho1 by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
+    <li class="footer">Generated on Mon Sep 28 2020 02:19:04 for Trabalho1 by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>
 </body>
