@@ -2,7 +2,7 @@
 #include <string>
 
 #include "Dominios.h"
-#include "testes.h"
+#include "testesDominios.h"
 
 using namespace std;
 
