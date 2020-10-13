@@ -24,11 +24,11 @@
 	<string>
 	<stdexcept>
 
-1601172982 source:d:\pedro\github\trabalho-tp1\trabalho1\main.cpp
+1601996916 source:d:\pedro\github\trabalho-tp1\trabalho1\main.cpp
 	<iostream>
 	<string>
 	"Dominios.h"
-	"testes.h"
+	"testesDominios.h"
 
 1601166868 source:d:\pedro\github\trabalho-tp1\trabalho1\testes.cpp
 	<iostream>
@@ -36,5 +36,8 @@
 	"testes.h"
 
 1601949662 d:\pedro\github\trabalho-tp1\trabalho1\testes.h
+	"Dominios.h"
+
+1601949662 d:\pedro\github\trabalho-tp1\trabalho1\testesdominios.h
 	"Dominios.h"
 
