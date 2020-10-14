@@ -24,11 +24,11 @@
 	<string>
 	<stdexcept>
 
-1601996916 source:d:\pedro\github\trabalho-tp1\trabalho1\main.cpp
+1602635204 source:d:\pedro\github\trabalho-tp1\trabalho1\main.cpp
 	<iostream>
 	<string>
 	"Dominios.h"
-	"testesDominios.h"
+	"testesEntidades.h"
 
 1601166868 source:d:\pedro\github\trabalho-tp1\trabalho1\testes.cpp
 	<iostream>
@@ -40,4 +40,21 @@
 
 1601949662 d:\pedro\github\trabalho-tp1\trabalho1\testesdominios.h
 	"Dominios.h"
+
+1602636586 d:\pedro\github\trabalho-tp1\trabalho1\testesentidades.h
+	<string>
+	"entidades.h"
+	"Dominios.h"
+
+1602635306 d:\pedro\github\trabalho-tp1\trabalho1\entidades.h
+	"Dominios.h"
+
+1602635204 source:d:\pedro\github\trabalho-tp1\trabalho1\testesentidades.cpp
+	"testesEntidades.h"
+	"entidades.h"
+	"Dominios.h"
+	<string>
+
+1602636474 source:d:\pedro\github\trabalho-tp1\trabalho1\entidades.cpp
+	"entidades.h"
 

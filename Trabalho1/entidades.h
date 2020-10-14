@@ -63,11 +63,11 @@ class Usuario{
         Senha senha;
 
  public:
-        void setNome(const Nome &nome);
+        void setNome(const Nome&);
         Nome getNome();
 
-        void setEndereco(const Endereco &endereco);
-        Endereco getNome();
+        void setEndereco(const Endereco&);
+        Endereco getEndereco() const;
 
         void setCep(const Cep &cep);
         Cep getCep();
