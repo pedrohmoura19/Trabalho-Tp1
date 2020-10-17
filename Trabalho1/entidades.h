@@ -3,6 +3,14 @@
 
 #include "Dominios.h"
 
+/// @class Produto
+///
+/// @brief C&oacute;digo destinado a representar a classe de entidade Produto.
+///
+/// A entidade Produto ir&aacute; conter codigo do produto, classe do produto de investimento, emissor,
+/// prazo de aplicac&atilde;o em meses, data do vencimento, taxa de rendimento, horario limite para aplicac&atilde;o e
+/// valor minimo de aplicac&atilde;
+///
 
 class Produto{
  private:

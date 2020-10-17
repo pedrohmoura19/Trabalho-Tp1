@@ -1,4 +1,6 @@
+warning: source ..\testes.h is not a readable file or directory... skipping.
 warning: source ..\Dominios2.cpp is not a readable file or directory... skipping.
+warning: source ..\testes.cpp is not a readable file or directory... skipping.
 D:/Pedro/GitHub/Trabalho-Tp1/Trabalho1/Dominios.h:44: warning: argument 'int' of command @param is not found in the argument list of Cep::setCep(int cep)
 D:/Pedro/GitHub/Trabalho-Tp1/Trabalho1/Dominios.h:53: warning: The following parameter of Cep::setCep(int cep) is not documented:
   parameter 'cep'

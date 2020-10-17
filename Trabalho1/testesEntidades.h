@@ -9,7 +9,7 @@ class TUProduto{
  private:
     const string VALOR_VALIDO_CODIGO = "015";
     const string VALOR_VALIDO_CLASSE = "LCA";
-    const string VALOR_VALIDO_EMISSOR = "Casa de Investimentos Sentroa";
+    const string VALOR_VALIDO_EMISSOR = "Casa De Investimentos Sentroa";
     const static int VALOR_VALIDO_PRAZO = 12;
     const string VALOR_VALIDO_VENCIMENTO = "07/04/2032";
     const static int VALOR_VALIDO_TAXA = 15;

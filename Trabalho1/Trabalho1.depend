@@ -24,7 +24,7 @@
 	<string>
 	<stdexcept>
 
-1602635204 source:d:\pedro\github\trabalho-tp1\trabalho1\main.cpp
+1602973856 source:d:\pedro\github\trabalho-tp1\trabalho1\main.cpp
 	<iostream>
 	<string>
 	"Dominios.h"
@@ -41,7 +41,7 @@
 1601949662 d:\pedro\github\trabalho-tp1\trabalho1\testesdominios.h
 	"Dominios.h"
 
-1602636586 d:\pedro\github\trabalho-tp1\trabalho1\testesentidades.h
+1602973898 d:\pedro\github\trabalho-tp1\trabalho1\testesentidades.h
 	<string>
 	"entidades.h"
 	"Dominios.h"

@@ -2,6 +2,7 @@
 #include <string>
 
 #include "Dominios.h"
+#include "entidades.h"
 #include "testesEntidades.h"
 
 using namespace std;
@@ -11,11 +12,11 @@ int main(){
     TUProduto testeproduto;
     TUUsuario testeusuario;
 
-    //if(testeproduto.run() == true){
-    //    cout << "SUCESSO no teste do Produto" << endl;
-    //}else if(testecep.run() == false){
-    //    cout << "FALHA no teste do Produto" << endl;
-    //}
+    if(testeproduto.run() == true){
+        cout << "SUCESSO no teste do Produto" << endl;
+    }else if(testeproduto.run() == false){
+        cout << "FALHA no teste do Produto" << endl;
+    }
 
     if(testeusuario.run() == true ){
         cout << "SUCESSO no teste de Usuario" << endl;

@@ -1,22 +1,4 @@
 var searchData=
 [
-  ['taxa_49',['Taxa',['../class_taxa.html',1,'']]],
-  ['tucep_50',['TUCep',['../class_t_u_cep.html',1,'']]],
-  ['tuclasse_51',['TUClasse',['../class_t_u_classe.html',1,'']]],
-  ['tucodagencia_52',['TUCodAgencia',['../class_t_u_cod_agencia.html',1,'']]],
-  ['tucodaplicacao_53',['TUCodAplicacao',['../class_t_u_cod_aplicacao.html',1,'']]],
-  ['tucodbanco_54',['TUCodBanco',['../class_t_u_cod_banco.html',1,'']]],
-  ['tucodproduto_55',['TUCodProduto',['../class_t_u_cod_produto.html',1,'']]],
-  ['tucpf_56',['TUCpf',['../class_t_u_cpf.html',1,'']]],
-  ['tudata_57',['TUData',['../class_t_u_data.html',1,'']]],
-  ['tuemissor_58',['TUEmissor',['../class_t_u_emissor.html',1,'']]],
-  ['tuendereco_59',['TUEndereco',['../class_t_u_endereco.html',1,'']]],
-  ['tuhorario_60',['TUHorario',['../class_t_u_horario.html',1,'']]],
-  ['tunome_61',['TUNome',['../class_t_u_nome.html',1,'']]],
-  ['tunumero_62',['TUNumero',['../class_t_u_numero.html',1,'']]],
-  ['tuprazo_63',['TUPrazo',['../class_t_u_prazo.html',1,'']]],
-  ['tusenha_64',['TUSenha',['../class_t_u_senha.html',1,'']]],
-  ['tutaxa_65',['TUTaxa',['../class_t_u_taxa.html',1,'']]],
-  ['tuvaloraplicacao_66',['TUValorAplicacao',['../class_t_u_valor_aplicacao.html',1,'']]],
-  ['tuvalorminimo_67',['TUValorMinimo',['../class_t_u_valor_minimo.html',1,'']]]
+  ['taxa_49',['Taxa',['../class_taxa.html',1,'']]]
 ];
