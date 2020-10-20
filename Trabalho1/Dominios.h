@@ -1,3 +1,12 @@
+///@file Dominios.h
+///@author Pedro Henrique e Roberto Caixeta
+///@brief Biblioteca simples de Classes de Dominios
+///@version 0.1
+///@date 2020-10-17
+
+
+
+
 #ifndef DOMINIOS_H_INCLUDED
 #define DOMINIOS_H_INCLUDED
 #include <string>

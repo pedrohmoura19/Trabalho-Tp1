@@ -41,7 +41,7 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"_dominios_8h_source.html"
+"_dominios_8h.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -37,18 +37,28 @@
 			<Option target="Debug" />
 		</Unit>
 		<Unit filename="Dominios.h">
-			<Option target="&lt;{~None~}&gt;" />
+			<Option target="Debug" />
 		</Unit>
 		<Unit filename="Dominios2.cpp">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
-		<Unit filename="entidades.cpp" />
-		<Unit filename="entidades.h" />
+		<Unit filename="entidades.cpp">
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="entidades.h">
+			<Option target="Debug" />
+		</Unit>
 		<Unit filename="main.cpp" />
 		<Unit filename="testes.cpp">
 			<Option target="Debug" />
 		</Unit>
 		<Unit filename="testes.h">
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="testesDominios.cpp">
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="testesDominios.h">
 			<Option target="Debug" />
 		</Unit>
 		<Unit filename="testesEntidades.cpp">
@@ -64,7 +74,7 @@
 			<DoxyBlocks>
 				<comment_style block="2" line="2" />
 				<doxyfile_project />
-				<doxyfile_build />
+				<doxyfile_build extract_all="1" />
 				<doxyfile_warnings />
 				<doxyfile_output />
 				<doxyfile_dot />
