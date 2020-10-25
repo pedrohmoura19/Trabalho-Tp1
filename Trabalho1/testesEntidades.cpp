@@ -3,6 +3,94 @@
 #include "Dominios.h"
 #include <string>
 
+//Metodos da Classe TUAplicacao
+void TUAplicacao::setUp(){
+    aplicacao = new Aplicacao();
+    estado = true;
+}
+
+void TUAplicacao::tearDown(){
+    delete aplicacao;
+}
+
+void TUAplicacao::testarCenarioSucesso(){
+
+    CodAplicacao codigo;
+    codigo.setAplicacao(VALOR_VALIDO_CODIGO_APLICACAO);
+    aplicacao->setAplicacao(codigo);
+
+    ValorAplicacao valor;
+    valor.setValor(VALOR_VALIDO_VALOR);
+    aplicacao->setValor(valor);
+
+    Data data;
+    data.setData(VALOR_VALIDO_DATA);
+    aplicacao->setData(data);
+
+
+    if(aplicacao->getAplicacao().getAplicacao() != VALOR_VALIDO_CODIGO_APLICACAO){
+        estado = false;
+
+    }else if(aplicacao->getValor().getValor() != VALOR_VALIDO_VALOR){
+        estado = false;
+
+    }else if(aplicacao->getData().getData() != VALOR_VALIDO_DATA){
+        estado = false;
+    }
+
+}
+
+bool TUAplicacao::run(){
+    setUp();
+    testarCenarioSucesso();
+    tearDown();
+    return estado;
+}
+
+//Metodos da Classe TUConta
+void TUConta::setUp(){
+    conta = new Conta();
+    estado = true;
+}
+
+void TUConta::tearDown(){
+    delete conta;
+}
+
+void TUConta::testarCenarioSucesso(){
+
+    CodBanco banco;
+    banco.setValor(VALOR_VALIDO_CODIGO_BANCO);
+    conta->setBanco(banco);
+
+    CodAgencia agencia;
+    agencia.setAgencia(VALOR_VALIDO_CODIGO_AGENCIA);
+    conta->setAgencia(agencia);
+
+    Numero numero;
+    numero.setNumero(VALOR_VALIDO_NUMERO);
+    conta->setNumero(numero);
+
+
+    if(conta->getBanco().getValor() != VALOR_VALIDO_CODIGO_AGENCIA){
+        estado = false;
+
+    }else if(conta->getAgencia().getAgencia() != VALOR_VALIDO_CODIGO_AGENCIA){
+        estado = false;
+
+    }else if(conta->getNumero().getNumero() != VALOR_VALIDO_CODIGO_AGENCIA){
+        estado = false;
+    }
+
+}
+
+bool TUConta::run(){
+    setUp();
+    testarCenarioSucesso();
+    tearDown();
+    return estado;
+}
+
 //Metodos da Classe TUProduto
 void TUProduto::setUp(){
     produto = new Produto();
