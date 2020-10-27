@@ -11,6 +11,117 @@
 
 #include "Dominios.h"
 
+/// @class Aplicac&atilde;o
+///
+/// @brief C&oacute;digo destinado a representar a classe de entidade Aplicac&atilde;o.
+///
+/// A entidade Aplicac&atilde;o representa uma aplicac&atilde;o de investimento e ir&aacute; conter codigo de aplicac&atilde;o, 
+/// valor de aplicac&atilde;o e data.
+///
+/// @see CodAplicacao
+/// @see ValorAplicacao 
+/// @see Data
+
+
+class Aplicacao{
+private:
+       CodAplicacao codigo;
+       ValorAplicacao valor;
+       Data data;
+public:
+       /// Metodo para dar set no Codigo de Aplicac&atilde;o
+       ///
+       /// @param CodAplicacao a ser inserido
+       ///
+       void setAplicacao(const CodAplicacao &codigo);
+
+       /// Metodo para dar get no Codigo de Aplicac&atilde;o
+       ///
+       /// @return Codigo de Aplicac&atilde;o
+       ///
+       CodAplicacao getAplicacao();
+
+       /// Metodo para dar set no Valor de Aplicac&atilde;o
+       ///
+       /// @param ValorAplicacao a ser inserido
+       ///
+       void setValor(const ValorAplicacao &valor);
+
+       /// Metodo para dar get no Valor de Aplicac&atilde;o
+       ///
+       /// @return Valor de Aplicac&atilde;o
+       ///
+       ValorAplicacao getValor();
+
+       /// Metodo para dar set na Data
+       ///
+       /// @param Data a ser inserido
+       ///
+       void setData(const Data &data);
+
+       /// Metodo para dar get na Data
+       ///
+       /// @return Data
+       ///
+       Data getData();
+};
+
+/// @class Conta
+///
+/// @brief C&oacute;digo destinado a representar a classe de entidade Conta.
+///
+/// A entidade Conta representa uma Conta de banco e ir&aacute; conter codigo de Banco, codigo de Agencia e numero.
+///
+/// @see CodBanco
+/// @see CodAgencia
+/// @see Numero
+
+class Conta{
+private: 
+       CodBanco banco;
+       CodAgencia agencia;
+       Numero numero;
+public:
+       /// Metodo para dar set no Codigo de Banco
+       ///
+       /// @param CodBanco a ser inserido
+       ///
+       void setBanco(const CodBanco &banco);
+
+       /// Metodo para dar get no Codigo de Banco
+       ///
+       /// @return Codigo de Banco
+       ///
+       CodBanco getBanco();
+
+       /// Metodo para dar set no Codigo de Agencia
+       ///
+       /// @param CodAgencia a ser inserido
+       ///
+       void setAgencia(const CodAgencia &agencia);
+
+       /// Metodo para dar get no Codigo de Agencia
+       ///
+       /// @return Codigo de Agencia
+       ///
+       CodAgencia getAgencia();
+
+       /// Metodo para dar set no Numero
+       ///
+       /// @param Numero a ser inserido
+       ///
+       void setNumero(const Numero &numero);
+
+       /// Metodo para dar get no Numero
+       ///
+       /// @return Numero
+       ///
+       Numero getNumero();
+
+};
+
+
+
 /// @class Produto
 ///
 /// @brief C&oacute;digo destinado a representar a classe de entidade Produto.
@@ -234,6 +345,7 @@ class Usuario{
         Senha getSenha();
 
 };
+
 
 
 #endif // ENTIDADES_H_INCLUDED

@@ -1,5 +1,57 @@
 #include "entidades.h"
 
+//Metodos da Classe Aplicacao
+void Aplicacao::setAplicacao(const CodAplicacao &codigo){
+    this->codigo = codigo;
+}
+
+CodAplicacao Aplicacao::getAplicacao(){
+    return codigo;
+}
+
+void Aplicacao::setValor(const ValorAplicacao &valor){
+    this->valor = valor;
+}
+
+ValorAplicacao Aplicacao::getValor(){
+    return valor;
+}
+
+void Aplicacao::setData(const Data &data){
+    this->data = data;
+}
+
+Data Aplicacao::getData(){
+    return data;
+}
+
+
+//Metodos da Classe Conta
+void Conta::setBanco(const CodBanco &banco){
+    this->banco = banco;
+}
+
+CodBanco Conta::getBanco(){
+    return banco;
+}
+
+void Conta::setAgencia(const CodAgencia &agencia){
+    this->agencia = agencia;
+}
+
+CodAgencia Conta::getAgencia(){
+    return agencia;
+}
+
+void Conta::setNumero(const Numero &numero){
+    this->numero = numero;
+}
+
+Numero Conta::getNumero(){
+    return numero;
+}
+
+//Metodos da Classe Produto
 void Produto::setProduto(const CodProduto &codigo){
     this->codigo = codigo;
 }
