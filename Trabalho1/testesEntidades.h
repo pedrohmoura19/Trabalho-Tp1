@@ -5,6 +5,43 @@
 #include "Dominios.h"
 
 
+class TUAplicacao{
+private:
+   const string VALOR_VALIDO_CODIGO_APLICACAO= "12345";
+   const static int VALOR_VALIDO_VALOR = 72000;
+   const string VALOR_VALIDO_DATA = "07/04/2020";
+
+   Aplicacao *aplicacao;
+
+   bool estado;
+
+   void setUp();
+   void tearDown();
+   void testarCenarioSucesso();
+
+public:
+   bool run();
+};
+
+class TUConta{
+private:
+   const string VALOR_VALIDO_CODIGO_BANCO= "001";
+   const string VALOR_VALIDO_CODIGO_AGENCIA = "1234";
+   const string VALOR_VALIDO_NUMERO = "819889-8";
+
+   Conta *conta;
+
+   bool estado;
+
+   void setUp();
+   void tearDown();
+   void testarCenarioSucesso();
+
+public:
+   bool run();
+};
+
+
 /// @class TUProduto
 ///
 /// @brief C&oacute;digo destinado a representar a classe de entidade Produto.

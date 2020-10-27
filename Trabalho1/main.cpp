@@ -9,8 +9,22 @@ using namespace std;
 
 int main(){
 
+    TUAplicacao testeaplicacao;
+    TUConta testeconta;
     TUProduto testeproduto;
     TUUsuario testeusuario;
+
+    if(testeaplicacao.run() == true){
+        cout << "SUCESSO no teste da Aplicacao" << endl;
+    }else if(testeaplicacao.run() == false){
+        cout << "FALHA no teste da Aplicacao" << endl;
+    }
+
+    if(testeconta.run() == true){
+        cout << "SUCESSO no teste da Conta" << endl;
+    }else if(testeconta.run() == false){
+        cout << "FALHA no teste da Conta" << endl;
+    }
 
     if(testeproduto.run() == true){
         cout << "SUCESSO no teste do Produto" << endl;
