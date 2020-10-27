@@ -1,0 +1,71 @@
+\hypertarget{class_cep}{}\doxysection{Cep Class Reference}
+\label{class_cep}\index{Cep@{Cep}}
+
+
+C\'{o}digo destinado a armazenar o C\+EP.  
+
+
+
+
+{\ttfamily \#include $<$Dominios.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_cep_a5996385293b801a2f6ecaba8509801b9}{set\+Cep}} (int)
+\item 
+int \mbox{\hyperlink{class_cep_a328f2f8018c0a0719fcfec286bec467d}{get\+Cep}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+C\'{o}digo destinado a armazenar o C\+EP. 
+
+C\'{o}digo v\'{a}lido caso o valor esteja entre as seguintes faixas\+:
+
+-\/1000000 a 5999999 e 8000000 a 8499999 \+: S\~{a}o Paulo
+
+-\/20000000 a 26600999 \+: Rio de Janeiro
+
+-\/70000000 a 70999999 \+: Bras\'{\i}lia.
+
+-\/40000000 a 41999999 \+: Salvador.
+
+-\/60000000 a 60999999 \+: Fortaleza. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_cep_a328f2f8018c0a0719fcfec286bec467d}\label{class_cep_a328f2f8018c0a0719fcfec286bec467d}} 
+\index{Cep@{Cep}!getCep@{getCep}}
+\index{getCep@{getCep}!Cep@{Cep}}
+\doxysubsubsection{\texorpdfstring{getCep()}{getCep()}}
+{\footnotesize\ttfamily int Cep\+::get\+Cep (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Met\'{o}do para dar get no C\+EP
+
+\begin{DoxyReturn}{Returns}
+C\+EP do us\'{u}ario 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_cep_a5996385293b801a2f6ecaba8509801b9}\label{class_cep_a5996385293b801a2f6ecaba8509801b9}} 
+\index{Cep@{Cep}!setCep@{setCep}}
+\index{setCep@{setCep}!Cep@{Cep}}
+\doxysubsubsection{\texorpdfstring{setCep()}{setCep()}}
+{\footnotesize\ttfamily void Cep\+::set\+Cep (\begin{DoxyParamCaption}\item[{int}]{cep }\end{DoxyParamCaption})}
+
+Met\'{o}do para dar set no C\+EP.
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & que representa o C\+EP que ser\'{a} inserido.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em invalid\+\_\+argument} & Em caso de argumento inv\'{}lido,\&eacute lancado um objeto explicando o erro. \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_dominios_8h}{Dominios.\+h}}\item 
+\mbox{\hyperlink{_dominios_8cpp}{Dominios.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,63 @@
+\hypertarget{class_numero}{}\doxysection{Numero Class Reference}
+\label{class_numero}\index{Numero@{Numero}}
+
+
+C\'{o}digo destinado a armazenar a conta corrente do usu\'{a}rio.  
+
+
+
+
+{\ttfamily \#include $<$Dominios.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_numero_af0abdf8f71a7e556c8942149f0ffb56a}{set\+Numero}} (string)
+\item 
+string \mbox{\hyperlink{class_numero_a69925fb8f861b1c9a429bf1141d8ce91}{get\+Numero}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+C\'{o}digo destinado a armazenar a conta corrente do usu\'{a}rio. 
+
+A conta corrente \'{e} um n\'{u}mero no formato X\+X\+X\+X\+X\+X-\/Y, onde cada X \&eacute digito (0 – 9) e Y é um dígito verificador calculado por meio do seguinte algoritmo\+:
+
+-- O digito verificador \'{e} igual a nove menos o resto da divisao por seis da soma de todos os digitos multiplicados por sua respectiva posic\~{a}o (Primeiro digito multiplicado por 1, Segundo por dois e assim por diante). 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_numero_a69925fb8f861b1c9a429bf1141d8ce91}\label{class_numero_a69925fb8f861b1c9a429bf1141d8ce91}} 
+\index{Numero@{Numero}!getNumero@{getNumero}}
+\index{getNumero@{getNumero}!Numero@{Numero}}
+\doxysubsubsection{\texorpdfstring{getNumero()}{getNumero()}}
+{\footnotesize\ttfamily string Numero\+::get\+Numero (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Met\'{o}do para dar get no \mbox{\hyperlink{class_numero}{Numero}}.
+
+\begin{DoxyReturn}{Returns}
+string Retorna o \mbox{\hyperlink{class_numero}{Numero}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_numero_af0abdf8f71a7e556c8942149f0ffb56a}\label{class_numero_af0abdf8f71a7e556c8942149f0ffb56a}} 
+\index{Numero@{Numero}!setNumero@{setNumero}}
+\index{setNumero@{setNumero}!Numero@{Numero}}
+\doxysubsubsection{\texorpdfstring{setNumero()}{setNumero()}}
+{\footnotesize\ttfamily void Numero\+::set\+Numero (\begin{DoxyParamCaption}\item[{string}]{numero }\end{DoxyParamCaption})}
+
+Met\'{o}do para dar set no \mbox{\hyperlink{class_numero}{Numero}} da conta corrente.
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & com 6 digitos e 1 digito verificador separados com \textquotesingle{}-\/\textquotesingle{} a ser inserido no objeto.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em invalid\+\_\+argument} & Em caso de argumento inv\'{a}lido,\'{e} lancado um objeto explicando o erro. \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_dominios_8h}{Dominios.\+h}}\item 
+\mbox{\hyperlink{_dominios_8cpp}{Dominios.\+cpp}}\end{DoxyCompactItemize}
