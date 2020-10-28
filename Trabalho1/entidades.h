@@ -11,15 +11,15 @@
 
 #include "Dominios.h"
 
-/// @class Aplicac&atilde;o
+/// @class Aplicacao
 ///
 /// @brief C&oacute;digo destinado a representar a classe de entidade Aplicac&atilde;o.
 ///
-/// A entidade Aplicac&atilde;o representa uma aplicac&atilde;o de investimento e ir&aacute; conter codigo de aplicac&atilde;o, 
+/// A entidade Aplicac&atilde;o representa uma aplicac&atilde;o de investimento e ir&aacute; conter codigo de aplicac&atilde;o,
 /// valor de aplicac&atilde;o e data.
 ///
 /// @see CodAplicacao
-/// @see ValorAplicacao 
+/// @see ValorAplicacao
 /// @see Data
 
 
@@ -77,7 +77,7 @@ public:
 /// @see Numero
 
 class Conta{
-private: 
+private:
        CodBanco banco;
        CodAgencia agencia;
        Numero numero;
@@ -257,7 +257,7 @@ class Produto{
 
 };
 
-/// @class Usu&aacute;rio
+/// @class Usuario
 ///
 /// @brief Entidade que deve armazenar dados de um usuario
 ///

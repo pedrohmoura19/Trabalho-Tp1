@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['emissor_94',['Emissor',['../class_emissor.html',1,'']]],
-  ['endereco_95',['Endereco',['../class_endereco.html',1,'']]]
+  ['data_91',['Data',['../class_data.html',1,'']]]
 ];

@@ -65,69 +65,107 @@ $(function() {
 <div class="title">testesEntidades.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="testes_entidades_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef TESTESENTIDADES_H_INCLUDED</span></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef TESTESENTIDADES_H_INCLUDED</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define TESTESENTIDADES_H_INCLUDED</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="entidades_8h.html">entidades.h</a>&quot;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_dominios_8h.html">Dominios.h</a>&quot;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_t_u_produto.html">   17</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_t_u_produto.html">TUProduto</a>{</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">string</span> VALOR_VALIDO_CODIGO = <span class="stringliteral">&quot;015&quot;</span>;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">string</span> VALOR_VALIDO_CLASSE = <span class="stringliteral">&quot;LCA&quot;</span>;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">string</span> VALOR_VALIDO_EMISSOR = <span class="stringliteral">&quot;Casa De Investimentos Sentroa&quot;</span>;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keyword">const</span> <span class="keyword">static</span> <span class="keywordtype">int</span> VALOR_VALIDO_PRAZO = 12;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">string</span> VALOR_VALIDO_VENCIMENTO = <span class="stringliteral">&quot;07/04/2032&quot;</span>;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keyword">const</span> <span class="keyword">static</span> <span class="keywordtype">int</span> VALOR_VALIDO_TAXA = 15;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">string</span> VALOR_VALIDO_HORARIO = <span class="stringliteral">&quot;14:33&quot;</span>;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keyword">const</span> <span class="keyword">static</span> <span class="keywordtype">int</span> VALOR_VALIDO_VALOR = 5000;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="class_produto.html">Produto</a> *produto;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">bool</span> estado;</div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="class_t_u_aplicacao.html">    8</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_t_u_aplicacao.html">TUAplicacao</a>{</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;   <span class="keyword">const</span> <span class="keywordtype">string</span> VALOR_VALIDO_CODIGO_APLICACAO= <span class="stringliteral">&quot;12345&quot;</span>;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;   <span class="keyword">const</span> <span class="keyword">static</span> <span class="keywordtype">int</span> VALOR_VALIDO_VALOR = 72000;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;   <span class="keyword">const</span> <span class="keywordtype">string</span> VALOR_VALIDO_DATA = <span class="stringliteral">&quot;07/04/2020&quot;</span>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;   <a class="code" href="class_aplicacao.html">Aplicacao</a> *aplicacao;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;   <span class="keywordtype">bool</span> estado;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;   <span class="keywordtype">void</span> setUp();</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;   <span class="keywordtype">void</span> tearDown();</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;   <span class="keywordtype">void</span> testarCenarioSucesso();</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;   <span class="keywordtype">bool</span> run();</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;};</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_t_u_conta.html">   26</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_t_u_conta.html">TUConta</a>{</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;   <span class="keyword">const</span> <span class="keywordtype">string</span> VALOR_VALIDO_CODIGO_BANCO = <span class="stringliteral">&quot;001&quot;</span>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;   <span class="keyword">const</span> <span class="keywordtype">string</span> VALOR_VALIDO_CODIGO_AGENCIA = <span class="stringliteral">&quot;1234&quot;</span>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;   <span class="keyword">const</span> <span class="keywordtype">string</span> VALOR_VALIDO_NUMERO = <span class="stringliteral">&quot;819889-8&quot;</span>;</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">void</span> setUp();</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">void</span> tearDown();</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">void</span> testarCenarioSucesso();</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;   <a class="code" href="class_conta.html">Conta</a> *conta;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;   <span class="keywordtype">bool</span> estado;</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_t_u_produto.html#a232b19a063806ffed566924bda29a1f7">run</a>();</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;};</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;   <span class="keywordtype">void</span> setUp();</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;   <span class="keywordtype">void</span> tearDown();</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;   <span class="keywordtype">void</span> testarCenarioSucesso();</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="class_t_u_usuario.html">   40</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_t_u_usuario.html">TUUsuario</a>{</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">string</span> VALOR_VALIDO_NOME = <span class="stringliteral">&quot;Joao Saldanha Santos&quot;</span>;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">string</span> VALOR_VALIDO_ENDERECO = <span class="stringliteral">&quot;Rua Sorgadinho Casa&quot;</span>;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keyword">const</span> <span class="keyword">static</span> <span class="keywordtype">int</span> VALOR_VALIDO_CEP = 70252200;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">string</span> VALOR_VALIDO_CPF = <span class="stringliteral">&quot;020.950.771-30&quot;</span>;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">string</span> VALOR_VALIDO_SENHA = <span class="stringliteral">&quot;456782&quot;</span>;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="class_usuario.html">Usuario</a> *usuario;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">bool</span> estado;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">void</span> setUp();</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">void</span> tearDown();</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">void</span> testarCenarioSucesso();</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;   <span class="keywordtype">bool</span> run();</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;};</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="class_t_u_produto.html">   45</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_t_u_produto.html">TUProduto</a>{</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">string</span> VALOR_VALIDO_CODIGO = <span class="stringliteral">&quot;015&quot;</span>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">string</span> VALOR_VALIDO_CLASSE = <span class="stringliteral">&quot;LCA&quot;</span>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">string</span> VALOR_VALIDO_EMISSOR = <span class="stringliteral">&quot;Casa De Investimentos Sentroa&quot;</span>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keyword">const</span> <span class="keyword">static</span> <span class="keywordtype">int</span> VALOR_VALIDO_PRAZO = 12;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">string</span> VALOR_VALIDO_VENCIMENTO = <span class="stringliteral">&quot;07/04/2032&quot;</span>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keyword">const</span> <span class="keyword">static</span> <span class="keywordtype">int</span> VALOR_VALIDO_TAXA = 15;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">string</span> VALOR_VALIDO_HORARIO = <span class="stringliteral">&quot;14:33&quot;</span>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keyword">const</span> <span class="keyword">static</span> <span class="keywordtype">int</span> VALOR_VALIDO_VALOR = 5000;</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;     <span class="keywordtype">bool</span> <a class="code" href="class_t_u_usuario.html#ae38d7c17d361bb72a9b09282fb4390d9">run</a>();</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;};</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <a class="code" href="class_produto.html">Produto</a> *produto;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordtype">bool</span> estado;</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="preprocessor">#endif // TESTESENTIDADES_H_INCLUDED</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">void</span> setUp();</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">void</span> tearDown();</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordtype">void</span> testarCenarioSucesso();</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">bool</span> run();</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;};</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="class_t_u_usuario.html">   68</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_t_u_usuario.html">TUUsuario</a>{</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">string</span> VALOR_VALIDO_NOME = <span class="stringliteral">&quot;Joao Saldanha Santos&quot;</span>;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">string</span> VALOR_VALIDO_ENDERECO = <span class="stringliteral">&quot;Rua Sorgadinho Casa&quot;</span>;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keyword">const</span> <span class="keyword">static</span> <span class="keywordtype">int</span> VALOR_VALIDO_CEP = 70252200;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">string</span> VALOR_VALIDO_CPF = <span class="stringliteral">&quot;020.950.771-30&quot;</span>;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">string</span> VALOR_VALIDO_SENHA = <span class="stringliteral">&quot;456782&quot;</span>;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <a class="code" href="class_usuario.html">Usuario</a> *usuario;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordtype">bool</span> estado;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordtype">void</span> setUp();</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordtype">void</span> tearDown();</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordtype">void</span> testarCenarioSucesso();</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;     <span class="keywordtype">bool</span> run();</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;};</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="preprocessor">#endif // TESTESENTIDADES_H_INCLUDED</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclass_t_u_produto_html"><div class="ttname"><a href="class_t_u_produto.html">TUProduto</a></div><div class="ttdoc">Código destinado a representar a classe de entidade Produto.</div><div class="ttdef"><b>Definition:</b> testesEntidades.h:17</div></div>
-<div class="ttc" id="aclass_produto_html"><div class="ttname"><a href="class_produto.html">Produto</a></div><div class="ttdoc">Código destinado a representar a classe de entidade Produto.</div><div class="ttdef"><b>Definition:</b> entidades.h:32</div></div>
-<div class="ttc" id="aclass_t_u_usuario_html"><div class="ttname"><a href="class_t_u_usuario.html">TUUsuario</a></div><div class="ttdef"><b>Definition:</b> testesEntidades.h:40</div></div>
+<div class="ttc" id="aclass_t_u_produto_html"><div class="ttname"><a href="class_t_u_produto.html">TUProduto</a></div><div class="ttdef"><b>Definition:</b> testesEntidades.h:45</div></div>
+<div class="ttc" id="aclass_t_u_aplicacao_html"><div class="ttname"><a href="class_t_u_aplicacao.html">TUAplicacao</a></div><div class="ttdef"><b>Definition:</b> testesEntidades.h:8</div></div>
+<div class="ttc" id="aclass_produto_html"><div class="ttname"><a href="class_produto.html">Produto</a></div><div class="ttdoc">Código destinado a representar a classe de entidade Produto.</div><div class="ttdef"><b>Definition:</b> entidades.h:143</div></div>
+<div class="ttc" id="aclass_conta_html"><div class="ttname"><a href="class_conta.html">Conta</a></div><div class="ttdoc">Código destinado a representar a classe de entidade Conta.</div><div class="ttdef"><b>Definition:</b> entidades.h:79</div></div>
+<div class="ttc" id="aclass_t_u_usuario_html"><div class="ttname"><a href="class_t_u_usuario.html">TUUsuario</a></div><div class="ttdef"><b>Definition:</b> testesEntidades.h:68</div></div>
 <div class="ttc" id="aentidades_8h_html"><div class="ttname"><a href="entidades_8h.html">entidades.h</a></div><div class="ttdoc">Biblioteca simples de Entidades.</div></div>
+<div class="ttc" id="aclass_aplicacao_html"><div class="ttname"><a href="class_aplicacao.html">Aplicacao</a></div><div class="ttdoc">Código destinado a representar a classe de entidade Aplicacão.</div><div class="ttdef"><b>Definition:</b> entidades.h:26</div></div>
+<div class="ttc" id="aclass_t_u_conta_html"><div class="ttname"><a href="class_t_u_conta.html">TUConta</a></div><div class="ttdef"><b>Definition:</b> testesEntidades.h:26</div></div>
 <div class="ttc" id="a_dominios_8h_html"><div class="ttname"><a href="_dominios_8h.html">Dominios.h</a></div><div class="ttdoc">Biblioteca simples de Classes de Dominios.</div></div>
-<div class="ttc" id="aclass_t_u_produto_html_a232b19a063806ffed566924bda29a1f7"><div class="ttname"><a href="class_t_u_produto.html#a232b19a063806ffed566924bda29a1f7">TUProduto::run</a></div><div class="ttdeci">bool run()</div><div class="ttdef"><b>Definition:</b> testesEntidades.cpp:78</div></div>
-<div class="ttc" id="aclass_usuario_html"><div class="ttname"><a href="class_usuario.html">Usuario</a></div><div class="ttdef"><b>Definition:</b> entidades.h:163</div></div>
-<div class="ttc" id="aclass_t_u_usuario_html_ae38d7c17d361bb72a9b09282fb4390d9"><div class="ttname"><a href="class_t_u_usuario.html#ae38d7c17d361bb72a9b09282fb4390d9">TUUsuario::run</a></div><div class="ttdeci">bool run()</div><div class="ttdef"><b>Definition:</b> testesEntidades.cpp:135</div></div>
+<div class="ttc" id="aclass_usuario_html"><div class="ttname"><a href="class_usuario.html">Usuario</a></div><div class="ttdoc">Entidade que deve armazenar dados de um usuario.</div><div class="ttdef"><b>Definition:</b> entidades.h:274</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20

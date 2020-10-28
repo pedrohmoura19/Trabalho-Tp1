@@ -20,14 +20,15 @@
 	<string>
 	<ctype.h>
 
-1601949662 d:\pedro\github\trabalho-tp1\trabalho1\dominios.h
+1602975762 d:\pedro\github\trabalho-tp1\trabalho1\dominios.h
 	<string>
 	<stdexcept>
 
-1602973856 source:d:\pedro\github\trabalho-tp1\trabalho1\main.cpp
+1603820636 source:d:\pedro\github\trabalho-tp1\trabalho1\main.cpp
 	<iostream>
 	<string>
 	"Dominios.h"
+	"entidades.h"
 	"testesEntidades.h"
 
 1601166868 source:d:\pedro\github\trabalho-tp1\trabalho1\testes.cpp
@@ -38,23 +39,28 @@
 1601949662 d:\pedro\github\trabalho-tp1\trabalho1\testes.h
 	"Dominios.h"
 
-1601949662 d:\pedro\github\trabalho-tp1\trabalho1\testesdominios.h
+1603206862 d:\pedro\github\trabalho-tp1\trabalho1\testesdominios.h
 	"Dominios.h"
 
-1602975476 d:\pedro\github\trabalho-tp1\trabalho1\testesentidades.h
+1603822046 d:\pedro\github\trabalho-tp1\trabalho1\testesentidades.h
 	<string>
 	"entidades.h"
 	"Dominios.h"
 
-1602975692 d:\pedro\github\trabalho-tp1\trabalho1\entidades.h
+1603824612 d:\pedro\github\trabalho-tp1\trabalho1\entidades.h
 	"Dominios.h"
 
-1602635204 source:d:\pedro\github\trabalho-tp1\trabalho1\testesentidades.cpp
+1603822266 source:d:\pedro\github\trabalho-tp1\trabalho1\testesentidades.cpp
 	"testesEntidades.h"
 	"entidades.h"
 	"Dominios.h"
 	<string>
 
-1602636474 source:d:\pedro\github\trabalho-tp1\trabalho1\entidades.cpp
+1603820636 source:d:\pedro\github\trabalho-tp1\trabalho1\entidades.cpp
 	"entidades.h"
+
+1603821904 source:d:\pedro\github\trabalho-tp1\trabalho1\testesdominios.cpp
+	<iostream>
+	<string>
+	"testesDominios.h"
 

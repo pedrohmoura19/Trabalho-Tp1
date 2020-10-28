@@ -71,141 +71,205 @@ $(function() {
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_dominios_8h.html">Dominios.h</a>&quot;</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="class_produto.html">   32</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_produto.html">Produto</a>{</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <a class="code" href="class_cod_produto.html">CodProduto</a> codigo;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <a class="code" href="class_classe.html">Classe</a> classe;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_aplicacao.html">   26</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_aplicacao.html">Aplicacao</a>{</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;       <a class="code" href="class_cod_aplicacao.html">CodAplicacao</a> codigo;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;       <a class="code" href="class_valor_aplicacao.html">ValorAplicacao</a> valor;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;       <a class="code" href="class_data.html">Data</a> data;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;       <span class="keywordtype">void</span> <a class="code" href="class_aplicacao.html#a04748c11e3f87d85155e0271c27eadc8">setAplicacao</a>(<span class="keyword">const</span> <a class="code" href="class_cod_aplicacao.html">CodAplicacao</a> &amp;codigo);</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <a class="code" href="class_emissor.html">Emissor</a> emissor;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <a class="code" href="class_prazo.html">Prazo</a> prazo;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <a class="code" href="class_data.html">Data</a> vencimento;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;       <a class="code" href="class_cod_aplicacao.html">CodAplicacao</a> <a class="code" href="class_aplicacao.html#a18c841668367dc2863010a63ef0457f3">getAplicacao</a>();</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <a class="code" href="class_taxa.html">Taxa</a> taxa;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <a class="code" href="class_horario.html">Horario</a> horario;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <a class="code" href="class_valor_minimo.html">ValorMinimo</a> valor;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;       <span class="keywordtype">void</span> <a class="code" href="class_aplicacao.html#a954430cc2ac11ecd95b8c8d6356d3d51">setValor</a>(<span class="keyword">const</span> <a class="code" href="class_valor_aplicacao.html">ValorAplicacao</a> &amp;valor);</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_produto.html#adf38a0722bdc9772d7f3f70652ad317f">setProduto</a>(<span class="keyword">const</span> <a class="code" href="class_cod_produto.html">CodProduto</a> &amp;codigo);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <a class="code" href="class_cod_produto.html">CodProduto</a> <a class="code" href="class_produto.html#aa595309f207b750a0c28e564a5c9bbfa">getProduto</a>();</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_produto.html#a75beb5a39523356956d6cc77e41b90d9">setClasse</a>(<span class="keyword">const</span> <a class="code" href="class_classe.html">Classe</a> &amp;classe);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;       <a class="code" href="class_valor_aplicacao.html">ValorAplicacao</a> <a class="code" href="class_aplicacao.html#a6dced908141ca58fe193dfd64d0ecb7e">getValor</a>();</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;       <span class="keywordtype">void</span> <a class="code" href="class_aplicacao.html#ad7339397580025ef1cf155caa7740d79">setData</a>(<span class="keyword">const</span> <a class="code" href="class_data.html">Data</a> &amp;data);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;       <a class="code" href="class_data.html">Data</a> <a class="code" href="class_aplicacao.html#aa64e5e8b6028c5bb1e0526710fa83761">getData</a>();</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;};</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <a class="code" href="class_classe.html">Classe</a> <a class="code" href="class_produto.html#aaf0c8e864409fcb5cca276fdb80fba8f">getClasse</a>();</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_produto.html#a05196aa8af139b6c4a7f3585e44d4387">setEmissor</a>(<span class="keyword">const</span> <a class="code" href="class_emissor.html">Emissor</a> &amp;emissor);</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <a class="code" href="class_emissor.html">Emissor</a> <a class="code" href="class_produto.html#aa510481e06c36b179e2ac9e6ab273a62">getEmissor</a>();</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_produto.html#a052bf9fd194c085e5850439a273c1632">setPrazo</a>(<span class="keyword">const</span> <a class="code" href="class_prazo.html">Prazo</a> &amp;prazo);</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <a class="code" href="class_prazo.html">Prazo</a> <a class="code" href="class_produto.html#a7ff77e07e5f14df0e1370c3dd84517d4">getPrazo</a>();</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_produto.html#a59c8dcf42107f7b369b7592ce13fd555">setData</a>(<span class="keyword">const</span> <a class="code" href="class_data.html">Data</a> &amp;vencimento);</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <a class="code" href="class_data.html">Data</a> <a class="code" href="class_produto.html#a460d30d7077ccb3d3a5583e7c3d6e87c">getData</a>();</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_produto.html#a357e22a3761030bb606f4283052da9be">setTaxa</a>(<span class="keyword">const</span> <a class="code" href="class_taxa.html">Taxa</a> &amp;taxa);</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        <a class="code" href="class_taxa.html">Taxa</a> <a class="code" href="class_produto.html#a2a12e28739316445c8f42e41baa602b9">getTaxa</a>();</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="class_conta.html">   79</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_conta.html">Conta</a>{</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;       <a class="code" href="class_cod_banco.html">CodBanco</a> banco;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;       <a class="code" href="class_cod_agencia.html">CodAgencia</a> agencia;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;       <a class="code" href="class_numero.html">Numero</a> numero;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;       <span class="keywordtype">void</span> <a class="code" href="class_conta.html#a5a77d2f06fcb7b4dac7331d1ebbd92f2">setBanco</a>(<span class="keyword">const</span> <a class="code" href="class_cod_banco.html">CodBanco</a> &amp;banco);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;       <a class="code" href="class_cod_banco.html">CodBanco</a> <a class="code" href="class_conta.html#ad5028fad746fc32e1f668ced59b44afd">getBanco</a>();</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;       <span class="keywordtype">void</span> <a class="code" href="class_conta.html#a06594cc31ec1799d3019f872bd907ae1">setAgencia</a>(<span class="keyword">const</span> <a class="code" href="class_cod_agencia.html">CodAgencia</a> &amp;agencia);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;       <a class="code" href="class_cod_agencia.html">CodAgencia</a> <a class="code" href="class_conta.html#a8f2a1c89504415fd426bac9f566b2f60">getAgencia</a>();</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;       <span class="keywordtype">void</span> <a class="code" href="class_conta.html#a2e92e9d142686ca4be8c7eab853c92ca">setNumero</a>(<span class="keyword">const</span> <a class="code" href="class_numero.html">Numero</a> &amp;numero);</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;       <a class="code" href="class_numero.html">Numero</a> <a class="code" href="class_conta.html#aa53889940b7aff4776437971881c72b5">getNumero</a>();</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;};</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_produto.html#ab21bd88fac29d6fea3ca313e57a75555">setHorario</a>(<span class="keyword">const</span> <a class="code" href="class_horario.html">Horario</a> &amp;horario);</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        <a class="code" href="class_horario.html">Horario</a> <a class="code" href="class_produto.html#a9336f02e4c7a19babd4c7302f1b8ee94">getHorario</a>();</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160; </div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_produto.html#ab15590550a47f2a13d458ae78b1d70ef">setValorMinimo</a>(<span class="keyword">const</span> <a class="code" href="class_valor_minimo.html">ValorMinimo</a> &amp;valor);</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160; </div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        <a class="code" href="class_valor_minimo.html">ValorMinimo</a> <a class="code" href="class_produto.html#a62fb6481620bd20efddc312a83b6b135">getValorMinimo</a>();</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160; </div>
+<div class="line"><a name="l00143"></a><span class="lineno"><a class="line" href="class_produto.html">  143</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_produto.html">Produto</a>{</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        <a class="code" href="class_cod_produto.html">CodProduto</a> codigo;</div>
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160; </div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;};</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        <a class="code" href="class_classe.html">Classe</a> classe;</div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160; </div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160; </div>
-<div class="line"><a name="l00163"></a><span class="lineno"><a class="line" href="class_usuario.html">  163</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_usuario.html">Usuario</a>{</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160; <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        <a class="code" href="class_nome.html">Nome</a> nome;</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160; </div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        <a class="code" href="class_endereco.html">Endereco</a> endereco;</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160; </div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        <a class="code" href="class_cep.html">Cep</a> cep;</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160; </div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        <a class="code" href="class_cpf.html">Cpf</a> cpf;</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160; </div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        <a class="code" href="class_senha.html">Senha</a> senha;</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160; </div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160; <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_usuario.html#a67580c333ab37fda94a3cb7c52121ef2">setNome</a>(<span class="keyword">const</span> <a class="code" href="class_nome.html">Nome</a>&amp;);</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160; </div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        <a class="code" href="class_nome.html">Nome</a> <a class="code" href="class_usuario.html#a67e8ffd0040afbdfc8d9c789bcabe9a2">getNome</a>();</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160; </div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_usuario.html#ab00d9c10534ac3ed59d93b3b0676488e">setEndereco</a>(<span class="keyword">const</span> <a class="code" href="class_endereco.html">Endereco</a>&amp;);</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160; </div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        <a class="code" href="class_endereco.html">Endereco</a> <a class="code" href="class_usuario.html#a8ab465c7dcaaa3b21f4220fe2fd58e7b">getEndereco</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160; </div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_usuario.html#aa2494fefeed8238d829f234a9f06f0e2">setCep</a>(<span class="keyword">const</span> <a class="code" href="class_cep.html">Cep</a> &amp;cep);</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160; </div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;        <a class="code" href="class_cep.html">Cep</a> <a class="code" href="class_usuario.html#acc7f8ca2c5ec28762100a530c29e3640">getCep</a>();</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160; </div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_usuario.html#adf6205a9a2421b8c1888824825617560">setCpf</a>(<span class="keyword">const</span> <a class="code" href="class_cpf.html">Cpf</a> &amp;cpf);</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160; </div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;        <a class="code" href="class_cpf.html">Cpf</a> <a class="code" href="class_usuario.html#aa83c6ad9525f456864291979f3e8a8da">getCpf</a>();</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160; </div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_usuario.html#a126a54fc422205571c6db490dcb9ca03">setSenha</a>(<span class="keyword">const</span> <a class="code" href="class_senha.html">Senha</a> &amp;senha);</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160; </div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;        <a class="code" href="class_senha.html">Senha</a> <a class="code" href="class_usuario.html#aa9f2e4c498f91addea1e1df8186e3ecb">getSenha</a>();</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160; </div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;};</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160; </div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160; </div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;<span class="preprocessor">#endif // ENTIDADES_H_INCLUDED</span></div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        <a class="code" href="class_emissor.html">Emissor</a> emissor;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160; </div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        <a class="code" href="class_prazo.html">Prazo</a> prazo;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160; </div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        <a class="code" href="class_data.html">Data</a> vencimento;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160; </div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        <a class="code" href="class_taxa.html">Taxa</a> taxa;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160; </div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        <a class="code" href="class_horario.html">Horario</a> horario;</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160; </div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        <a class="code" href="class_valor_minimo.html">ValorMinimo</a> valor;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160; </div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_produto.html#adf38a0722bdc9772d7f3f70652ad317f">setProduto</a>(<span class="keyword">const</span> <a class="code" href="class_cod_produto.html">CodProduto</a> &amp;codigo);</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160; </div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        <a class="code" href="class_cod_produto.html">CodProduto</a> <a class="code" href="class_produto.html#aa595309f207b750a0c28e564a5c9bbfa">getProduto</a>();</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160; </div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_produto.html#a75beb5a39523356956d6cc77e41b90d9">setClasse</a>(<span class="keyword">const</span> <a class="code" href="class_classe.html">Classe</a> &amp;classe);</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160; </div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        <a class="code" href="class_classe.html">Classe</a> <a class="code" href="class_produto.html#aaf0c8e864409fcb5cca276fdb80fba8f">getClasse</a>();</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160; </div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_produto.html#a05196aa8af139b6c4a7f3585e44d4387">setEmissor</a>(<span class="keyword">const</span> <a class="code" href="class_emissor.html">Emissor</a> &amp;emissor);</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160; </div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;        <a class="code" href="class_emissor.html">Emissor</a> <a class="code" href="class_produto.html#aa510481e06c36b179e2ac9e6ab273a62">getEmissor</a>();</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160; </div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_produto.html#a052bf9fd194c085e5850439a273c1632">setPrazo</a>(<span class="keyword">const</span> <a class="code" href="class_prazo.html">Prazo</a> &amp;prazo);</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160; </div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        <a class="code" href="class_prazo.html">Prazo</a> <a class="code" href="class_produto.html#a7ff77e07e5f14df0e1370c3dd84517d4">getPrazo</a>();</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160; </div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_produto.html#a59c8dcf42107f7b369b7592ce13fd555">setData</a>(<span class="keyword">const</span> <a class="code" href="class_data.html">Data</a> &amp;vencimento);</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160; </div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;        <a class="code" href="class_data.html">Data</a> <a class="code" href="class_produto.html#a460d30d7077ccb3d3a5583e7c3d6e87c">getData</a>();</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160; </div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_produto.html#a357e22a3761030bb606f4283052da9be">setTaxa</a>(<span class="keyword">const</span> <a class="code" href="class_taxa.html">Taxa</a> &amp;taxa);</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160; </div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        <a class="code" href="class_taxa.html">Taxa</a> <a class="code" href="class_produto.html#a2a12e28739316445c8f42e41baa602b9">getTaxa</a>();</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160; </div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_produto.html#ab21bd88fac29d6fea3ca313e57a75555">setHorario</a>(<span class="keyword">const</span> <a class="code" href="class_horario.html">Horario</a> &amp;horario);</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160; </div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;        <a class="code" href="class_horario.html">Horario</a> <a class="code" href="class_produto.html#a9336f02e4c7a19babd4c7302f1b8ee94">getHorario</a>();</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160; </div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_produto.html#ab15590550a47f2a13d458ae78b1d70ef">setValorMinimo</a>(<span class="keyword">const</span> <a class="code" href="class_valor_minimo.html">ValorMinimo</a> &amp;valor);</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160; </div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;        <a class="code" href="class_valor_minimo.html">ValorMinimo</a> <a class="code" href="class_produto.html#a62fb6481620bd20efddc312a83b6b135">getValorMinimo</a>();</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160; </div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;};</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160; </div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160; </div>
+<div class="line"><a name="l00274"></a><span class="lineno"><a class="line" href="class_usuario.html">  274</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_usuario.html">Usuario</a>{</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;        <a class="code" href="class_nome.html">Nome</a> nome;</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160; </div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;        <a class="code" href="class_endereco.html">Endereco</a> endereco;</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160; </div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;        <a class="code" href="class_cep.html">Cep</a> cep;</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160; </div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;        <a class="code" href="class_cpf.html">Cpf</a> cpf;</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160; </div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;        <a class="code" href="class_senha.html">Senha</a> senha;</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160; </div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_usuario.html#a67580c333ab37fda94a3cb7c52121ef2">setNome</a>(<span class="keyword">const</span> <a class="code" href="class_nome.html">Nome</a>&amp;);</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160; </div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;        <a class="code" href="class_nome.html">Nome</a> <a class="code" href="class_usuario.html#a67e8ffd0040afbdfc8d9c789bcabe9a2">getNome</a>();</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160; </div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_usuario.html#ab00d9c10534ac3ed59d93b3b0676488e">setEndereco</a>(<span class="keyword">const</span> <a class="code" href="class_endereco.html">Endereco</a>&amp;);</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160; </div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;        <a class="code" href="class_endereco.html">Endereco</a> <a class="code" href="class_usuario.html#a8ab465c7dcaaa3b21f4220fe2fd58e7b">getEndereco</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160; </div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_usuario.html#aa2494fefeed8238d829f234a9f06f0e2">setCep</a>(<span class="keyword">const</span> <a class="code" href="class_cep.html">Cep</a> &amp;cep);</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160; </div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;        <a class="code" href="class_cep.html">Cep</a> <a class="code" href="class_usuario.html#acc7f8ca2c5ec28762100a530c29e3640">getCep</a>();</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160; </div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_usuario.html#adf6205a9a2421b8c1888824825617560">setCpf</a>(<span class="keyword">const</span> <a class="code" href="class_cpf.html">Cpf</a> &amp;cpf);</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160; </div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;        <a class="code" href="class_cpf.html">Cpf</a> <a class="code" href="class_usuario.html#aa83c6ad9525f456864291979f3e8a8da">getCpf</a>();</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160; </div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_usuario.html#a126a54fc422205571c6db490dcb9ca03">setSenha</a>(<span class="keyword">const</span> <a class="code" href="class_senha.html">Senha</a> &amp;senha);</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160; </div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;        <a class="code" href="class_senha.html">Senha</a> <a class="code" href="class_usuario.html#aa9f2e4c498f91addea1e1df8186e3ecb">getSenha</a>();</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160; </div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;};</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160; </div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160; </div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160; </div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;<span class="preprocessor">#endif // ENTIDADES_H_INCLUDED</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_taxa_html"><div class="ttname"><a href="class_taxa.html">Taxa</a></div><div class="ttdoc">Código destinado a armazenar a Taxa de rendimento do produto em porcentagem.</div><div class="ttdef"><b>Definition:</b> Dominios.h:323</div></div>
-<div class="ttc" id="aclass_usuario_html_acc7f8ca2c5ec28762100a530c29e3640"><div class="ttname"><a href="class_usuario.html#acc7f8ca2c5ec28762100a530c29e3640">Usuario::getCep</a></div><div class="ttdeci">Cep getCep()</div><div class="ttdef"><b>Definition:</b> entidades.cpp:91</div></div>
-<div class="ttc" id="aclass_produto_html_ab15590550a47f2a13d458ae78b1d70ef"><div class="ttname"><a href="class_produto.html#ab15590550a47f2a13d458ae78b1d70ef">Produto::setValorMinimo</a></div><div class="ttdeci">void setValorMinimo(const ValorMinimo &amp;valor)</div><div class="ttdef"><b>Definition:</b> entidades.cpp:59</div></div>
+<div class="ttc" id="aclass_usuario_html_acc7f8ca2c5ec28762100a530c29e3640"><div class="ttname"><a href="class_usuario.html#acc7f8ca2c5ec28762100a530c29e3640">Usuario::getCep</a></div><div class="ttdeci">Cep getCep()</div><div class="ttdef"><b>Definition:</b> entidades.cpp:143</div></div>
+<div class="ttc" id="aclass_produto_html_ab15590550a47f2a13d458ae78b1d70ef"><div class="ttname"><a href="class_produto.html#ab15590550a47f2a13d458ae78b1d70ef">Produto::setValorMinimo</a></div><div class="ttdeci">void setValorMinimo(const ValorMinimo &amp;valor)</div><div class="ttdef"><b>Definition:</b> entidades.cpp:111</div></div>
+<div class="ttc" id="aclass_aplicacao_html_a954430cc2ac11ecd95b8c8d6356d3d51"><div class="ttname"><a href="class_aplicacao.html#a954430cc2ac11ecd95b8c8d6356d3d51">Aplicacao::setValor</a></div><div class="ttdeci">void setValor(const ValorAplicacao &amp;valor)</div><div class="ttdef"><b>Definition:</b> entidades.cpp:12</div></div>
 <div class="ttc" id="aclass_cep_html"><div class="ttname"><a href="class_cep.html">Cep</a></div><div class="ttdoc">Código destinado a armazenar o CEP.</div><div class="ttdef"><b>Definition:</b> Dominios.h:34</div></div>
-<div class="ttc" id="aclass_usuario_html_ab00d9c10534ac3ed59d93b3b0676488e"><div class="ttname"><a href="class_usuario.html#ab00d9c10534ac3ed59d93b3b0676488e">Usuario::setEndereco</a></div><div class="ttdeci">void setEndereco(const Endereco &amp;)</div><div class="ttdef"><b>Definition:</b> entidades.cpp:79</div></div>
+<div class="ttc" id="aclass_usuario_html_ab00d9c10534ac3ed59d93b3b0676488e"><div class="ttname"><a href="class_usuario.html#ab00d9c10534ac3ed59d93b3b0676488e">Usuario::setEndereco</a></div><div class="ttdeci">void setEndereco(const Endereco &amp;)</div><div class="ttdef"><b>Definition:</b> entidades.cpp:131</div></div>
 <div class="ttc" id="aclass_horario_html"><div class="ttname"><a href="class_horario.html">Horario</a></div><div class="ttdoc">Código destinado a armazenar o Horário.</div><div class="ttdef"><b>Definition:</b> Dominios.h:572</div></div>
-<div class="ttc" id="aclass_produto_html_a75beb5a39523356956d6cc77e41b90d9"><div class="ttname"><a href="class_produto.html#a75beb5a39523356956d6cc77e41b90d9">Produto::setClasse</a></div><div class="ttdeci">void setClasse(const Classe &amp;classe)</div><div class="ttdef"><b>Definition:</b> entidades.cpp:11</div></div>
+<div class="ttc" id="aclass_produto_html_a75beb5a39523356956d6cc77e41b90d9"><div class="ttname"><a href="class_produto.html#a75beb5a39523356956d6cc77e41b90d9">Produto::setClasse</a></div><div class="ttdeci">void setClasse(const Classe &amp;classe)</div><div class="ttdef"><b>Definition:</b> entidades.cpp:63</div></div>
 <div class="ttc" id="aclass_senha_html"><div class="ttname"><a href="class_senha.html">Senha</a></div><div class="ttdoc">Código destinado a armazenar a Senha.</div><div class="ttdef"><b>Definition:</b> Dominios.h:604</div></div>
-<div class="ttc" id="aclass_usuario_html_aa9f2e4c498f91addea1e1df8186e3ecb"><div class="ttname"><a href="class_usuario.html#aa9f2e4c498f91addea1e1df8186e3ecb">Usuario::getSenha</a></div><div class="ttdeci">Senha getSenha()</div><div class="ttdef"><b>Definition:</b> entidades.cpp:107</div></div>
-<div class="ttc" id="aclass_produto_html_a62fb6481620bd20efddc312a83b6b135"><div class="ttname"><a href="class_produto.html#a62fb6481620bd20efddc312a83b6b135">Produto::getValorMinimo</a></div><div class="ttdeci">ValorMinimo getValorMinimo()</div><div class="ttdef"><b>Definition:</b> entidades.cpp:63</div></div>
-<div class="ttc" id="aclass_produto_html_a052bf9fd194c085e5850439a273c1632"><div class="ttname"><a href="class_produto.html#a052bf9fd194c085e5850439a273c1632">Produto::setPrazo</a></div><div class="ttdeci">void setPrazo(const Prazo &amp;prazo)</div><div class="ttdef"><b>Definition:</b> entidades.cpp:27</div></div>
-<div class="ttc" id="aclass_produto_html"><div class="ttname"><a href="class_produto.html">Produto</a></div><div class="ttdoc">Código destinado a representar a classe de entidade Produto.</div><div class="ttdef"><b>Definition:</b> entidades.h:32</div></div>
-<div class="ttc" id="aclass_produto_html_a9336f02e4c7a19babd4c7302f1b8ee94"><div class="ttname"><a href="class_produto.html#a9336f02e4c7a19babd4c7302f1b8ee94">Produto::getHorario</a></div><div class="ttdeci">Horario getHorario()</div><div class="ttdef"><b>Definition:</b> entidades.cpp:55</div></div>
-<div class="ttc" id="aclass_usuario_html_a67e8ffd0040afbdfc8d9c789bcabe9a2"><div class="ttname"><a href="class_usuario.html#a67e8ffd0040afbdfc8d9c789bcabe9a2">Usuario::getNome</a></div><div class="ttdeci">Nome getNome()</div><div class="ttdef"><b>Definition:</b> entidades.cpp:75</div></div>
-<div class="ttc" id="aclass_produto_html_a7ff77e07e5f14df0e1370c3dd84517d4"><div class="ttname"><a href="class_produto.html#a7ff77e07e5f14df0e1370c3dd84517d4">Produto::getPrazo</a></div><div class="ttdeci">Prazo getPrazo()</div><div class="ttdef"><b>Definition:</b> entidades.cpp:31</div></div>
-<div class="ttc" id="aclass_usuario_html_adf6205a9a2421b8c1888824825617560"><div class="ttname"><a href="class_usuario.html#adf6205a9a2421b8c1888824825617560">Usuario::setCpf</a></div><div class="ttdeci">void setCpf(const Cpf &amp;cpf)</div><div class="ttdef"><b>Definition:</b> entidades.cpp:95</div></div>
+<div class="ttc" id="aclass_usuario_html_aa9f2e4c498f91addea1e1df8186e3ecb"><div class="ttname"><a href="class_usuario.html#aa9f2e4c498f91addea1e1df8186e3ecb">Usuario::getSenha</a></div><div class="ttdeci">Senha getSenha()</div><div class="ttdef"><b>Definition:</b> entidades.cpp:159</div></div>
+<div class="ttc" id="aclass_produto_html_a62fb6481620bd20efddc312a83b6b135"><div class="ttname"><a href="class_produto.html#a62fb6481620bd20efddc312a83b6b135">Produto::getValorMinimo</a></div><div class="ttdeci">ValorMinimo getValorMinimo()</div><div class="ttdef"><b>Definition:</b> entidades.cpp:115</div></div>
+<div class="ttc" id="aclass_produto_html_a052bf9fd194c085e5850439a273c1632"><div class="ttname"><a href="class_produto.html#a052bf9fd194c085e5850439a273c1632">Produto::setPrazo</a></div><div class="ttdeci">void setPrazo(const Prazo &amp;prazo)</div><div class="ttdef"><b>Definition:</b> entidades.cpp:79</div></div>
+<div class="ttc" id="aclass_produto_html"><div class="ttname"><a href="class_produto.html">Produto</a></div><div class="ttdoc">Código destinado a representar a classe de entidade Produto.</div><div class="ttdef"><b>Definition:</b> entidades.h:143</div></div>
+<div class="ttc" id="aclass_produto_html_a9336f02e4c7a19babd4c7302f1b8ee94"><div class="ttname"><a href="class_produto.html#a9336f02e4c7a19babd4c7302f1b8ee94">Produto::getHorario</a></div><div class="ttdeci">Horario getHorario()</div><div class="ttdef"><b>Definition:</b> entidades.cpp:107</div></div>
+<div class="ttc" id="aclass_usuario_html_a67e8ffd0040afbdfc8d9c789bcabe9a2"><div class="ttname"><a href="class_usuario.html#a67e8ffd0040afbdfc8d9c789bcabe9a2">Usuario::getNome</a></div><div class="ttdeci">Nome getNome()</div><div class="ttdef"><b>Definition:</b> entidades.cpp:127</div></div>
+<div class="ttc" id="aclass_numero_html"><div class="ttname"><a href="class_numero.html">Numero</a></div><div class="ttdoc">Código destinado a armazenar a conta corrente do usuário.</div><div class="ttdef"><b>Definition:</b> Dominios.h:260</div></div>
+<div class="ttc" id="aclass_produto_html_a7ff77e07e5f14df0e1370c3dd84517d4"><div class="ttname"><a href="class_produto.html#a7ff77e07e5f14df0e1370c3dd84517d4">Produto::getPrazo</a></div><div class="ttdeci">Prazo getPrazo()</div><div class="ttdef"><b>Definition:</b> entidades.cpp:83</div></div>
+<div class="ttc" id="aclass_usuario_html_adf6205a9a2421b8c1888824825617560"><div class="ttname"><a href="class_usuario.html#adf6205a9a2421b8c1888824825617560">Usuario::setCpf</a></div><div class="ttdeci">void setCpf(const Cpf &amp;cpf)</div><div class="ttdef"><b>Definition:</b> entidades.cpp:147</div></div>
+<div class="ttc" id="aclass_conta_html"><div class="ttname"><a href="class_conta.html">Conta</a></div><div class="ttdoc">Código destinado a representar a classe de entidade Conta.</div><div class="ttdef"><b>Definition:</b> entidades.h:79</div></div>
+<div class="ttc" id="aclass_conta_html_a2e92e9d142686ca4be8c7eab853c92ca"><div class="ttname"><a href="class_conta.html#a2e92e9d142686ca4be8c7eab853c92ca">Conta::setNumero</a></div><div class="ttdeci">void setNumero(const Numero &amp;numero)</div><div class="ttdef"><b>Definition:</b> entidades.cpp:46</div></div>
+<div class="ttc" id="aclass_aplicacao_html_a18c841668367dc2863010a63ef0457f3"><div class="ttname"><a href="class_aplicacao.html#a18c841668367dc2863010a63ef0457f3">Aplicacao::getAplicacao</a></div><div class="ttdeci">CodAplicacao getAplicacao()</div><div class="ttdef"><b>Definition:</b> entidades.cpp:8</div></div>
 <div class="ttc" id="aclass_classe_html"><div class="ttname"><a href="class_classe.html">Classe</a></div><div class="ttdoc">Código destinado a armazenar a Classe do investimento.</div><div class="ttdef"><b>Definition:</b> Dominios.h:79</div></div>
-<div class="ttc" id="aclass_usuario_html_aa2494fefeed8238d829f234a9f06f0e2"><div class="ttname"><a href="class_usuario.html#aa2494fefeed8238d829f234a9f06f0e2">Usuario::setCep</a></div><div class="ttdeci">void setCep(const Cep &amp;cep)</div><div class="ttdef"><b>Definition:</b> entidades.cpp:87</div></div>
-<div class="ttc" id="aclass_produto_html_adf38a0722bdc9772d7f3f70652ad317f"><div class="ttname"><a href="class_produto.html#adf38a0722bdc9772d7f3f70652ad317f">Produto::setProduto</a></div><div class="ttdeci">void setProduto(const CodProduto &amp;codigo)</div><div class="ttdef"><b>Definition:</b> entidades.cpp:3</div></div>
+<div class="ttc" id="aclass_usuario_html_aa2494fefeed8238d829f234a9f06f0e2"><div class="ttname"><a href="class_usuario.html#aa2494fefeed8238d829f234a9f06f0e2">Usuario::setCep</a></div><div class="ttdeci">void setCep(const Cep &amp;cep)</div><div class="ttdef"><b>Definition:</b> entidades.cpp:139</div></div>
+<div class="ttc" id="aclass_produto_html_adf38a0722bdc9772d7f3f70652ad317f"><div class="ttname"><a href="class_produto.html#adf38a0722bdc9772d7f3f70652ad317f">Produto::setProduto</a></div><div class="ttdeci">void setProduto(const CodProduto &amp;codigo)</div><div class="ttdef"><b>Definition:</b> entidades.cpp:55</div></div>
+<div class="ttc" id="aclass_aplicacao_html_ad7339397580025ef1cf155caa7740d79"><div class="ttname"><a href="class_aplicacao.html#ad7339397580025ef1cf155caa7740d79">Aplicacao::setData</a></div><div class="ttdeci">void setData(const Data &amp;data)</div><div class="ttdef"><b>Definition:</b> entidades.cpp:20</div></div>
 <div class="ttc" id="aclass_nome_html"><div class="ttname"><a href="class_nome.html">Nome</a></div><div class="ttdoc">Código destinado a armazenar o Nome do usuário.</div><div class="ttdef"><b>Definition:</b> Dominios.h:221</div></div>
 <div class="ttc" id="aclass_data_html"><div class="ttname"><a href="class_data.html">Data</a></div><div class="ttdoc">Código destinado a armazenar a Data.</div><div class="ttdef"><b>Definition:</b> Dominios.h:186</div></div>
+<div class="ttc" id="aclass_aplicacao_html_a04748c11e3f87d85155e0271c27eadc8"><div class="ttname"><a href="class_aplicacao.html#a04748c11e3f87d85155e0271c27eadc8">Aplicacao::setAplicacao</a></div><div class="ttdeci">void setAplicacao(const CodAplicacao &amp;codigo)</div><div class="ttdef"><b>Definition:</b> entidades.cpp:4</div></div>
 <div class="ttc" id="aclass_prazo_html"><div class="ttname"><a href="class_prazo.html">Prazo</a></div><div class="ttdoc">Código destinado a armazenar o Prazo da aplicacao em meses.</div><div class="ttdef"><b>Definition:</b> Dominios.h:291</div></div>
-<div class="ttc" id="aclass_produto_html_a2a12e28739316445c8f42e41baa602b9"><div class="ttname"><a href="class_produto.html#a2a12e28739316445c8f42e41baa602b9">Produto::getTaxa</a></div><div class="ttdeci">Taxa getTaxa()</div><div class="ttdef"><b>Definition:</b> entidades.cpp:47</div></div>
-<div class="ttc" id="aclass_usuario_html_a67580c333ab37fda94a3cb7c52121ef2"><div class="ttname"><a href="class_usuario.html#a67580c333ab37fda94a3cb7c52121ef2">Usuario::setNome</a></div><div class="ttdeci">void setNome(const Nome &amp;)</div><div class="ttdef"><b>Definition:</b> entidades.cpp:71</div></div>
-<div class="ttc" id="aclass_usuario_html_a126a54fc422205571c6db490dcb9ca03"><div class="ttname"><a href="class_usuario.html#a126a54fc422205571c6db490dcb9ca03">Usuario::setSenha</a></div><div class="ttdeci">void setSenha(const Senha &amp;senha)</div><div class="ttdef"><b>Definition:</b> entidades.cpp:103</div></div>
+<div class="ttc" id="aclass_conta_html_aa53889940b7aff4776437971881c72b5"><div class="ttname"><a href="class_conta.html#aa53889940b7aff4776437971881c72b5">Conta::getNumero</a></div><div class="ttdeci">Numero getNumero()</div><div class="ttdef"><b>Definition:</b> entidades.cpp:50</div></div>
+<div class="ttc" id="aclass_valor_aplicacao_html"><div class="ttname"><a href="class_valor_aplicacao.html">ValorAplicacao</a></div><div class="ttdoc">Código destinado a armazenar o Valor da Aplicacão do usuário.</div><div class="ttdef"><b>Definition:</b> Dominios.h:357</div></div>
+<div class="ttc" id="aclass_aplicacao_html"><div class="ttname"><a href="class_aplicacao.html">Aplicacao</a></div><div class="ttdoc">Código destinado a representar a classe de entidade Aplicacão.</div><div class="ttdef"><b>Definition:</b> entidades.h:26</div></div>
+<div class="ttc" id="aclass_produto_html_a2a12e28739316445c8f42e41baa602b9"><div class="ttname"><a href="class_produto.html#a2a12e28739316445c8f42e41baa602b9">Produto::getTaxa</a></div><div class="ttdeci">Taxa getTaxa()</div><div class="ttdef"><b>Definition:</b> entidades.cpp:99</div></div>
+<div class="ttc" id="aclass_conta_html_ad5028fad746fc32e1f668ced59b44afd"><div class="ttname"><a href="class_conta.html#ad5028fad746fc32e1f668ced59b44afd">Conta::getBanco</a></div><div class="ttdeci">CodBanco getBanco()</div><div class="ttdef"><b>Definition:</b> entidades.cpp:34</div></div>
+<div class="ttc" id="aclass_usuario_html_a67580c333ab37fda94a3cb7c52121ef2"><div class="ttname"><a href="class_usuario.html#a67580c333ab37fda94a3cb7c52121ef2">Usuario::setNome</a></div><div class="ttdeci">void setNome(const Nome &amp;)</div><div class="ttdef"><b>Definition:</b> entidades.cpp:123</div></div>
+<div class="ttc" id="aclass_aplicacao_html_aa64e5e8b6028c5bb1e0526710fa83761"><div class="ttname"><a href="class_aplicacao.html#aa64e5e8b6028c5bb1e0526710fa83761">Aplicacao::getData</a></div><div class="ttdeci">Data getData()</div><div class="ttdef"><b>Definition:</b> entidades.cpp:24</div></div>
+<div class="ttc" id="aclass_usuario_html_a126a54fc422205571c6db490dcb9ca03"><div class="ttname"><a href="class_usuario.html#a126a54fc422205571c6db490dcb9ca03">Usuario::setSenha</a></div><div class="ttdeci">void setSenha(const Senha &amp;senha)</div><div class="ttdef"><b>Definition:</b> entidades.cpp:155</div></div>
+<div class="ttc" id="aclass_conta_html_a06594cc31ec1799d3019f872bd907ae1"><div class="ttname"><a href="class_conta.html#a06594cc31ec1799d3019f872bd907ae1">Conta::setAgencia</a></div><div class="ttdeci">void setAgencia(const CodAgencia &amp;agencia)</div><div class="ttdef"><b>Definition:</b> entidades.cpp:38</div></div>
 <div class="ttc" id="a_dominios_8h_html"><div class="ttname"><a href="_dominios_8h.html">Dominios.h</a></div><div class="ttdoc">Biblioteca simples de Classes de Dominios.</div></div>
-<div class="ttc" id="aclass_produto_html_aa510481e06c36b179e2ac9e6ab273a62"><div class="ttname"><a href="class_produto.html#aa510481e06c36b179e2ac9e6ab273a62">Produto::getEmissor</a></div><div class="ttdeci">Emissor getEmissor()</div><div class="ttdef"><b>Definition:</b> entidades.cpp:23</div></div>
+<div class="ttc" id="aclass_produto_html_aa510481e06c36b179e2ac9e6ab273a62"><div class="ttname"><a href="class_produto.html#aa510481e06c36b179e2ac9e6ab273a62">Produto::getEmissor</a></div><div class="ttdeci">Emissor getEmissor()</div><div class="ttdef"><b>Definition:</b> entidades.cpp:75</div></div>
 <div class="ttc" id="aclass_cod_produto_html"><div class="ttname"><a href="class_cod_produto.html">CodProduto</a></div><div class="ttdoc">Código destinado a armazenar o Código do Produto.</div><div class="ttdef"><b>Definition:</b> Dominios.h:150</div></div>
-<div class="ttc" id="aclass_produto_html_a59c8dcf42107f7b369b7592ce13fd555"><div class="ttname"><a href="class_produto.html#a59c8dcf42107f7b369b7592ce13fd555">Produto::setData</a></div><div class="ttdeci">void setData(const Data &amp;vencimento)</div><div class="ttdef"><b>Definition:</b> entidades.cpp:35</div></div>
-<div class="ttc" id="aclass_produto_html_aaf0c8e864409fcb5cca276fdb80fba8f"><div class="ttname"><a href="class_produto.html#aaf0c8e864409fcb5cca276fdb80fba8f">Produto::getClasse</a></div><div class="ttdeci">Classe getClasse()</div><div class="ttdef"><b>Definition:</b> entidades.cpp:15</div></div>
-<div class="ttc" id="aclass_produto_html_a05196aa8af139b6c4a7f3585e44d4387"><div class="ttname"><a href="class_produto.html#a05196aa8af139b6c4a7f3585e44d4387">Produto::setEmissor</a></div><div class="ttdeci">void setEmissor(const Emissor &amp;emissor)</div><div class="ttdef"><b>Definition:</b> entidades.cpp:19</div></div>
-<div class="ttc" id="aclass_usuario_html_aa83c6ad9525f456864291979f3e8a8da"><div class="ttname"><a href="class_usuario.html#aa83c6ad9525f456864291979f3e8a8da">Usuario::getCpf</a></div><div class="ttdeci">Cpf getCpf()</div><div class="ttdef"><b>Definition:</b> entidades.cpp:99</div></div>
+<div class="ttc" id="aclass_produto_html_a59c8dcf42107f7b369b7592ce13fd555"><div class="ttname"><a href="class_produto.html#a59c8dcf42107f7b369b7592ce13fd555">Produto::setData</a></div><div class="ttdeci">void setData(const Data &amp;vencimento)</div><div class="ttdef"><b>Definition:</b> entidades.cpp:87</div></div>
+<div class="ttc" id="aclass_produto_html_aaf0c8e864409fcb5cca276fdb80fba8f"><div class="ttname"><a href="class_produto.html#aaf0c8e864409fcb5cca276fdb80fba8f">Produto::getClasse</a></div><div class="ttdeci">Classe getClasse()</div><div class="ttdef"><b>Definition:</b> entidades.cpp:67</div></div>
+<div class="ttc" id="aclass_produto_html_a05196aa8af139b6c4a7f3585e44d4387"><div class="ttname"><a href="class_produto.html#a05196aa8af139b6c4a7f3585e44d4387">Produto::setEmissor</a></div><div class="ttdeci">void setEmissor(const Emissor &amp;emissor)</div><div class="ttdef"><b>Definition:</b> entidades.cpp:71</div></div>
+<div class="ttc" id="aclass_cod_agencia_html"><div class="ttname"><a href="class_cod_agencia.html">CodAgencia</a></div><div class="ttdoc">Código destinado a armazenar o Código da Agencia.</div><div class="ttdef"><b>Definition:</b> Dominios.h:114</div></div>
+<div class="ttc" id="aclass_usuario_html_aa83c6ad9525f456864291979f3e8a8da"><div class="ttname"><a href="class_usuario.html#aa83c6ad9525f456864291979f3e8a8da">Usuario::getCpf</a></div><div class="ttdeci">Cpf getCpf()</div><div class="ttdef"><b>Definition:</b> entidades.cpp:151</div></div>
+<div class="ttc" id="aclass_conta_html_a8f2a1c89504415fd426bac9f566b2f60"><div class="ttname"><a href="class_conta.html#a8f2a1c89504415fd426bac9f566b2f60">Conta::getAgencia</a></div><div class="ttdeci">CodAgencia getAgencia()</div><div class="ttdef"><b>Definition:</b> entidades.cpp:42</div></div>
 <div class="ttc" id="aclass_cpf_html"><div class="ttname"><a href="class_cpf.html">Cpf</a></div><div class="ttdoc">Código destinado a armazenar o CPF.</div><div class="ttdef"><b>Definition:</b> Dominios.h:473</div></div>
 <div class="ttc" id="aclass_valor_minimo_html"><div class="ttname"><a href="class_valor_minimo.html">ValorMinimo</a></div><div class="ttdoc">Código destinado a armazenar o Valor Minimo.</div><div class="ttdef"><b>Definition:</b> Dominios.h:635</div></div>
-<div class="ttc" id="aclass_produto_html_aa595309f207b750a0c28e564a5c9bbfa"><div class="ttname"><a href="class_produto.html#aa595309f207b750a0c28e564a5c9bbfa">Produto::getProduto</a></div><div class="ttdeci">CodProduto getProduto()</div><div class="ttdef"><b>Definition:</b> entidades.cpp:7</div></div>
-<div class="ttc" id="aclass_produto_html_a357e22a3761030bb606f4283052da9be"><div class="ttname"><a href="class_produto.html#a357e22a3761030bb606f4283052da9be">Produto::setTaxa</a></div><div class="ttdeci">void setTaxa(const Taxa &amp;taxa)</div><div class="ttdef"><b>Definition:</b> entidades.cpp:43</div></div>
+<div class="ttc" id="aclass_cod_banco_html"><div class="ttname"><a href="class_cod_banco.html">CodBanco</a></div><div class="ttdoc">Código destinado a armazenar o Código do Banco.</div><div class="ttdef"><b>Definition:</b> Dominios.h:438</div></div>
+<div class="ttc" id="aclass_produto_html_aa595309f207b750a0c28e564a5c9bbfa"><div class="ttname"><a href="class_produto.html#aa595309f207b750a0c28e564a5c9bbfa">Produto::getProduto</a></div><div class="ttdeci">CodProduto getProduto()</div><div class="ttdef"><b>Definition:</b> entidades.cpp:59</div></div>
+<div class="ttc" id="aclass_produto_html_a357e22a3761030bb606f4283052da9be"><div class="ttname"><a href="class_produto.html#a357e22a3761030bb606f4283052da9be">Produto::setTaxa</a></div><div class="ttdeci">void setTaxa(const Taxa &amp;taxa)</div><div class="ttdef"><b>Definition:</b> entidades.cpp:95</div></div>
 <div class="ttc" id="aclass_endereco_html"><div class="ttname"><a href="class_endereco.html">Endereco</a></div><div class="ttdoc">Código destinado a armazenar o Endereco do usuario.</div><div class="ttdef"><b>Definition:</b> Dominios.h:540</div></div>
-<div class="ttc" id="aclass_usuario_html"><div class="ttname"><a href="class_usuario.html">Usuario</a></div><div class="ttdef"><b>Definition:</b> entidades.h:163</div></div>
-<div class="ttc" id="aclass_produto_html_a460d30d7077ccb3d3a5583e7c3d6e87c"><div class="ttname"><a href="class_produto.html#a460d30d7077ccb3d3a5583e7c3d6e87c">Produto::getData</a></div><div class="ttdeci">Data getData()</div><div class="ttdef"><b>Definition:</b> entidades.cpp:39</div></div>
+<div class="ttc" id="aclass_usuario_html"><div class="ttname"><a href="class_usuario.html">Usuario</a></div><div class="ttdoc">Entidade que deve armazenar dados de um usuario.</div><div class="ttdef"><b>Definition:</b> entidades.h:274</div></div>
+<div class="ttc" id="aclass_cod_aplicacao_html"><div class="ttname"><a href="class_cod_aplicacao.html">CodAplicacao</a></div><div class="ttdoc">Código destinado a armazenar o Código da Aplicacão.</div><div class="ttdef"><b>Definition:</b> Dominios.h:391</div></div>
+<div class="ttc" id="aclass_produto_html_a460d30d7077ccb3d3a5583e7c3d6e87c"><div class="ttname"><a href="class_produto.html#a460d30d7077ccb3d3a5583e7c3d6e87c">Produto::getData</a></div><div class="ttdeci">Data getData()</div><div class="ttdef"><b>Definition:</b> entidades.cpp:91</div></div>
+<div class="ttc" id="aclass_conta_html_a5a77d2f06fcb7b4dac7331d1ebbd92f2"><div class="ttname"><a href="class_conta.html#a5a77d2f06fcb7b4dac7331d1ebbd92f2">Conta::setBanco</a></div><div class="ttdeci">void setBanco(const CodBanco &amp;banco)</div><div class="ttdef"><b>Definition:</b> entidades.cpp:30</div></div>
 <div class="ttc" id="aclass_emissor_html"><div class="ttname"><a href="class_emissor.html">Emissor</a></div><div class="ttdoc">Código destinado a armazenar o Emissor.</div><div class="ttdef"><b>Definition:</b> Dominios.h:506</div></div>
-<div class="ttc" id="aclass_produto_html_ab21bd88fac29d6fea3ca313e57a75555"><div class="ttname"><a href="class_produto.html#ab21bd88fac29d6fea3ca313e57a75555">Produto::setHorario</a></div><div class="ttdeci">void setHorario(const Horario &amp;horario)</div><div class="ttdef"><b>Definition:</b> entidades.cpp:51</div></div>
-<div class="ttc" id="aclass_usuario_html_a8ab465c7dcaaa3b21f4220fe2fd58e7b"><div class="ttname"><a href="class_usuario.html#a8ab465c7dcaaa3b21f4220fe2fd58e7b">Usuario::getEndereco</a></div><div class="ttdeci">Endereco getEndereco() const</div><div class="ttdef"><b>Definition:</b> entidades.cpp:83</div></div>
+<div class="ttc" id="aclass_aplicacao_html_a6dced908141ca58fe193dfd64d0ecb7e"><div class="ttname"><a href="class_aplicacao.html#a6dced908141ca58fe193dfd64d0ecb7e">Aplicacao::getValor</a></div><div class="ttdeci">ValorAplicacao getValor()</div><div class="ttdef"><b>Definition:</b> entidades.cpp:16</div></div>
+<div class="ttc" id="aclass_produto_html_ab21bd88fac29d6fea3ca313e57a75555"><div class="ttname"><a href="class_produto.html#ab21bd88fac29d6fea3ca313e57a75555">Produto::setHorario</a></div><div class="ttdeci">void setHorario(const Horario &amp;horario)</div><div class="ttdef"><b>Definition:</b> entidades.cpp:103</div></div>
+<div class="ttc" id="aclass_usuario_html_a8ab465c7dcaaa3b21f4220fe2fd58e7b"><div class="ttname"><a href="class_usuario.html#a8ab465c7dcaaa3b21f4220fe2fd58e7b">Usuario::getEndereco</a></div><div class="ttdeci">Endereco getEndereco() const</div><div class="ttdef"><b>Definition:</b> entidades.cpp:135</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20

@@ -72,13 +72,13 @@ void TUConta::testarCenarioSucesso(){
     conta->setNumero(numero);
 
 
-    if(conta->getBanco().getValor() != VALOR_VALIDO_CODIGO_AGENCIA){
+    if(conta->getBanco().getValor() != VALOR_VALIDO_CODIGO_BANCO){
         estado = false;
 
     }else if(conta->getAgencia().getAgencia() != VALOR_VALIDO_CODIGO_AGENCIA){
         estado = false;
 
-    }else if(conta->getNumero().getNumero() != VALOR_VALIDO_CODIGO_AGENCIA){
+    }else if(conta->getNumero().getNumero() != VALOR_VALIDO_NUMERO){
         estado = false;
     }
 

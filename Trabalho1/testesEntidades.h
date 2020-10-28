@@ -25,7 +25,7 @@ public:
 
 class TUConta{
 private:
-   const string VALOR_VALIDO_CODIGO_BANCO= "001";
+   const string VALOR_VALIDO_CODIGO_BANCO = "001";
    const string VALOR_VALIDO_CODIGO_AGENCIA = "1234";
    const string VALOR_VALIDO_NUMERO = "819889-8";
 
@@ -41,15 +41,6 @@ public:
    bool run();
 };
 
-
-/// @class TUProduto
-///
-/// @brief C&oacute;digo destinado a representar a classe de entidade Produto.
-///
-/// A entidade Produto ir&aacute; conter codigo do produto, classe do produto de investimento, emissor,
-/// prazo de aplicac&atilde;o em meses, data do vencimento, taxa de rendimento, horario limite para aplicac&atilde;o e
-/// valor minimo de aplicac&atilde;
-///
 
 class TUProduto{
  private:
