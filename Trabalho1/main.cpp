@@ -1,57 +1,55 @@
+#include <string.h>
+#include <stdexcept>
 #include <iostream>
-#include <string>
 
-#include "Dominios.h"
-#include "entidades.h"
-#include "testesEntidades.h"
+#include "curses.h"
+#include "dominios.h"
+#include "interfaces.h"
+#include "controladorasApresentacao.h"
+#include "controladorasServico.h"
 
 using namespace std;
 
-int main(){
+int main()
+{
+    // Instancia as controladoras de apresentação.
 
-    TUAplicacao testeaplicacao;
-    TUConta testeconta;
-    TUProduto testeproduto;
-    TUUsuario testeusuario;
+    CntrApresentacaoControle *cntrApresentacaoControle;
+    IApresentacaoAutenticacao *cntrApresentacaoAutenticacao;
+    IApresentacaoPessoal *cntrApresentacaoPessoal;
+    IApresentacaoProdutosFinanceiros *cntrApresentacaoProdutosFinanceiros;
 
-    if(testeaplicacao.run() == true){
-        cout << "SUCESSO no teste da Aplicacao" << endl;
-    }else if(testeaplicacao.run() == false){
-        cout << "FALHA no teste da Aplicacao" << endl;
-    }
+    cntrApresentacaoControle = new CntrApresentacaoControle();
+    cntrApresentacaoAutenticacao = new CntrApresentacaoAutenticacao();
+    cntrApresentacaoPessoal = new CntrApresentacaoPessoal();
+    cntrApresentacaoProdutosFinanceiros = new CntrApresentacaoProdutosFinanceiros();
 
-    if(testeconta.run() == true){
-        cout << "SUCESSO no teste da Conta" << endl;
-    }else if(testeconta.run() == false){
-        cout << "FALHA no teste da Conta" << endl;
-    }
+    // Instancia as controladoras de serviço.
 
-    if(testeproduto.run() == true){
-        cout << "SUCESSO no teste do Produto" << endl;
-    }else if(testeproduto.run() == false){
-        cout << "FALHA no teste do Produto" << endl;
-    }
+    IServicoAutenticacao *cntrServicoAutenticacao;
+    IServicoPessoal *cntrServicoPessoal;
+    IServicoProdutosFinanceiros *cntrServicoProdutosFinanceiros;
 
-    if(testeusuario.run() == true ){
-        cout << "SUCESSO no teste de Usuario" << endl;
-    }else if(testeusuario.run() == false){
-        cout << "FALHA no teste de Usuario" << endl;
-    }
+    cntrServicoAutenticacao = new CntrServicoAutenticacao();
+    cntrServicoPessoal = new CntrServicoPessoal();
+    cntrServicoProdutosFinanceiros = new CntrServicoProdutosFinanceiros();
 
-    //if(testecpf.run() == true){
-    //    cout << "SUCESSO no teste de CPF" << endl;
-    //}else if(testecpf.run() == false){
-    //    cout << "FALHA no teste de CPF" << endl;
-    //}
+    // Interliga as controladoras aos stubs.
 
-    //if(testeagencia.run() == true ){
-    //    cout << "SUCESSO no teste de Codigo de Agencia" << endl;
-    //}else if(testeagencia.run() == false){
-    //    cout << "FALHA no teste de Codigo de Agencia" << endl;
-    //}
+    cntrApresentacaoControle->setCntrApresentacaoAutenticacao(cntrApresentacaoAutenticacao);
+    cntrApresentacaoControle->setCntrApresentacaoPessoal(cntrApresentacaoPessoal);
+    cntrApresentacaoControle->setCntrApresentacaoProdutosFinanceiros(cntrApresentacaoProdutosFinanceiros);
 
+    cntrApresentacaoAutenticacao->setCntrServicoAutenticacao(cntrServicoAutenticacao);
 
+    cntrApresentacaoPessoal->setCntrServicoPessoal(cntrServicoPessoal);
+    cntrApresentacaoPessoal->setCntrServicoProdutosFinanceiros(cntrServicoProdutosFinanceiros);
+
+    cntrApresentacaoProdutosFinanceiros->setCntrServicoProdutosFinanceiros(cntrServicoProdutosFinanceiros);
+
+    initscr();                                                                      // Inicia curses.
+    cntrApresentacaoControle->executar();                                           // Solicita serviço apresentacao.
+    endwin();                                                                       // Finaliza curses.
 
     return 0;
-
 }

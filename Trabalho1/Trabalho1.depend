@@ -24,12 +24,12 @@
 	<string>
 	<stdexcept>
 
-1603820636 source:d:\pedro\github\trabalho-tp1\trabalho1\main.cpp
+1606190324 source:d:\pedro\github\trabalho-tp1\trabalho1\main.cpp
 	<iostream>
 	<string>
 	"Dominios.h"
 	"entidades.h"
-	"testesEntidades.h"
+	"curses.h"
 
 1601166868 source:d:\pedro\github\trabalho-tp1\trabalho1\testes.cpp
 	<iostream>
@@ -63,4 +63,107 @@
 	<iostream>
 	<string>
 	"testesDominios.h"
+
+1604023176 source:d:\pedro\github\trabalho-tp1\trabalho1\controladoras.cpp
+
+1606706258 source:d:\pedro\github\trabalho-tp1\trabalho1\controladorasapresentacao.cpp
+	"controladorasApresentacao.h"
+
+1606705334 d:\pedro\github\trabalho-tp1\trabalho1\controladorasapresentacao.h
+	<string.h>
+	"curses.h"
+	"dominios.h"
+	"entidades.h"
+	"interfaces.h"
+
+1605392194 d:\pedro\github\trabalho-tp1\trabalho1\curses.h
+	<stdarg.h>
+	<stddef.h>
+	<stdio.h>
+	<wchar.h>
+	<stdbool.h>
+
+1606714198 d:\pedro\github\trabalho-tp1\trabalho1\interfaces.h
+	"Dominios.h"
+	"entidades.h"
+	"curses.h"
+
+1606435018 source:d:\pedro\github\trabalho-tp1\trabalho1\controladorasservico.cpp
+	"controladorasServico.h"
+
+1606711864 d:\pedro\github\trabalho-tp1\trabalho1\controladorasservico.h
+	<list>
+	<iostream>
+	<conio.h>
+	<string>
+	<stdio.h>
+	"dominios.h"
+	"entidades.h"
+	"interfaces.h"
+	"sqlite3.h"
+
+1597412568 d:\pedro\github\trabalho-tp1\trabalho1\sqlite3.h
+	<stdarg.h>
+
+1597412568 d:\pedro\github\trabalho-tp1\trabalho1\sqlite3ext.h
+	"sqlite3.h"
+
+1597412568 source:d:\pedro\github\trabalho-tp1\trabalho1\sqlite3.c
+	"config.h"
+	<vxWorks.h>
+	<pthread.h>
+	"mingw.h"
+	"_mingw.h"
+	<stdarg.h>
+	<stdint.h>
+	<inttypes.h>
+	<intrin.h>
+	<cmnintrin.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<assert.h>
+	<stddef.h>
+	<TargetConditionals.h>
+	<ctype.h>
+	<time.h>
+	<sys/sysctl.h>
+	<malloc/malloc.h>
+	<libkern/OSAtomic.h>
+	<malloc.h>
+	<pthread.h>
+	"windows.h"
+	<sys/cygwin.h>
+	<errno.h>
+	<process.h>
+	<math.h>
+	<sys/types.h>
+	<sys/stat.h>
+	<fcntl.h>
+	<sys/ioctl.h>
+	<unistd.h>
+	<sys/time.h>
+	<errno.h>
+	<sys/mman.h>
+	<sys/file.h>
+	<sys/param.h>
+	<semaphore.h>
+	<limits.h>
+	<sys/mount.h>
+	<utime.h>
+	<sys/dcmd_blk.h>
+	<sys/statvfs.h>
+	<dlfcn.h>
+	"sqlite_tcl.h"
+	"tcl.h"
+	<ctype.h>
+	"sqlite3rtree.h"
+	<ctype.h>
+	<unicode/utypes.h>
+	<unicode/uregex.h>
+	<unicode/ustring.h>
+	<unicode/ucol.h>
+	<unicode/ubrk.h>
+	<unicode/utf16.h>
+	<math.h>
 
