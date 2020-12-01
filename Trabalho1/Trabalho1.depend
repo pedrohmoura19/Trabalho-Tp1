@@ -66,10 +66,11 @@
 
 1604023176 source:d:\pedro\github\trabalho-tp1\trabalho1\controladoras.cpp
 
-1606706258 source:d:\pedro\github\trabalho-tp1\trabalho1\controladorasapresentacao.cpp
+1606793242 source:d:\pedro\github\trabalho-tp1\trabalho1\controladorasapresentacao.cpp
 	"controladorasApresentacao.h"
 
-1606705334 d:\pedro\github\trabalho-tp1\trabalho1\controladorasapresentacao.h
+1606793228 d:\pedro\github\trabalho-tp1\trabalho1\controladorasapresentacao.h
+	<list>
 	<string.h>
 	"curses.h"
 	"dominios.h"
@@ -83,15 +84,16 @@
 	<wchar.h>
 	<stdbool.h>
 
-1606714198 d:\pedro\github\trabalho-tp1\trabalho1\interfaces.h
+1606795228 d:\pedro\github\trabalho-tp1\trabalho1\interfaces.h
+	<list>
 	"Dominios.h"
 	"entidades.h"
 	"curses.h"
 
-1606435018 source:d:\pedro\github\trabalho-tp1\trabalho1\controladorasservico.cpp
+1606796864 source:d:\pedro\github\trabalho-tp1\trabalho1\controladorasservico.cpp
 	"controladorasServico.h"
 
-1606711864 d:\pedro\github\trabalho-tp1\trabalho1\controladorasservico.h
+1606795716 d:\pedro\github\trabalho-tp1\trabalho1\controladorasservico.h
 	<list>
 	<iostream>
 	<conio.h>

@@ -59,7 +59,7 @@ int ComandoSQL::callback(void *NotUsed, int argc, char **valorColuna, char **nom
       return 0;
 }
 
-//Classe ComandoLerSenha.
+//Classe ComandoAutenticar
 
 ComandoAutenticar::ComandoAutenticar(Cpf cpf) {
         comandoSQL = "SELECT senha FROM usuarios WHERE cpf = ";
@@ -107,6 +107,132 @@ ComandoCadastrarProduto::ComandoCadastrarProduto(Produto produto) {
         comandoSQL += "'" + to_string(produto.getValorMinimo().getValorMinimo()) + "')";
 }
 
+//Classe ComandpPesquisarProduto
+
+ComandoConsultarProduto::ComandoConsultarProduto(Classe classe){
+    comandoSQL = "SELECT * FROM produtos WHERE classe = ";
+    comandoSQL += classe.getClasse();
+}
+
+list<Produto> ComandoConsultarProduto::getResultado(){
+    ElementoResultado resultado;
+
+    Produto produto;
+    list<Produto> produtos;
+
+    while(listaResultado.empty() != true){
+        CodProduto codigo;
+        Classe classe;
+        Emissor emissor;
+        Prazo prazo;
+        Data data;
+        Taxa taxa;
+        Horario horario;
+        ValorMinimo valor;
+
+        resultado = listaResultado.back();
+        listaResultado.pop_back();
+        codigo.setProduto(resultado.getValorColuna());
+        produto.setProduto(codigo);
+
+        resultado = listaResultado.back();
+        listaResultado.pop_back();
+        classe.setClasse(resultado.getValorColuna());
+        produto.setClasse(classe);
+
+        resultado = listaResultado.back();
+        listaResultado.pop_back();
+        emissor.setEmissor(resultado.getValorColuna());
+        produto.setEmissor(emissor);
+
+        resultado = listaResultado.back();
+        listaResultado.pop_back();
+        prazo.setPrazo(stoi(resultado.getValorColuna()));
+        produto.setPrazo(prazo);
+
+        resultado = listaResultado.back();
+        listaResultado.pop_back();
+        data.setData(resultado.getValorColuna());
+        produto.setData(data);
+
+        resultado = listaResultado.back();
+        listaResultado.pop_back();
+        taxa.setTaxa(stoi(resultado.getValorColuna()));
+        produto.setTaxa(taxa);
+
+        resultado = listaResultado.back();
+        listaResultado.pop_back();
+        horario.setHorario(resultado.getValorColuna());
+        produto.setHorario(horario);
+
+        resultado = listaResultado.back();
+        listaResultado.pop_back();
+        valor.setValorMinimo(stoi(resultado.getValorColuna()));
+        produto.setValorMinimo(valor);
+
+        produtos.push_back(produto);
+    }
+
+    return produtos;
+
+}
+
+//Classe ComandoInformacoesUsuario
+
+ComandoInformacoesUsuario::ComandoInformacoesUsuario(Cpf cpf){
+    comandoSQL = "SELECT * FROM usuarios WHERE cpf = ";
+    comandoSQL += cpf.getCpf();
+}
+
+Usuario ComandoInformacoesUsuario::getResultado(){
+    ElementoResultado resultado;
+    Usuario usuario;
+
+    Nome nome;
+    Endereco endereco;
+    Cep cep;
+    Cpf cpf;
+    Senha senha;
+
+    if (listaResultado.empty())
+            throw EErroPersistencia("Lista de resultados vazia.");
+    resultado = listaResultado.back();
+    listaResultado.pop_back();
+    nome.setNome(resultado.getValorColuna());
+    usuario.setNome(nome);
+
+    if (listaResultado.empty())
+            throw EErroPersistencia("Lista de resultados vazia.");
+    resultado = listaResultado.back();
+    listaResultado.pop_back();
+    endereco.setEndereco(resultado.getValorColuna());
+    usuario.setEndereco(endereco);
+
+    if (listaResultado.empty())
+            throw EErroPersistencia("Lista de resultados vazia.");
+    resultado = listaResultado.back();
+    listaResultado.pop_back();
+    cep.setCep(stoi(resultado.getValorColuna()));
+    usuario.setCep(cep);
+
+    if (listaResultado.empty())
+            throw EErroPersistencia("Lista de resultados vazia.");
+    resultado = listaResultado.back();
+    listaResultado.pop_back();
+    cpf.setCpf(resultado.getValorColuna());
+    usuario.setCpf(cpf);
+
+    if (listaResultado.empty())
+            throw EErroPersistencia("Lista de resultados vazia.");
+    resultado = listaResultado.back();
+    listaResultado.pop_back();
+    senha.setSenha(resultado.getValorColuna());
+    usuario.setSenha(senha);
+
+    return usuario;
+
+}
+
 
 //Classe ComandoRemoverUsuario.
 
@@ -125,8 +251,45 @@ ComandoCadastrarConta::ComandoCadastrarConta(Conta conta) {
         comandoSQL += "'" + conta.getNumero().getNumero() + "')";
 }
 
-//Classe ComandoConsultarConta
-///////////////IMPLEMENTAR//////////
+//Classe ComandoConsultarConta.
+
+ComandoConsultarConta::ComandoConsultarConta(Cpf cpf) {
+        comandoSQL = "SELECT * FROM contas WHERE cpf = ";
+        comandoSQL += cpf.getCpf();
+}
+
+Conta ComandoConsultarConta::getResultado(){
+        ElementoResultado resultado;
+        Conta conta;
+
+        CodAgencia codagencia;
+        CodBanco codbanco;
+        Numero numero;
+
+        if (listaResultado.empty())
+                throw EErroPersistencia("Lista de resultados vazia.");
+        resultado = listaResultado.back();
+        listaResultado.pop_back();
+        codagencia.setAgencia(resultado.getValorColuna());
+        conta.setAgencia(codagencia);
+
+        if (listaResultado.empty())
+                throw EErroPersistencia("Lista de resultados vazia.");
+        resultado = listaResultado.back();
+        listaResultado.pop_back();
+        codbanco.setValor(resultado.getValorColuna());
+        conta.setBanco(codbanco);
+
+        if (listaResultado.empty())
+                throw EErroPersistencia("Lista de resultados vazia.");
+        resultado = listaResultado.back();
+        listaResultado.pop_back();
+        numero.setNumero(resultado.getValorColuna());
+        conta.setNumero(numero);
+
+        return conta;
+
+}
 
 //Classe ComandoRemoverProduto.
 
@@ -146,3 +309,42 @@ ComandoRealizarAplicacao::ComandoRealizarAplicacao(Aplicacao aplicacao) {
 }
 
 
+//Classe ComandoListarAplicacoes
+
+ComandoListarAplicacao::ComandoListarAplicacao(Cpf cpf) {
+        comandoSQL = "SELECT * FROM aplicacao WHERE cpf = ";
+        comandoSQL += cpf.getCpf();
+}
+
+list<Aplicacao> ComandoListarAplicacao::getResultado(){
+    ElementoResultado resultado;
+
+    Aplicacao aplicacao;
+    list<Aplicacao> aplicacoes;
+
+    while(listaResultado.empty() != true){
+        CodAplicacao codigo;
+        ValorAplicacao valor;
+        Data data;
+
+        resultado = listaResultado.back();
+        listaResultado.pop_back();
+        codigo.setAplicacao(resultado.getValorColuna());
+        aplicacao.setAplicacao(codigo);
+
+        resultado = listaResultado.back();
+        listaResultado.pop_back();
+        valor.setValor(stoi(resultado.getValorColuna()));
+        aplicacao.setValor(valor);
+
+        resultado = listaResultado.back();
+        listaResultado.pop_back();
+        data.setData(resultado.getValorColuna());
+        aplicacao.setData(data);
+
+
+        aplicacoes.push_back(aplicacao);
+
+    }
+    return aplicacoes;
+}

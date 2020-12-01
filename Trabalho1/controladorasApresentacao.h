@@ -1,6 +1,7 @@
 #ifndef CONTROLADORASAPRESENTACAO_H_INCLUDED
 #define CONTROLADORASAPRESENTACAO_H_INCLUDED
 
+#include <list>
 #include <string.h>
 #include "curses.h"
 #include "dominios.h"
@@ -86,7 +87,7 @@ class CntrApresentacaoProdutosFinanceiros:public IApresentacaoProdutosFinanceiro
         void descadastrarProdutoInvestimento();
         void consultarProdutoInvestimento();
         void realizarAplicacao();
-        void listarAplicacoes();
+        void listarAplicacoes(Cpf);
     public:
         virtual void executar();
         virtual void executar(Cpf);

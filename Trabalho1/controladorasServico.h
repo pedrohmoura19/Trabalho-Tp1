@@ -14,12 +14,6 @@
 
 using namespace std;
 
-//--------------------------------------------------------------------------------------------
-//--------------------------------------------------------------------------------------------
-// Implementar as controladoras de serviço.
-//--------------------------------------------------------------------------------------------
-//--------------------------------------------------------------------------------------------
-
 //Classe EErroPersistencia.
 
 class EErroPersistencia {
@@ -85,6 +79,17 @@ public:
 };
 
 //---------------------------------------------------------------------------
+//Classe ComandoInformacoesUsuario.
+
+class ComandoInformacoesUsuario:public ComandoSQL {
+public:
+        ComandoInformacoesUsuario(Cpf);
+        Usuario getResultado();
+};
+
+
+
+//---------------------------------------------------------------------------
 //Classe ComandoCadastrarProduto.
 
 class ComandoCadastrarProduto:public ComandoSQL {
@@ -94,10 +99,10 @@ public:
 
 //Classe ComandoPesquisarProdutos.
 
-class ComandoPesquisarProdutos:public ComandoSQL {
+class ComandoConsultarProduto:public ComandoSQL {
 public:
-        ComandoPesquisarProdutos(Classe);
-        Produto getResultado() throw (EErroPersistencia);
+        ComandoConsultarProduto(Classe);
+        list<Produto> getResultado();
 };
 
 //---------------------------------------------------------------------------
@@ -121,8 +126,8 @@ public:
 
 class ComandoConsultarConta:public ComandoSQL {
 public:
-        ComandoConsultarConta(Conta);
-        Conta getResultado() throw (EErroPersistencia);
+        ComandoConsultarConta(Cpf);
+        Conta getResultado();
 };
 
 
@@ -139,6 +144,14 @@ public:
 class ComandoRealizarAplicacao:public ComandoSQL {
 public:
         ComandoRealizarAplicacao(Aplicacao);
+};
+
+//Classe ComandoListarAplicacoes.
+
+class ComandoListarAplicacao:public ComandoSQL {
+public:
+        ComandoListarAplicacao(Cpf);
+        list<Aplicacao> getResultado();
 };
 
 
@@ -163,7 +176,6 @@ inline string ElementoResultado::getValorColuna() const {
 class CntrServicoAutenticacao:public IServicoAutenticacao{
     public:
         bool ComandoAutenticar(Cpf,Senha) override;
-        Usuario ComandoDadosAutenticados() override;
 };
 
 //--------------------------------------------------------------------------------------------
@@ -172,7 +184,7 @@ class CntrServicoAutenticacao:public IServicoAutenticacao{
 class CntrServicoPessoal:public IServicoPessoal{
     public:
         bool ComandoCadastrarUsuario(Usuario) override;
-        Usuario ComandoInformacoesUsuario(Cpf&) override;
+        Usuario ComandoInformacoesUsuario(Cpf) override;
         bool ComandoRemoverUsuario(Usuario) override;
 };
 
@@ -184,10 +196,10 @@ class CntrServicoProdutosFinanceiros:public IServicoProdutosFinanceiros{
         bool ComandoCadastrarConta(Conta) override;
         Conta ComandoConsultarConta(Cpf) override;
         bool ComandoCadastrarProduto(Produto) override;
-        Produto ComandoConsultarProduto(Classe) override;
+        list<Produto> ComandoConsultarProduto(Classe) override;
         bool ComandoRemoverProduto(CodProduto) override;
         bool ComandoRealizarAplicacao(Aplicacao) override;
-        Aplicacao ComandoListarAplicacoes() override;
+        list<Aplicacao> ComandoListarAplicacoes(Cpf) override;
 };
 
 

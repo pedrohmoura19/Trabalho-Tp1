@@ -435,7 +435,7 @@ void CntrApresentacaoProdutosFinanceiros::executar(Cpf cpf){
                     break;
             case 5: realizarAplicacao();
                     break;
-            case 6: listarAplicacoes();
+            case 6: listarAplicacoes(cpf);
                     break;
             case 7: apresentar = false;
                     break;
@@ -648,12 +648,12 @@ void CntrApresentacaoProdutosFinanceiros::consultarProdutoInvestimento(){
     mvprintw(linha/4 + 2,coluna/4,"%s",texto2);                                                 // Imprime nome do campo.
     getstr(campo1);                                                                             // Lê valor do campo.
 
-    Produto produto;
+    list<Produto> produtos;
     Classe classe;
 
     classe.setClasse(campo1);
 
-    produto = cntr->ComandoConsultarProduto(classe);
+    produtos = cntr->ComandoConsultarProduto(classe);
 
 
     char texto3[] ="Dados sobre o produto :";
@@ -665,44 +665,59 @@ void CntrApresentacaoProdutosFinanceiros::consultarProdutoInvestimento(){
     char texto9[] ="Taxa de Rendimento    :";
     char texto10[] ="Horário de Aplicação  :";
     char texto11[] ="Valor Mínimo de Aplicação:";
-    char texto12[] ="Digite algo para retornar.";
+    char texto12[] ="Digite algo para a proxima aplicacao.";
+    char texto13[] ="Todos produtos listadas, digite algo para retornar.";
 
     string campo2, campo3, campo4, campo5;                            // Cria campos para entrada dos dados.
     string campo6, campo7, campo8, campo9;                                        // Cria campos para entrada dos dados.
 
-    campo2 = produto.getProduto().getProduto();
-    campo3 = produto.getClasse().getClasse();
-    campo4 = produto.getEmissor().getEmissor();
-    campo5 = produto.getPrazo().getPrazo();
-    campo6 = produto.getData().getData();
-    campo7 = produto.getTaxa().getTaxa();
-    campo8 = produto.getHorario().getHorario();
-    campo9 = produto.getValorMinimo().getValorMinimo();
+    while(produtos.empty() != true){
+        Produto produto;
+        produto = produtos.back();
+        produtos.pop_back();
+
+        campo2 = produto.getProduto().getProduto();
+        campo3 = produto.getClasse().getClasse();
+        campo4 = produto.getEmissor().getEmissor();
+        campo5 = produto.getPrazo().getPrazo();
+        campo6 = produto.getData().getData();
+        campo7 = produto.getTaxa().getTaxa();
+        campo8 = produto.getHorario().getHorario();
+        campo9 = produto.getValorMinimo().getValorMinimo();
+
+        clear();
+
+        mvprintw(linha/4,coluna/4,"%s",texto3);                                                 // Imprime nome do campo.
+        mvprintw(linha/4 + 2,coluna/4,"%s",texto4);                                             // Imprime nome do campo.
+        mvprintw(linha/4 + 2,coluna/4,"%s",campo2);
+        mvprintw(linha/4 + 4,coluna/4,"%s",texto5);                                             // Imprime nome do campo.
+        mvprintw(linha/4 + 4,coluna/4,"%s",campo3);
+        mvprintw(linha/4 + 6,coluna/4,"%s",texto6);                                             // Imprime nome do campo.
+        mvprintw(linha/4 + 6,coluna/4,"%s",campo4);                                                                                    // Limpa janela.
+        mvprintw(linha/4 + 8,coluna/4,"%s",texto7);
+        mvprintw(linha/4 + 8,coluna/4,"%s",campo5);                                             // Imprime nome do campo.
+        mvprintw(linha/4 + 10,coluna/4,"%s",texto8);
+        mvprintw(linha/4 + 10,coluna/4,"%s",campo6);                                             // Imprime nome do campo.
+        mvprintw(linha/4 + 12,coluna/4,"%s",texto9);
+        mvprintw(linha/4 + 12,coluna/4,"%s",campo7);                                             // Imprime nome do campo.
+        mvprintw(linha/4 + 14,coluna/4,"%s",texto10);                                                                                    // Limpa janela.
+        mvprintw(linha/4 + 14,coluna/4,"%s",campo8);
+        mvprintw(linha/4 + 16,coluna/4,"%s",texto11);
+        mvprintw(linha/4 + 16,coluna/4,"%s",campo9);
+        mvprintw(linha/4 + 18,coluna/4,"%s",texto12);
+
+        noecho();
+        getch();
+        echo();
+    }
 
     clear();
-
-    mvprintw(linha/4,coluna/4,"%s",texto3);                                                 // Imprime nome do campo.
-    mvprintw(linha/4 + 2,coluna/4,"%s",texto4);                                             // Imprime nome do campo.
-    mvprintw(linha/4 + 2,coluna/4,"%s",campo2);
-    mvprintw(linha/4 + 4,coluna/4,"%s",texto5);                                             // Imprime nome do campo.
-    mvprintw(linha/4 + 4,coluna/4,"%s",campo3);
-    mvprintw(linha/4 + 6,coluna/4,"%s",texto6);                                             // Imprime nome do campo.
-    mvprintw(linha/4 + 6,coluna/4,"%s",campo4);                                                                                    // Limpa janela.
-    mvprintw(linha/4 + 8,coluna/4,"%s",texto7);
-    mvprintw(linha/4 + 8,coluna/4,"%s",campo5);                                             // Imprime nome do campo.
-    mvprintw(linha/4 + 10,coluna/4,"%s",texto8);
-    mvprintw(linha/4 + 10,coluna/4,"%s",campo6);                                             // Imprime nome do campo.
-    mvprintw(linha/4 + 12,coluna/4,"%s",texto9);
-    mvprintw(linha/4 + 12,coluna/4,"%s",campo7);                                             // Imprime nome do campo.
-    mvprintw(linha/4 + 14,coluna/4,"%s",texto10);                                                                                    // Limpa janela.
-    mvprintw(linha/4 + 14,coluna/4,"%s",campo8);
-    mvprintw(linha/4 + 14,coluna/4,"%s",texto11);
-    mvprintw(linha/4 + 14,coluna/4,"%s",campo9);
-    mvprintw(linha/4 + 14,coluna/4,"%s",texto12);
-
+    mvprintw(linha/4 ,coluna/4,"%s",texto13);                                               // Informa sucesso.
     noecho();
     getch();
     echo();
+    return;
+
 }
 
 //--------------------------------------------------------------------------------------------
@@ -754,6 +769,7 @@ void CntrApresentacaoProdutosFinanceiros::realizarAplicacao(){
     aplicacao.setValor(valor);
     aplicacao.setData(data);
 
+
     if(cntr->ComandoRealizarAplicacao(aplicacao)){
         mvprintw(linha/4 + 18,coluna/4,"%s",texto6);                                               // Informa sucesso.
         noecho();
@@ -771,24 +787,52 @@ void CntrApresentacaoProdutosFinanceiros::realizarAplicacao(){
 
 //--------------------------------------------------------------------------------------------
 
-void CntrApresentacaoProdutosFinanceiros::listarAplicacoes(){
+void CntrApresentacaoProdutosFinanceiros::listarAplicacoes(Cpf cpf){
 
-    //--------------------------------------------------------------------------------------------
-    //--------------------------------------------------------------------------------------------
-    // Substituir código seguinte pela implementação do método.
-    //--------------------------------------------------------------------------------------------
-    //--------------------------------------------------------------------------------------------
+    char texto1[] ="Dados da aplicação:";
+    char texto2[] ="Código da Aplicação   :";
+    char texto3[] ="Valor da Aplicação    :";
+    char texto4[] ="Data                  :";
+    char texto5[] ="Digite algo para listar a proxima aplicação.";
+    char texto6[] ="Todas aplicacoes listadas, digite algo para retornar.";
 
+    string campo1, campo2, campo3;
 
-    // Mensagens a serem apresentadas.
+    list<Aplicacao> aplicacoes;
+
+    aplicacoes = cntr->ComandoListarAplicacoes(cpf);
 
     int linha,coluna;                                                                           // Dados sobre tamanho da tela.
     getmaxyx(stdscr,linha,coluna);                                                              // Armazena quantidade de linhas e colunas.
 
-    char texto[]="Servico listar aplicacoes nao implementado. Digite algo.";                    // Mensagem a ser apresentada.
-    clear();                                                                                    // Limpa janela.
-    mvprintw(linha/4,coluna/4,"%s",texto);                                                      // Imprime nome do campo.
+    while(aplicacoes.empty() != true){
+        Aplicacao aplicacao;
+        aplicacao = aplicacoes.back();
+        aplicacoes.pop_back();
+
+        campo1 = aplicacao.getAplicacao().getAplicacao();
+        campo2 = aplicacao.getValor().getValor();
+        campo3 = aplicacao.getData().getData();
+
+        clear();                                                                                    // Limpa janela.
+        mvprintw(linha/4,coluna/4,"%s",texto1);                                                 // Imprime nome do campo.
+        mvprintw(linha/4 + 2,coluna/4,"%s",texto2);                                             // Imprime nome do campo.
+        mvprintw(linha/4 + 2,coluna/4,"%s",campo1);
+        mvprintw(linha/4 + 4,coluna/4,"%s",texto3);                                             // Imprime nome do campo.
+        mvprintw(linha/4 + 4,coluna/4,"%s",campo2);
+        mvprintw(linha/4 + 6,coluna/4,"%s",texto4);                                             // Imprime nome do campo.
+        mvprintw(linha/4 + 6,coluna/4,"%s",campo3);                                                                                    // Limpa janela.
+        mvprintw(linha/4 + 8,coluna/4,"%s",texto5);                                                      // Imprime nome do campo.
+        noecho();
+        getch();
+        echo();
+    }
+
+    clear();
+    mvprintw(linha/4,coluna/4,"%s",texto6);
     noecho();
     getch();
     echo();
+    return;
+
 }
